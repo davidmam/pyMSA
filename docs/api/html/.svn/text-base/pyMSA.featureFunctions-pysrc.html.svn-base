@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.featureFunctions</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        Module&nbsp;featureFunctions
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.featureFunctions-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyMSA.featureFunctions-module.html">Module pyMSA.featureFunctions</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (c) 2012 - N.P. de Klein</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">#     This file is part of Python Mass Spec Analyzer (PyMSA).</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is free software: you can redistribute it and/or modify</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#     it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">#     the Free Software Foundation, either version 3 of the License, or</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#     (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#     GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#     along with Python Mass Spec Analyzer (PyMSA).  If not, see &lt;http://www.gnu.org/licenses/&gt;.")</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">Functions that get information out of a feature element</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># author: ndeklein</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># date:08/02/2012</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># summary: functions to get information from elements</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">math</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyMSA.elementFunctions=pyMSA.elementFunctions-module.html"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-0', 'elementFunctions', 'link-0');">elementFunctions</a></tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">warnings</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt>  </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment"># Get all the coordinates of given feature element that are in the feature element</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-comment"># return dictionary with the coordinates</tt> </tt>
+<a name="getFeatureConvexhullCoordinates"></a><div id="getFeatureConvexhullCoordinates-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="getFeatureConvexhullCoordinates-toggle" onclick="return toggle('getFeatureConvexhullCoordinates');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureFunctions-module.html#getFeatureConvexhullCoordinates">getFeatureConvexhullCoordinates</a><tt class="py-op">(</tt><tt class="py-param">featureElement</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getFeatureConvexhullCoordinates-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getFeatureConvexhullCoordinates-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">    Get the coordinates of the corners of the convexhull of featureElement. Return a dictionary with as key the feature and as value a dictionary</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">    with as keys mzMax, mzMin, rtMax and rtMin. This is the maximum and minimum retention time and the maximum and minimum m/z ratio of the convexhull. These</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">    four points together can be seen as a rectangle, if you see each point as the corner. This does not take into account that the feature convexhulls are not</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">    perfect rectangles.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">    @type featureElement: Element</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">    @param featureElement: A feature element</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: dictionary</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">    @return: Dictionary with key the feature and values the coordinates of the 4 corners of the convexhull</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">    @raises IOError: No convexhulls in the element</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">    @raises TypeError: featureElement is not of type Element</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">    B{Example}:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-docstring">    Print the convexhull coordinates of all the features in a file:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; import parseFeatureXML                                                 # to get the features use parseFeatureXML</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; featureXML = parseFeatureXML.Reader('example_feature_file.featureXML')   # make a reader instance</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; for feature in featureXML.getFeatures():                               # loop through all the features</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">    ...    print getFeatureConvexhullCoordinates(feature)                      # print the coordinates of all the feature convexhulls</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">    {&lt;Element 'feature' at 0x136b9a80&gt;: {'mzMax': '338.251376135343', 'rtMin': '5105.9217', 'rtMax': '5111.6874', 'mzMin': '336.124751115092'}}</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">    {&lt;Element 'feature' at 0x136bd510&gt;: {'mzMax': '430.197574989105', 'rtMin': '4001.7973', 'rtMax': '4017.7105', 'mzMin': '428.070943557216'}}</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">    {&lt;Element 'feature' at 0x136bde40&gt;: {'mzMax': '339.251376135343', 'rtMin': '5107.9217', 'rtMax': '5112.6874', 'mzMin': '337.124751115092'}}</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt>     </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">     </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">     </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">featureElement</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-string">'&lt;type \'Element\'&gt;'</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-comment"># make a dictionary in which the corner coordinates of the feature will be saved</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-name">featureCoordinate</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">countConvexhull</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> <tt class="py-comment"># count the amnount of times the tage convexhull is found</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-comment"># for every element in feature element</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">element</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureElement</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-comment"># if featureElement = convexhull</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">element</tt><tt class="py-op">.</tt><tt class="py-name">tag</tt> <tt class="py-op">==</tt> <tt class="py-string">'convexhull'</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-comment"># every time that there is a new convexhull, make an empty list retentionTimeList for x coordinates and mzList for y coordinates</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-name">retentionTimeList</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">mzList</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-comment"># for every point in the convexhull element</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">pt</tt> <tt class="py-keyword">in</tt> <tt class="py-name">element</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                    <tt class="py-comment"># if the syntax of the convexhull is the same as syntax for version 1.8.0</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt id="link-1" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-1', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Function pyMSA.elementFunctions.getItems()=pyMSA.elementFunctions-module.html#getItems"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-2', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">pt</tt><tt class="py-op">)</tt> <tt class="py-op">!=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                        <tt class="py-comment"># save the retention time (x-axis) and m/z (y-axis) in a list</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                            <tt class="py-name">retentionTimeList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-3" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-3', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-4', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">pt</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'x'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                            <tt class="py-name">mzList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-5" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-5', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-6', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">pt</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'y'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                            <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method pyMSA.output.FileWriter.write()=pyMSA.output.FileWriter-class.html#write"><a title="pyMSA.output.FileWriter.write" class="py-name" href="#" onclick="return doclink('link-7', 'write', 'link-7');">write</a></tt><tt class="py-op">(</tt><tt class="py-string">'Your featureXML file is not in the format of output from version 1.8.0 or 1.7.0 FeatureFinder'</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                            <tt id="link-8" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-8', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-9', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">pt</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'x'</tt><tt class="py-op">]</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                    <tt class="py-comment"># else the syntax for 1.7.0 (don't have access to any other versions</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                         </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">convex</tt> <tt class="py-keyword">in</tt> <tt class="py-name">pt</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                            <tt class="py-comment"># check what dim the convxhull position is (dim 0 is retention time, dim 1 = mz)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                            <tt class="py-keyword">if</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt id="link-10" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-10', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-11', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">convex</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'dim'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                                <tt class="py-name">retentionTimeList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">convex</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                            <tt class="py-keyword">elif</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt id="link-12" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-12', 'elementFunctions', 'link-0');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-13', 'getItems', 'link-2');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">convex</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'dim'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                                <tt class="py-name">mzList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">convex</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                                <tt class="py-name">warnings</tt><tt class="py-op">.</tt><tt class="py-name">warn</tt><tt class="py-op">(</tt><tt class="py-string">'dim in convexhull hullpoint is not 0 or 1. Value not used'</tt><tt class="py-op">,</tt><tt class="py-name">stacklevel</tt><tt class="py-op">=</tt><tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                <tt class="py-comment"># get the minimum and maximum values of x and y and save them</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-name">rtMin</tt> <tt class="py-op">=</tt> <tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-name">retentionTimeList</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-name">rtMax</tt> <tt class="py-op">=</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-name">retentionTimeList</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">mzMin</tt> <tt class="py-op">=</tt> <tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-name">mzList</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-name">mzMax</tt> <tt class="py-op">=</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-name">mzList</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">     </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                <tt class="py-comment">#add the coordinates of the feature to the featureCoordinate</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-name">featureCoordinate</tt><tt class="py-op">[</tt><tt class="py-name">featureElement</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'rtMin'</tt><tt class="py-op">:</tt><tt class="py-name">rtMin</tt><tt class="py-op">,</tt> <tt class="py-string">'rtMax'</tt><tt class="py-op">:</tt><tt class="py-name">rtMax</tt><tt class="py-op">,</tt> <tt class="py-string">'mzMin'</tt><tt class="py-op">:</tt><tt class="py-name">mzMin</tt><tt class="py-op">,</tt><tt class="py-string">'mzMax'</tt><tt class="py-op">:</tt><tt class="py-name">mzMax</tt><tt class="py-op">}</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                <tt class="py-name">countConvexhull</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> <tt class="py-comment"># add 1 for every convexhull</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">         </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">countConvexhull</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">            <tt class="py-comment"># raise an IO</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">IOError</tt><tt class="py-op">,</tt> <tt class="py-string">'No convexhulls in the element, check your featureXML file'</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-comment"># return the dictionary with the coordinates of the feature</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">featureCoordinate</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">TypeError</tt><tt class="py-op">,</tt> <tt class="py-string">'featureElement in getFeatureConvexhullCoordinates is not of type Element but of type: '</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">featureElement</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-comment"># Calculate how often the features overlap with each other based on X minimum, X maximum, Y minimum and Y maximum values (which gives the coordinates of a square</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-comment"># with given dictionary with feature element as key and coordinate of that feature element as value</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-comment"># Returns the amount of overlap</tt> </tt>
+<a name="getOverlap"></a><div id="getOverlap-def"><a name="L118"></a><tt class="py-lineno">118</tt> <a class="py-toggle" href="#" id="getOverlap-toggle" onclick="return toggle('getOverlap');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureFunctions-module.html#getOverlap">getOverlap</a><tt class="py-op">(</tt><tt class="py-param">featureCoordinates</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getOverlap-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getOverlap-expanded"><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">    Calculate how often the features overlap with each other based on X min, X max, Y min and Y max values (which gives the coordinates of a square</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">    with given dictionary with feature element as key and coordinate of that feature element as value.</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">    @type featureCoordinates: dictionary</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">    @param featureCoordinates: A dictionary with as keys a set of features and as value a dictionary with the keys rtMin, rtMax, mzMin and mzMax. Contains the 4 corner coordinates of a convexhull</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: number</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">    @return: The amount of times that the convexhulls in featureCoordinates overlap with each other. </tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-docstring">    B{Example}:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-docstring">    Print the overlap of all the feature's convexhulls in a file:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; import parseFeatureXML                                                 # to get the features use parseFeatureXML</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; featureXML = parseFeatureXML.Reader('example_feature_file.featureXML')   # make a reader instance</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; featureDict = {}    </tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; for feature in featureXML.getSimpleFeatureInfo():   # get all the features in featureXML and loop through them. Because the for loop gets the convexhull coordinates one at a time, the convexhulls first have to be put in one big dictionary before they can be given to getOverlap</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">    ...    featureDict.update(getFeatureConvexhullCoordinates(feature))        # getFeatureConvexhullCoordinates returns a dictionary, so featureDict can be updated with .update()</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; print getOverlap(featureDict)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">    439</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">    <tt class="py-name">overlapCount</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-comment"># calculate the amount of overlap</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">    <tt class="py-comment"># for every element in featureCoordinate</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">element</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-comment"># looping again over every element in featureCoordinate(for comparison)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">compareElement</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">            <tt class="py-comment"># if the element is not the compareElement</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">element</tt> <tt class="py-op">!=</tt> <tt class="py-name">compareElement</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                <tt class="py-comment"># if element overlaps on the left side with compareElement: x+=1</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                <tt class="py-comment"># *note* only uses the left side because then it counts every overlap only ones (because all elements are compared to all elements)</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'rtMin'</tt><tt class="py-op">]</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'rtMin'</tt><tt class="py-op">]</tt>\ </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                   <tt class="py-keyword">and</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'rtMax'</tt><tt class="py-op">]</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'rtMin'</tt><tt class="py-op">]</tt>\ </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">                   <tt class="py-keyword">and</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMin'</tt><tt class="py-op">]</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMax'</tt><tt class="py-op">]</tt>\ </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                        <tt class="py-keyword">and</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMax'</tt><tt class="py-op">]</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMax'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt>\ </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                   <tt class="py-keyword">or</tt>  <tt class="py-op">(</tt><tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMin'</tt><tt class="py-op">]</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMin'</tt><tt class="py-op">]</tt>\ </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                        <tt class="py-keyword">and</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">element</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMax'</tt><tt class="py-op">]</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">featureCoordinates</tt><tt class="py-op">[</tt><tt class="py-name">compareElement</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'mzMin'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                        <tt class="py-name">overlapCount</tt><tt class="py-op">+=</tt><tt class="py-number">1</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">overlapCount</tt> </tt>
+</div><a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:34 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

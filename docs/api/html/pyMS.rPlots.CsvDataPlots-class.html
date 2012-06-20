@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMS.rPlots.CsvDataPlots</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyMS-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMS-module.html">Package&nbsp;pyMS</a> ::
+        <a href="pyMS.rPlots-module.html">Module&nbsp;rPlots</a> ::
+        Class&nbsp;CsvDataPlots
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMS.rPlots.CsvDataPlots-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CsvDataPlots</h1><p class="nomargin-top"><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots">source&nbsp;code</a></span></p>
+<p>CsvDataPlots contains several functions to plot information from csv 
+  input files</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      set some default values that are used by multiple functions, like png
+      window size</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dictionary</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#getParams" class="summary-sig-name">getParams</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kwargsDict</span>)</span><br />
+      Has a dictionary with default values which can be overriden by 
+      arguments given to kwargsDict.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.getParams">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rFeaturePerIntensityHistogram" class="summary-sig-name">rFeaturePerIntensityHistogram</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">csvFile</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">plotArgs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Plot a histogram of feature per intensity.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rFeaturePerIntensityHistogram">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rMSMSperIntensityHistogram" class="summary-sig-name">rMSMSperIntensityHistogram</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">csvFile</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">plotArgs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Plot a histogram of MS/MS per intensity.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMSMSperIntensityHistogram">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rMSMSperFeatureBarplot" class="summary-sig-name">rMSMSperFeatureBarplot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">csvFile</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">plotArgs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Plot a histogram of feature per intensity.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMSMSperFeatureBarplot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rFeatureMSMSperIntensityHistogram" class="summary-sig-name">rFeatureMSMSperIntensityHistogram</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mzmlCsv</span>,
+        <span class="summary-sig-arg">featCsv</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      rFEaturePrecursorPerIntensityHistogram makes two (possibly) 
+      overlapping histograms, one of feature per intensity and one of the 
+      MS/MS per intensity</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rFeatureMSMSperIntensityHistogram">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rIonCurrentPerSpectrumHistogram" class="summary-sig-name">rIonCurrentPerSpectrumHistogram</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">csvFile</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      rIonCurrentPerSpectrumHistogram makes two (possibly) overlapping 
+      histograms, one of IonCurrent per Spectrum for ms level 1 and one for
+      ms level 2</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rIonCurrentPerSpectrumHistogram">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rPlots.CsvDataPlots-class.html#rMsmsPerFeatureIntensityBoxPlot" class="summary-sig-name">rMsmsPerFeatureIntensityBoxPlot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">featureCsv</span>,
+        <span class="summary-sig-arg">featurePrecursorCsv</span>,
+        <span class="summary-sig-arg">outPath</span>,
+        <span class="summary-sig-arg">plotArgs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      boxplot of the # ms/ms per feature per intensity</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMsmsPerFeatureIntensityBoxPlot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="getParams"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getParams</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">kwargsDict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.getParams">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Has a dictionary with default values which can be overriden by 
+  arguments given to kwargsDict. The default dictionary looks like this: 
+  The defaultdict looks like this (and these key value pairs can be given 
+  to kwargsDict): defaultDict = {'title':self.title, 'xlab':self.xlab, 
+  'ylab':self.ylab, 'width':self.pngWidth, 
+  'height':self.pngHeight,'logBase':self.log,'vector1Name':'vector 1', 
+  'vector2Name':'vector2'}</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>kwargsDict</code></strong> (dictionary) - A dictionary containing all the extra input given to a function, 
+          passed to **kwargs</li>
+    </ul></dd>
+    <dt>Returns: dictionary</dt>
+        <dd>The keys and values of the default dictionary, only the values 
+          overriden that were given to kwargsDict</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - kwargsDict not of type dict
+        <p><b>Example</b>:</p>
+        <p>Overriding some default values and leaving some as they are:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">def</span> <span class="py-defname">exampleFunction</span>(**kwargs):
+<span class="py-more">... </span>   csvDataPlots = CsvDataPlots()
+<span class="py-more">... </span>   return csvDataPlots.getParams(dict(kwargs))     <span class="py-comment"># have to make a dictionary out of kwargs</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> exampleFunction(title=<span class="py-string">'example getParams'</span>, xlab = <span class="py-string">'example 2 kwargs'</span>) <span class="py-comment"># only override tile and xlab, rest stay default</span>
+<span class="py-output">{'vector1Name': 'vector 1', 'xlab': 'example 2 kwargs', 'logBase': 10, 'title': 'example getParams', 'ylab': 'y', 'vector2Name': 'vector2', 'width': 300, 'height': 300}</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rFeaturePerIntensityHistogram"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rFeaturePerIntensityHistogram</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">csvFile</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">plotArgs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rFeaturePerIntensityHistogram">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot a histogram of feature per intensity.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>csvFile</code></strong> (string) - A tab-delimited csv file with an id column and an intensity 
+          column (can have more columns, but these HAVE to be in there</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>plotArgs</code></strong> (dictionary) - A dictionary containing additional information for the plot 
+          function (e.g. {'labels',True}</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - plotArgs is not of type dict
+        <p><b>Example</b>:</p>
+        <p>Plotting feature per intensity hsitogram of a csv file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rFeaturePerIntensityHistogram(<span class="py-string">'exampleFeature.csv'</span>, <span class="py-string">'exampleOutput.png'</span>, plotArgs={<span class="py-string">'label'</span>:True}, 
+<span class="py-more">... </span>                                             width=400, height=400, title=<span class="py-string">'#features per intensity'</span>,  ylab = <span class="py-string">'# of features'</span>, logBase=10)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMSMSperIntensityHistogram"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rMSMSperIntensityHistogram</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">csvFile</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">plotArgs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMSMSperIntensityHistogram">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot a histogram of MS/MS per intensity.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>csvFile</code></strong> (string) - A tab-delimited csv file with an id column and an intensity 
+          column (can have more columns, but these HAVE to be in there</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>plotArgs</code></strong> (dictionary) - A dictionary containing additional information for the plot 
+          function (e.g. {'labels',True}</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - plotArgs is not of type dict
+        <p><b>Example</b>:</p>
+        <p>Plotting MS/MS per intensity histogram from a csv file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rMSMSperIntensityHistogram(<span class="py-string">'mzmlExampleInput.csv'</span>, <span class="py-string">'exampleOutput.png'</span>, width=400, height=400, title=<span class="py-string">'#MSMS per intensity'</span>,  
+<span class="py-more">... </span>                                           ylab = <span class="py-string">'# of MS/MS features'</span>, logBase=10)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMSMSperFeatureBarplot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rMSMSperFeatureBarplot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">csvFile</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">plotArgs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMSMSperFeatureBarplot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot a histogram of feature per intensity.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>csvFile</code></strong> (string) - A tab-delimited csv file with an id column and an intensity 
+          column (can have more columns, but these HAVE to be in there</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>plotArgs</code></strong> (dictionary) - A dictionary containing additional information for the plot 
+          function (e.g. {'labels',True}</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - plotArgs is not of type dict
+        <p><b>Example</b>:</p>
+        <p>Plotting MS/MS per feature barplot from a csv file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rMSMSperFeatureBarplot(<span class="py-string">'exampleFeaturePrecursor.csv'</span>, <span class="py-string">'exampleOutput.png'</span>, width=400, height=400, 
+<span class="py-more">... </span>                                       title=<span class="py-string">'#MS/MS per feature'</span>, xlab = <span class="py-string">'# features'</span>, ylab = <span class="py-string">'# MS/MS'</span>, logBase=10)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rFeatureMSMSperIntensityHistogram"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rFeatureMSMSperIntensityHistogram</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mzmlCsv</span>,
+        <span class="sig-arg">featCsv</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rFeatureMSMSperIntensityHistogram">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>rFEaturePrecursorPerIntensityHistogram makes two (possibly) 
+  overlapping histograms, one of feature per intensity and one of the MS/MS
+  per intensity</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mzmlCsv</code></strong> (string) - A tab-delimited csv file with a column 'base peak intensity'</li>
+        <li><strong class="pname"><code>featCsv</code></strong> (string) - A tab-delimited csv file with a column 'id' and a column 
+          'intensity</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.
+          <p><b>Example</b>:</p>
+          <p>Plotting an overlapping histogram of the amount of MS/MS per 
+          intensity and the amount of feature per intensity:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rFeatureMSMSperIntensityHistogram(<span class="py-string">'exampleMzml.csv'</span>, <span class="py-string">'exampleOutput.png'</span>, testFolder+<span class="py-string">'featureMSMSperIntensity.png'</span>, width=400, height=400, 
+<span class="py-more">... </span>                                                title=<span class="py-string">'feature and ms/ms per intensity'</span>, xlab = <span class="py-string">'log 10 of intensity'</span>, ylab = <span class="py-string">'# features and ms/ms'</span>, logBase=10,
+<span class="py-more">... </span>                                                vector1Name=<span class="py-string">'features'</span>, vector2Name=<span class="py-string">'MS/MS'</span>)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rIonCurrentPerSpectrumHistogram"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rIonCurrentPerSpectrumHistogram</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">csvFile</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rIonCurrentPerSpectrumHistogram">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>rIonCurrentPerSpectrumHistogram makes two (possibly) overlapping 
+  histograms, one of IonCurrent per Spectrum for ms level 1 and one for ms 
+  level 2</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>csvFile</code></strong> (string) - A tab-delimited csv file with a column 'ms level' and a column 
+          'total ion current'</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.
+          <p><b>Example</b>:</p>
+          <p>Plotting an histogram of the ion current per spectrum:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rIonCurrentPerSpectrumHistogram(testFolder+<span class="py-string">'mzML.csv'</span>, testFolder+<span class="py-string">'ionCurrentPerSpectrum.png'</span>, width=400, height=400, 
+<span class="py-more">... </span>                                             title=<span class="py-string">'feature and ms/ms per intensity'</span>, xlab = <span class="py-string">'# of spectrum'</span>, ylab = <span class="py-string">'log 10 of Ion current'</span>, logBase=10,
+<span class="py-more">... </span>                                             vector1Name=<span class="py-string">'ms level 2'</span>, vector2Name=<span class="py-string">'ms level 1'</span> )</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMsmsPerFeatureIntensityBoxPlot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rMsmsPerFeatureIntensityBoxPlot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">featureCsv</span>,
+        <span class="sig-arg">featurePrecursorCsv</span>,
+        <span class="sig-arg">outPath</span>,
+        <span class="sig-arg">plotArgs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rPlots-pysrc.html#CsvDataPlots.rMsmsPerFeatureIntensityBoxPlot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>boxplot of the # ms/ms per feature per intensity</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>featureCsv</code></strong> (string) - A tab-delimited csv file with a column 'id' and a column 
+          'intensity'</li>
+        <li><strong class="pname"><code>featurePrecursorCsv</code></strong> (string) - A tab-delimited csv file with a column 'id' and a column 
+          'intensity'</li>
+        <li><strong class="pname"><code>outPath</code></strong> (string) - Path for the output file</li>
+        <li><strong class="pname"><code>plotArgs</code></strong> (dictionary) - A dictionary containing additional information for the plot 
+          function (e.g. {'labels',True}</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Additional arguments. See defaultdict in getParams documentation 
+          for a full list of possible arguments.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - plotArgs not a dictionary
+        <p><b>Example</b>:</p>
+        <p>Plotting a boxplot of the amount of MS/MS per feature per 
+        intensity from a csv file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots = CsvDataPlots()
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataPlots.rMsmsPerFeatureIntensityBoxPlot(<span class="py-string">'exampleFeatureCsvFile.csv'</span>, <span class="py-string">'exampleFeaturePrecursor.csv'</span>, <span class="py-string">'exampleOutput.png'</span>, width=400, height=400, 
+<span class="py-more">... </span>                                                 title=<span class="py-string">'feature and ms/ms per intensity'</span>, xlab = <span class="py-string">'log 10 of intensity'</span>, ylab = <span class="py-string">'# of MS/MS per feature'</span>, logBase=10 )</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyMS-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar 15 15:16:45 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

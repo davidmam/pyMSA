@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMS.compareFeatureXMLmzML</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMS-module.html">Package&nbsp;pyMS</a> ::
+        Module&nbsp;compareFeatureXMLmzML
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMS.compareFeatureXMLmzML-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module compareFeatureXMLmzML</h1><p class="nomargin-top"><span class="codelink"><a href="pyMS.compareFeatureXMLmzML-pysrc.html">source&nbsp;code</a></span></p>
+<p>Compares information from featureXML and mzML files with 
+  eachother.</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Dictionary</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.compareFeatureXMLmzML-module.html#compareCoordinate" class="summary-sig-name">compareCoordinate</a>(<span class="summary-sig-arg">mzmlFile</span>,
+        <span class="summary-sig-arg">featureFile</span>,
+        <span class="summary-sig-arg">writeCSV</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">writeTo</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">precursorPerFeature.csv</code><code class="variable-quote">'</code></span>)</span><br />
+      Compare the precursors scan time and m/z values of a spectrum with 
+      all the retention time and m/z values in the convexhull of a feature.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.compareFeatureXMLmzML-pysrc.html#compareCoordinate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'pyMS'"><code class="variable-quote">'</code><code class="variable-string">pyMS</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="compareCoordinate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">compareCoordinate</span>(<span class="sig-arg">mzmlFile</span>,
+        <span class="sig-arg">featureFile</span>,
+        <span class="sig-arg">writeCSV</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">writeTo</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">precursorPerFeature.csv</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.compareFeatureXMLmzML-pysrc.html#compareCoordinate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compare the precursors scan time and m/z values of a spectrum with all
+  the retention time and m/z values in the convexhull of a feature. The 
+  spectrum information can come from a mzml File or a peaks.mzml file. It 
+  returns a dictionary with 3 keys: totalPrecursorsInFeatures, 
+  averagePrecursorsInFeatures and featPerPrecursorDict. 
+  totalPrecursorsInFeatures is a numeric value: the total amount of 
+  precursors that are in all features, averagePrecursorsInFeatures is a 
+  numeric value: the average amount of precursors in a feature and 
+  totalPrecursorsInFeatures is a dictionary with as key every feature and 
+  as value the amount of precursors per feature. A third input is writeCSV.
+  If this is set to true, totalPrecursorsInFeatures is written out to a CSV
+  file with a column featureID and a column # of precursors.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mzmlFile</code></strong> (string) - The path of the .mzML file</li>
+        <li><strong class="pname"><code>featureFile</code></strong> (string) - The path of the .featureXML file</li>
+        <li><strong class="pname"><code>writeCSV</code></strong> (bool) - Flag if a CSV file has to be written out of the precursor per 
+          feature data (default: false)</li>
+        <li><strong class="pname"><code>writeTo</code></strong> (string) - The file and path where writeCSV has to be written to, default is
+          precursorPerFeature.csv in the same folder as the script</li>
+    </ul></dd>
+    <dt>Returns: Dictionary</dt>
+        <dd>A dictionary with 3 keys: totalPrecursorsInFeatures, 
+          averagePrecursorsInFeatures and featPerPrecursorDict. 
+          totalPrecursorsInFeatures is a numeric value: the total amount of
+          precursors that are in all features, averagePrecursorsInFeatures 
+          is a numeric value: the average amount of precursors in a feature
+          and totalPrecursorsInFeatures is a dictionary with as key every 
+          feature and as value the amount of precursors per feature
+          <p><b>Examples</b>:</p>
+          <p>Print the return value:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> compareCoordinate(<span class="py-string">'example_mzML_file.mzML'</span>, <span class="py-string">'example_feature_file.featureXML'</span>)
+<span class="py-output">{'totalPrecursorsInFeatures': 2, 'featPerPrecursorDict': {'f_43922326584371237334': 1, 'f_8613715360396561740': 0, 'f_13020522388175237334': 1}, 'averagePrecursorsInFeatures': 0.66666666666666663}</span></pre>
+          <p>Write the results to a csv file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>compareCoordinate(testFolder+<span class="py-string">'mzmlTestFile.mzML'</span>, testFolder+<span class="py-string">'featurexmlTestFile.featureXML'</span>, True, testFolder+<span class="py-string">'testPrecursorPerFeature.csv'</span>) <span class="py-comment"># note the True</span></pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Apr 11 12:01:49 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

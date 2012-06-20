@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMS.parseFeatureXML.Reader</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMS-module.html">Package&nbsp;pyMS</a> ::
+        <a href="pyMS.parseFeatureXML-module.html">Module&nbsp;parseFeatureXML</a> ::
+        Class&nbsp;Reader
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMS.parseFeatureXML.Reader-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Reader</h1><p class="nomargin-top"><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader">source&nbsp;code</a></span></p>
+<p>Generator object with functions to acces information from featureXML 
+  files easily. Reader() applies a __getitem__ functio so information can 
+  be retrieved from the feature elements using the dictionary [key] 
+  syntax.</p>
+  <p><b>Example</b></p>
+  <p>Print feature id and intensity example with example output:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getSimpleFeatureInfo()                    <span class="py-comment"># get all the features of the Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> features:                               <span class="py-comment"># loop through all the features</span>
+<span class="py-more">... </span>    <span class="py-keyword">print</span> <span class="py-string">'intensity of'</span>, featureXML[<span class="py-string">'id'</span>],<span class="py-string">' = '</span>, featureXML[<span class="py-string">'intensity'</span>]    <span class="py-comment"># print the id and intensity of the feature</span>
+<span class="py-output">intensity of f_13020522388175237334  =  524284</span>
+<span class="py-output">intensity of f_8613715360396561740  =  111329</span>
+<span class="py-output">intensity of f_43922326584371237334  =  524284</span></pre>
+  <p><b>&lt;TODO&gt;:</b></p>
+  <p>Do something about the minute-second interchangability between peaks, 
+  features and spectra (one xml format uses seconds, the other uses 
+  minutes)</p>
+  <p><b>To change (?):</b></p>
+  <p>The class is a bit weirdly designed, because it has both the generator
+  functions and the __getitem__ function you need to loop through the 
+  spectra but then use the Reader instance to get the item (see the 
+  example, for feature in features: featureXML['id']). This can be changed 
+  by having a different class called feature which has a __getitem__ 
+  function, and yield the feature from the Reader instance. However, this 
+  method <i>does</i> work, so it is not high on priority (unless it causes 
+  a lot of confusion with the user). Same goes for <a 
+  href="pyMS.parsePeaksMzML.Reader-class.html" 
+  class="link">parsePeaksMzML.Reader</a>.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span><br />
+      Initialize the Reader instance and check if the file is a valid 
+      featureXML file and put it in a fileHandling.FileHandle instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getAllElements" class="summary-sig-name">getAllElements</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the elements in the file given to 
+      Reader()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllElements">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getSimpleFeatureInfo" class="summary-sig-name">getSimpleFeatureInfo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the feature elements in the file 
+      given to Reader().</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getSimpleFeatureInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getAllFeatureInfo" class="summary-sig-name">getAllFeatureInfo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the feature elements in the file 
+      given to Reader().</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllFeatureInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getNonFeatureElements" class="summary-sig-name">getNonFeatureElements</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the non-feature elements in the 
+      file given to Reader()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getNonFeatureElements">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Set</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getKeys" class="summary-sig-name">getKeys</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the set of keys that can be used as a key on a Reader instance</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getKeys">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getAllFeatureId" class="summary-sig-name">getAllFeatureId</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all feature Ids</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllFeatureId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#getElementInfo" class="summary-sig-name">getElementInfo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return self.elementInfo.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getElementInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parseFeatureXML.Reader-class.html#__getitem__" class="summary-sig-name">__getitem__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>)</span><br />
+      'Magic' function to make it possible to get information from an 
+      element using dictionary [key] syntax</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.__getitem__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">path</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the Reader instance and check if the file is a valid 
+  featureXML file and put it in a fileHandling.FileHandle instance.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>path</code></strong> (string) - The path of the feature XML file</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAllElements"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAllElements</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllElements">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the elements in the file given to 
+  Reader()</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No elements in the file
+        <p><b>Example</b>:</p>
+        <p>Printing all elements in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a read instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>allElements = featureXML.getAllElements()    <span class="py-comment"># get all elements of the reader instance, you can now iterate over allElements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> element <span class="py-keyword">in</span> allElements:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> element
+<span class="py-output">&lt;Element 'software' at 0x166a05a0&gt;</span>
+<span class="py-output">&lt;Element 'processingAction' at 0x166a0600&gt;</span>
+<span class="py-output">&lt;Element 'feature' at 0x6184270&gt;</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSimpleFeatureInfo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSimpleFeatureInfo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getSimpleFeatureInfo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the feature elements in the file 
+  given to Reader(). It saves info from the features in a dict, 
+  self.elementInfo, which is used in the <a 
+  href="pyMS.parseFeatureXML.Reader-class.html#__getitem__" 
+  class="link">parseFeatureXML.Reader.__getitem__</a> retrieval function. 
+  This function has predefined information like intensity, overallquality, 
+  convexhull etc that make for easier browsing, but because of this it does
+  not contain all information. If you want to get all information exactly 
+  as found in the xml file, use <a 
+  href="pyMS.parseFeatureXML.Reader-class.html#getAllFeatureInfo" 
+  class="link">parseFeatureXML.Reader.getAllFeatureInfo</a>.</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file where element.tag == 
+          'feature'</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No features in the file
+        <p><b>Example</b>:</p>
+        <p>Printing all the features in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>allElements = featureXML.getAllElements()    <span class="py-comment"># get all feature elements of the reader instance, you can now iterate over allElements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getSimpleFeatureInfo()
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> features:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> feature
+<span class="py-output">&lt;Element 'feature' at 0x6184270&gt;</span>
+<span class="py-output">&lt;Element 'feature' at 0x6184cc0&gt;</span>
+<span class="py-output">&lt;Element 'feature' at 0x6188630&gt;</span></pre>
+        <p>Printing the intensities of all features:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>allElements = featureXML.getAllElements()    <span class="py-comment"># get all feature elements of the reader instance, you can now iterate over allElements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getSimpleFeatureInfo()
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> features:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> featureXML[<span class="py-string">'intensity'</span>]
+<span class="py-output">6182</span>
+<span class="py-output">3543</span>
+<span class="py-output">2134</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAllFeatureInfo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAllFeatureInfo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllFeatureInfo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the feature elements in the file 
+  given to Reader(). It saves info from the features in a dict, 
+  self.elementInfo, which is used in the <a 
+  href="pyMS.parseFeatureXML.Reader-class.html#__getitem__" 
+  class="link">parseFeatureXML.Reader.__getitem__</a> retrieval function. 
+  This function gets all the information from a feature element and does no
+  processing. Because of this the key names are not very intuitive. If you 
+  want a more intuitive key-name system, use <a 
+  href="pyMS.parseFeatureXML.Reader-class.html#getSimpleFeatureInfo" 
+  class="link">parseFeatureXML.Reader.getSimpleFeatureInfo</a>. That comes 
+  at the cost of loss of information though.</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file where element.tag == 
+          'feature'</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No features in the file
+        <p><b>Example</b>:</p>
+        <p>Printing all the features in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>allElements = featureXML.getAllElements()    <span class="py-comment"># get all feature elements of the reader instance, you can now iterate over allElements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getAllFeatureInfo()
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> features:                                    <span class="py-comment"># loop through all the features</span>
+<span class="py-output">    print featureXML['nestedElement']</span>
+<span class="py-output">[{'content': '7052.29224', 'dim': '0', 'tagName': 'position'}, {'content': '322.251104824796', 'dim': '1', 'tagName': 'position'}, {'content': '52234', 'tagName': 'intensity'}, {'content': '0', 'dim': '0', 'tagName': 'quality'}, {'content': '0', 'dim': '1', 'tagName': 'quality'}, {'content': '225053', 'tagName': 'overallquality'}, {'content': '2', 'tagName': 'charge'}, {'nr': '0', 'nestedElement': [{'y': '336.125209180674', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '336.124751115092', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '336.124841989895', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '336.12529301464', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '336.124957942644', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '338.251041063348', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '338.251376135343', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '338.250925110599', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '338.250834235796', 'x': '7052.29224', 'tagName': 'pt'}, {'y': '338.251292301377', 'x': '7052.29224', 'tagName': 'pt'}], 'tagName': 'convexhull'}, {'value': '421', 'type': 'int', 'name': 'spectrum_index', 'tagName': 'userParam'}, {'value': 'controllerType=0 controllerNumber=1 scan=5342', 'type': 'string', 'name': 'spectrum_native_id', 'tagName': 'userParam'}]</span>
+<span class="py-output">[{'content': '5109.29224', 'dim': '0', 'tagName': 'position'}, {'content': '336.251104824796', 'dim': '1', 'tagName': 'position'}, {'content': '234284', 'tagName': 'intensity'}, {'content': '0', 'dim': '0', 'tagName': 'quality'}, {'content': '0', 'dim': '1', 'tagName': 'quality'}, {'content': '225053', 'tagName': 'overallquality'}, {'content': '2', 'tagName': 'charge'}, {'nr': '0', 'nestedElement': [{'y': '336.125209180674', 'x': '5105.9217', 'tagName': 'pt'}, {'y': '336.124751115092', 'x': '5108.7642', 'tagName': 'pt'}, {'y': '336.124841989895', 'x': '5109.6031', 'tagName': 'pt'}, {'y': '336.12529301464', 'x': '5110.4848', 'tagName': 'pt'}, {'y': '336.124957942644', 'x': '5111.6874', 'tagName': 'pt'}, {'y': '338.251041063348', 'x': '5111.6874', 'tagName': 'pt'}, {'y': '338.251376135343', 'x': '5110.4848', 'tagName': 'pt'}, {'y': '338.250925110599', 'x': '5109.6031', 'tagName': 'pt'}, {'y': '338.250834235796', 'x': '5108.7642', 'tagName': 'pt'}, {'y': '338.251292301377', 'x': '5105.9217', 'tagName': 'pt'}], 'tagName': 'convexhull'}, {'value': '3916', 'type': 'int', 'name': 'spectrum_index', 'tagName': 'userParam'}, {'value': 'controllerType=0 controllerNumber=1 scan=18484', 'type': 'string', 'name': 'spectrum_native_id', 'tagName': 'userParam'}]</span>
+<span class="py-output">[{'content': '4009.58726', 'dim': '0', 'tagName': 'position'}, {'content': '428.197275997238', 'dim': '1', 'tagName': 'position'}, {'content': '111429', 'tagName': 'intensity'}, {'content': '0', 'dim': '0', 'tagName': 'quality'}, {'content': '0', 'dim': '1', 'tagName': 'quality'}, {'content': '35753.2', 'tagName': 'overallquality'}, {'content': '2', 'tagName': 'charge'}, {'nr': '0', 'nestedElement': [{'y': '428.071338720547', 'x': '4001.7973', 'tagName': 'pt'}, {'y': '428.071177661641', 'x': '4004.4017', 'tagName': 'pt'}, {'y': '428.071136832932', 'x': '4009.2555', 'tagName': 'pt'}, {'y': '428.071491868401', 'x': '4014.7713', 'tagName': 'pt'}, {'y': '428.070943557216', 'x': '4017.7105', 'tagName': 'pt'}, {'y': '430.19702667792', 'x': '4017.7105', 'tagName': 'pt'}, {'y': '430.197574989105', 'x': '4014.7713', 'tagName': 'pt'}, {'y': '430.197219953635', 'x': '4009.2555', 'tagName': 'pt'}, {'y': '430.197260782345', 'x': '4004.4017', 'tagName': 'pt'}, {'y': '430.197421841251', 'x': '4001.7973', 'tagName': 'pt'}], 'tagName': 'convexhull'}, {'value': '2895', 'type': 'int', 'name': 'spectrum_index', 'tagName': 'userParam'}, {'value': 'controllerType=0 controllerNumber=1 scan=15394', 'type': 'string', 'name': 'spectrum_native_id', 'tagName': 'userParam'}]</span>
+<span class="py-output">[{'content': '5107.29224', 'dim': '0', 'tagName': 'position'}, {'content': '337.251104824796', 'dim': '1', 'tagName': 'position'}, {'content': '556384', 'tagName': 'intensity'}, {'content': '0', 'dim': '0', 'tagName': 'quality'}, {'content': '0', 'dim': '1', 'tagName': 'quality'}, {'content': '225053', 'tagName': 'overallquality'}, {'content': '2', 'tagName': 'charge'}, {'nr': '0', 'nestedElement': [{'y': '337.125209180674', 'x': '5107.9217', 'tagName': 'pt'}, {'y': '337.124751115092', 'x': '5108.7642', 'tagName': 'pt'}, {'y': '337.124841989895', 'x': '5109.6031', 'tagName': 'pt'}, {'y': '337.12529301464', 'x': '5110.4848', 'tagName': 'pt'}, {'y': '337.124957942644', 'x': '5112.6874', 'tagName': 'pt'}, {'y': '339.251041063348', 'x': '5111.6874', 'tagName': 'pt'}, {'y': '339.251376135343', 'x': '5110.4848', 'tagName': 'pt'}, {'y': '339.250925110599', 'x': '5109.6031', 'tagName': 'pt'}, {'y': '339.250834235796', 'x': '5108.7642', 'tagName': 'pt'}, {'y': '339.251292301377', 'x': '5108.9217', 'tagName': 'pt'}], 'tagName': 'convexhull'}, {'value': '3916', 'type': 'int', 'name': 'spectrum_index', 'tagName': 'userParam'}, {'value': 'controllerType=0 controllerNumber=1 scan=18484', 'type': 'string', 'name': 'spectrum_native_id', 'tagName': 'userParam'}]</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNonFeatureElements"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNonFeatureElements</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getNonFeatureElements">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the non-feature elements in the file
+  given to Reader()</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file where element.tag != 
+          'feature'
+          <p><b>Example</b>:</p>
+          <p>Printing all the non-features in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getNonFeatureElements()                     <span class="py-comment"># get all non-features</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> element <span class="py-keyword">in</span> features:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> element
+<span class="py-output">&lt;Element 'software' at 0x166a05a0&gt;</span>
+<span class="py-output">&lt;Element 'processingAction' at 0x166a0600&gt;</span></pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getKeys"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getKeys</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getKeys">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the set of keys that can be used as a key on a Reader 
+  instance</p>
+  <dl class="fields">
+    <dt>Returns: Set</dt>
+        <dd>All usable Reader instance keys
+          <p><b>Example</b>:</p>
+          <p>Printing the keys that can be used to get information from a 
+          feature:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML.getKeys()
+<span class="py-output">set(['convexhull', 'charge', 'content', 'intensity', 'position', 'overallquality', 'userParam', 'quality', 'id'])</span></pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAllFeatureId"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAllFeatureId</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getAllFeatureId">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all feature Ids</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>Iterator of all the id's in the file</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No feature id's in the file
+        <p><b>Example</b>:</p>
+        <p>Print all the feature ids in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> id <span class="py-keyword">in</span> featureXML.getAllFeatureId():
+<span class="py-more">... </span>   <span class="py-keyword">print</span> id
+<span class="py-output">f_13020522388175237334</span>
+<span class="py-output">f_8613715360396561740</span>
+<span class="py-output">f_43922326584371237334</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getElementInfo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getElementInfo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.getElementInfo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return self.elementInfo.</p>
+  <dl class="fields">
+    <dt>Returns: dict</dt>
+        <dd>self.elementInfo</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__getitem__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__getitem__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>)</span>
+    <br /><em class="fname">(Indexing operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parseFeatureXML-pysrc.html#Reader.__getitem__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>'Magic' function to make it possible to get information from an 
+  element using dictionary [key] syntax</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (string) - Name of the value to get information from</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>The [key] value of the current element</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>Exception</strong></code> - The value given to __getitem__ is not a string
+        <p><b>Example</b>:</p>
+        <p>Print the feature id and intensity, making use of the dictionary
+        [key] sytax:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>features = featureXML.getFeatures()                    <span class="py-comment"># get all the features of the Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> features:                               <span class="py-comment"># loop through all the features</span>
+<span class="py-more">... </span>    <span class="py-keyword">print</span> <span class="py-string">'intensity of'</span>, featureXML[<span class="py-string">'id'</span>],<span class="py-string">' = '</span>, featureXML[<span class="py-string">'intensity'</span>]    <span class="py-comment"># print the id and intensity of the feature</span>
+<span class="py-output">intensity of f_13020522388175237334  =  524284</span>
+<span class="py-output">intensity of f_8613715360396561740  =  111329</span>
+<span class="py-output">intensity of f_43922326584371237334  =  524284</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Apr 11 12:01:50 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

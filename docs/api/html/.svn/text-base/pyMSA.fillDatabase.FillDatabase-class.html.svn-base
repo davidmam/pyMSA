@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.fillDatabase.FillDatabase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        <a href="pyMSA.fillDatabase-module.html">Module&nbsp;fillDatabase</a> ::
+        Class&nbsp;FillDatabase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class FillDatabase</h1><p class="nomargin-top"></p>
+<p>class with functions to fill the pyMS database. One instance fills one
+  msrun so when creating an instance of FillDatabase you have to give the 
+  name of the msrun and msrun description. If the msrunName already exists 
+  it will give a warning, but it can still be used. This is so that the 
+  database can be updated. To ensure proper closing of the connection 
+  FillDatbase uses __enter__ and __exit__ 'magic' functions and needs to be
+  used with the with statement.</p>
+  <p><b>Example:</b></p>
+  <p>Filling database with feature info of msrun 'example'</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> parseFeatureXML
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = parseFeatureXML.Reader(<span class="py-string">'example_file.featureXML'</span>)          <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'example'</span>, <span class="py-string">'example description'</span>) <span class="py-keyword">as</span> fd:    <span class="py-comment"># make a FillDatabase instance with msrun named example, description of msrun 'example description' and default database</span>
+<span class="py-more">... </span>    fd.msrun()                                         <span class="py-comment"># fill the msrun table. msrun name is 'example'</span>
+<span class="py-more">... </span>    fd.fillFeatures(featureXML)                        <span class="py-comment"># fill the other feature tables.</span></pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__enter__" class="summary-sig-name">__enter__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set things up using __enter__ so that __exit__ can be used.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__exit__" class="summary-sig-name">__exit__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type</span>,
+        <span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">traceback</span>)</span><br />
+      __exit__ always happens.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">msrunName</span>,
+        <span class="summary-sig-arg">msrunDescription</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">databaseName</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/homes/ndeklein/workspace/MS/Trunk/PyMSA_dev/database/pyMSA_d</code><code class="variable-ellipsis">...</code></span>)</span><br />
+      Setting things up for the class.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#fillFeatureMapping" class="summary-sig-name">fillFeatureMapping</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">featureXMLinstance_1</span>,
+        <span class="summary-sig-arg">featureXMLinstance_2</span>,
+        <span class="summary-sig-arg">trafoXML_file</span>)</span><br />
+      Fill the featureMapping table.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#fillFeatures" class="summary-sig-name">fillFeatures</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">featureXMLinstance</span>)</span><br />
+      Fill all tables related to features with data from 
+      featureXMLinstance.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#fillMsrun" class="summary-sig-name">fillMsrun</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Fill the msrun table.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#fillSpectrum" class="summary-sig-name">fillSpectrum</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mzMLinstance</span>)</span><br />
+      Fill all tables related to spectra with data from mzMLinstance.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">number</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#getPrimaryKeyValue" class="summary-sig-name">getPrimaryKeyValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">column</span>,
+        <span class="summary-sig-arg">table</span>)</span><br />
+      Gets the value for the primary key of column and table.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#linkSpectrumToFeature" class="summary-sig-name">linkSpectrumToFeature</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Fills the spectrum_has_feature table.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#sanitizeString" class="summary-sig-name">sanitizeString</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">string</span>,
+        <span class="summary-sig-arg">errors</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">strict</code><code class="variable-quote">'</code></span>)</span><br />
+      Way to sanitize query input.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fillDatabase.FillDatabase-class.html#updateDescription" class="summary-sig-name">updateDescription</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">description</span>)</span><br />
+      Update the description of msrun.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__enter__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__enter__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set things up using __enter__ so that __exit__ can be used. 
+  Explanation of __enter__ and __exit__ can be found 
+  http://effbot.org/zone/python-with-statement.htm (and other google 
+  places)</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>sqlite.Error</strong></code> - An error happened when trying to connect to the database</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__exit__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__exit__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type</span>,
+        <span class="sig-arg">value</span>,
+        <span class="sig-arg">traceback</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>__exit__ always happens. This is used to close the connection. 
+  Explanation of __enter__ and __exit__ can be found 
+  http://effbot.org/zone/python-with-statement.htm (and other google 
+  places)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">msrunName</span>,
+        <span class="sig-arg">msrunDescription</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">databaseName</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/homes/ndeklein/workspace/MS/Trunk/PyMSA_dev/database/pyMSA_d</code><code class="variable-ellipsis">...</code></span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Setting things up for the class.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>msrunName</code></strong> (string) - Name of the msrun. This can be linked to spectrum info from the 
+          same msrun.</li>
+        <li><strong class="pname"><code>msrunDescription</code></strong> (string) - A semi-long (max 500 chars) description of the msrun</li>
+        <li><strong class="pname"><code>databaseName</code></strong> (string) - The name and location of the database you want to fill. (default 
+          your/path/to/PyMS/database/pyMS_database.db. This is done by 
+          getting location of current file and then splitting on pyMS 
+          instead of using ../ because of import).</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - msrun description too long</li>
+        <li><code><strong class='fraise'>IOError</strong></code> - Database file given to databaseName does not exist
+        <p>See class description for an example.</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fillFeatureMapping"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fillFeatureMapping</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">featureXMLinstance_1</span>,
+        <span class="sig-arg">featureXMLinstance_2</span>,
+        <span class="sig-arg">trafoXML_file</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fill the featureMapping table.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>featureXMLinstance_1</code></strong> (parseFeatureXML.Reader) - Instance of parseFeatureXML with 1 of the featureXML files used 
+          for the alignment as input for parseFeatureXML</li>
+        <li><strong class="pname"><code>featureXMLinstance_2</code></strong> (parseFeatureXML.Reader) - Instance of parseFeatureXML with the other one of the featureXML 
+          files used for the alignment as input for parseFeatureXML</li>
+        <li><strong class="pname"><code>trafoXML_file</code></strong> (string) - path to the trafoXML file corresponding to the aligning of the 
+          two given featureXML instances. Has to be the linear trafoXML 
+          file.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - There is no database entry with self.msrunName as msrun_name
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> featureMapping
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML_1 = parseFeatureXML.Reader(testFolder+<span class="py-string">'featurexmlTestFile_1.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML_2 = parseFeatureXML.Reader(testFolder+<span class="py-string">'featurexmlTestFile_2.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>trafoXML = testFolder+<span class="py-string">'featurexmlTestFile_2.trafoXML'</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'test'</span>, <span class="py-string">'this is a test input. should be deleted after use'</span>, databaseName = testDatabase+<span class="py-string">'test_pyMSA_database.db'</span>) <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>    fd.fillMsrun()
+<span class="py-more">... </span>    fd.fillFeatures(featureXML_1)
+<span class="py-more">... </span>    fd.fillFeatures(featureXML_2)
+<span class="py-more">... </span>    fd.fillFeatureMapping(trafoXML)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fillFeatures"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fillFeatures</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">featureXMLinstance</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fill all tables related to features with data from featureXMLinstance.
+  This includes the tables:</p>
+  <ul>
+    <li>
+      feature
+    </li>
+    <li>
+      position
+    </li>
+    <li>
+      convexhull
+    </li>
+    <li>
+      feature_has_userParam_names
+    </li>
+    <li>
+      userParam_names
+    </li>
+    <li>
+      feature_has_userParam_names_has_userParam_value
+    </li>
+    <li>
+      userParam_value
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>featureXMLinstance</code></strong> (parseFeatureXML.Reader) - Instance of parseFeatureXML, from which the information will be 
+          added to the database</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - There is no database entry with self.msrunName as msrun_name
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> parseFeatureXML
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = parseFeatureXML.Reader(<span class="py-string">'example_file.featureXML'</span>)          <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>fillDatabaseInstance = FillDatabase(<span class="py-string">'example'</span>)                          <span class="py-comment"># make a FillDatabase instance with msrun named example</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabaseInstance <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>    fd.fillMsrun                                       <span class="py-comment"># need to fill the msrun table first</span>
+<span class="py-more">... </span>    fd.fillFeatures(featureXML)                        <span class="py-comment"># fill the database. msrun name is 'example'</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fillMsrun"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fillMsrun</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fill the msrun table. If msrun already exists raise an error.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>sqlite.IntegrityError</strong></code> - The name msrunName already exists in the database
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'example'</span>, <span class="py-string">'example description'</span>) <span class="py-keyword">as</span> fd:    <span class="py-comment"># make a FillDatabase instance with msrun named example, description of msrun 'example description' and default database</span>
+<span class="py-more">... </span>    fd.msrun()                                         <span class="py-comment"># fill the msrun table. msrun name is 'example'</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fillSpectrum"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fillSpectrum</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mzMLinstance</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fill all tables related to spectra with data from mzMLinstance. This 
+  includes the tables:</p>
+  <ul>
+    <li>
+      spectrum
+    </li>
+    <li>
+      MSMS_precursor
+    </li>
+    <li>
+      spectrum_has_feature
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mzMLinstance</code></strong> (pymzml.run.Reader) - Instance of pyMZML.run.Reader, from which the information will be
+          added to the database</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - There is no database entry with self.msrunName as msrun_name
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> pymzml
+<span class="py-prompt">&gt;&gt;&gt; </span>mzMLinstance = pymzml.run.Reader(<span class="py-string">'example_file.mzML'</span>)          <span class="py-comment"># make a pymzml.run.Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>fillDatabaseInstance = FillDatabase(<span class="py-string">'example'</span>)                          <span class="py-comment"># make a FillDatabase instance with msrun named example</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabaseInstance <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>    fd.fillMsrun                                       <span class="py-comment"># need to fill the msrun table first</span>
+<span class="py-more">... </span>    fd.fillSpectrum(mzMLinstance)                        <span class="py-comment"># fill the database. msrun name is 'example'</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getPrimaryKeyValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPrimaryKeyValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">column</span>,
+        <span class="sig-arg">table</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets the value for the primary key of column and table. Selects max of
+  column and adds one. The primary key value returned is always 1 higher 
+  than the highest value currently in column of table. If there is no 
+  current value (it's the first entry) the value is set to 1. This works on
+  all tables and columns that are in the database to which fillDatabase is 
+  connected. The variable table and column names are sanitized using <a 
+  href="pyMSA.fillDatabase.FillDatabase-class.html#sanitizeString" 
+  class="link">FillDatabase.sanitizeString</a> before being 
+  concatenated.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>table</code></strong> (string) - table from which you want to get the next primary key value</li>
+        <li><strong class="pname"><code>column</code></strong> (string) - name of the column that is the primary key of table.</li>
+    </ul></dd>
+    <dt>Returns: number</dt>
+        <dd>The next primary key value (one higher than the current highest 
+          primary key value)</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>sqlite.OperationalError</strong></code> - No such table or column
+        <p><b>Example:</b></p>
+        <p>Get the next primary key value out of the table 'example' from 
+        database 'example_db.db' that has column 'id' and 'value'. Column 
+        'id' is the primary key and the table looks like this:</p>
+        <p>id    value _______________ 1     'example' 2     'example' 3
+        'examples'</p>
+        <p>And the table test has to be in the database given to 
+        FillDatabase.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>with FillDatabase(msrunName = <span class="py-string">'example'</span>, databaseName = <span class="py-string">'example_db.db'</span>) <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> fd.getPrimaryKeyValue(<span class="py-string">'example'</span>, <span class="py-string">'id'</span>)
+<span class="py-output">4</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="linkSpectrumToFeature"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">linkSpectrumToFeature</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fills the spectrum_has_feature table. Takes the spectrum and features 
+  that have the same msrun_msrun_id (the foreign key to the msrun table) 
+  and matches the ones where the spectrum is inside the features 
+  convexhull.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - msrun, spectrum or feature table has not been filled yet.
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> pymzml
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> parseFeatureXML
+<span class="py-prompt">&gt;&gt;&gt; </span>mzMLinstance = pymzml.run.Reader(<span class="py-string">'example_file.mzML'</span>)                   <span class="py-comment"># make a pymzml.run.Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = parseFeatureXML.Reader(<span class="py-string">'example_file.featureXML'</span>)          <span class="py-comment"># make a parseFeatureXML.Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>fillDatabaseInstance = FillDatabase(<span class="py-string">'example'</span>)                          <span class="py-comment"># make a FillDatabase instance with msrun named example</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabaseInstance <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>    fd.fillMsrun                                                        <span class="py-comment"># need to fill the msrun, feature and spectrum tables first</span>
+<span class="py-more">... </span>    fd.fillSpectrum(mzMLinstance)                                      
+<span class="py-more">... </span>    fd.fillFeatures(featureXML)
+<span class="py-more">... </span>    fd.linkSpectrumToFeature()</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sanitizeString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sanitizeString</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">string</span>,
+        <span class="sig-arg">errors</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">strict</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Way to sanitize query input. Use this if you want to use variable 
+  table or column names (as used in getPrimaryKeyValue). For variable 
+  values use the sqlite's ? method. This code is a direct copy from 
+  http://stackoverflow.com/a/6701665/651779, read that for more information
+  (and to give credits).</p>
+  <p>{Example:}</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'test'</span>, <span class="py-string">'this is a test input. should be deleted after use'</span>, databaseName = testDatabase+<span class="py-string">'test_pyMSA_database.db'</span>) <span class="py-keyword">as</span> fd:
+<span class="py-more">... </span>    <span class="py-keyword">print</span> fd.sanitizeString(<span class="py-string">&quot;Fo o!&quot;</span>, <span class="py-string">&quot;replace&quot;</span>)
+<span class="py-output">&quot;Fo?o!&quot;</span>
+<span class="py-output">...     print fd.sanitizeString(&quot;Fo o!&quot;, &quot;ignore&quot;)   </span>
+<span class="py-output">&quot;Foo!&quot;</span></pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="updateDescription"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">updateDescription</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">description</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the description of msrun. This can either be done from the same
+  instance that msrun was added with, or with a new instance if it has an 
+  msrun_name that is already in the database.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>description</code></strong> (string) - A semi-long (max 500 chars) description of the msrun</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - msrun description too long</li>
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - There is no record of msrunName in the database
+        <p><b>Examples:</b></p>
+        <p>Updating description from the same instance:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'example'</span>, <span class="py-string">'example description'</span>) <span class="py-keyword">as</span> fd:    <span class="py-comment"># make a FillDatabase instance with msrun named example, description of msrun 'example description' and default database</span>
+<span class="py-more">... </span>    fd.msrun()                                   <span class="py-comment"># fill the msrun table. msrun name is 'example'</span>
+<span class="py-more">... </span>    fd.updateDescription(<span class="py-string">'updated description'</span>)  <span class="py-comment"># updated the description from the same instance of FillDatabase</span></pre>
+        <p>Updating description from a different instance:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'example'</span>, <span class="py-string">'example description'</span>) <span class="py-keyword">as</span> fd:    <span class="py-comment"># make a FillDatabase instance with msrun named example, description of msrun 'example description' and default database</span>
+<span class="py-more">... </span>    fd.msrun()                                       <span class="py-comment"># fill the msrun table. msrun name is 'example'</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>with fillDatabase.FillDatabase(<span class="py-string">'example'</span>) <span class="py-keyword">as</span> fd:     <span class="py-comment"># make a new instance with the same msrun_name</span>
+<span class="py-more">... </span>    fd.updateDescription(<span class="py-string">'updated description'</span>)      <span class="py-comment"># updated the description from a different instance of FillDatabase</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:33 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

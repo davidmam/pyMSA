@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>example_scripts.specific_peaks_and_feature_retrieval</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="example_scripts-module.html">Package&nbsp;example_scripts</a> ::
+        Module&nbsp;specific_peaks_and_feature_retrieval
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="example_scripts.specific_peaks_and_feature_retrieval-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module specific_peaks_and_feature_retrieval</h1><p class="nomargin-top"><span class="codelink"><a href="example_scripts.specific_peaks_and_feature_retrieval-pysrc.html">source&nbsp;code</a></span></p>
+<p>Examples how to extract peaks, features or spectra, from either 
+  .peaks.mzML, .featureXML or .mzML files, between a certain m/z or ry 
+  value and print their m/z - rt value.</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="example_scripts.specific_peaks_and_feature_retrieval-module.html#peaksRetrieval" class="summary-sig-name">peaksRetrieval</a>()</span><br />
+      Example of how to retrieve the m/z and retention time of peaks in a 
+      window of m/z or retention time.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="example_scripts.specific_peaks_and_feature_retrieval-pysrc.html#peaksRetrieval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="example_scripts.specific_peaks_and_feature_retrieval-module.html#featureRetrieval" class="summary-sig-name">featureRetrieval</a>()</span><br />
+      Example of how to retrieve the m/z and retention time of features in 
+      a window of m/z or retention time.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="example_scripts.specific_peaks_and_feature_retrieval-pysrc.html#featureRetrieval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'example_scripts'"><code class="variable-quote">'</code><code class="variable-string">example_scripts</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="peaksRetrieval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">peaksRetrieval</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="example_scripts.specific_peaks_and_feature_retrieval-pysrc.html#peaksRetrieval">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Example of how to retrieve the m/z and retention time of peaks in a 
+  window of m/z or retention time.</p>
+  <p>This example script uses the following classes and functions:</p>
+  <ul>
+    <li>
+      <a href="pyMSA.parsePeaksMzML.Reader-class.html" 
+      class="link">parsePeaksMzML.Reader</a>
+    </li>
+    <li>
+      <a href="pyMSA.getWindow.PeakLocation-class.html" 
+      class="link">getWindow.PeakLocation</a>
+    </li>
+    <li>
+      <a href="pyMSA.getWindow.PeakLocation-class.html#getPeaks_mzWindow" 
+      class="link">getWindow.PeakLocation.getPeaks_mzWindow</a>
+    </li>
+    <li>
+      <a href="pyMSA.getWindow.PeakLocation-class.html#getPeaks_rtWindow" 
+      class="link">getWindow.PeakLocation.getPeaks_rtWindow</a>
+    </li>
+  </ul>
+  <p>Printing the m/z and retention time of all the peaks with an m/z 
+  between 300 and 500</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">from</span> pyMSA <span class="py-keyword">import</span> parsePeaksMzML
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">from</span> pyMSA <span class="py-keyword">import</span> getWindow
+<span class="py-prompt">&gt;&gt;&gt; </span>peaks = parsePeaksMzML.Reader(<span class="py-string">'example_peak_file.peaks.mzML'</span>)                                <span class="py-comment"># read in the peaks file and make an instance of parsePeaksMzML.Reader class</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>peakLocation = getWindow.PeakLocation(peaks)                                                 <span class="py-comment"># get a getWindow.PeakLocation instance with the parsePeaksMzML.Reader instance as input</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> peak <span class="py-keyword">in</span> peakLocation.getPeaks_mzWindow(300,500):                                         <span class="py-comment"># loop through all he peaks that have an m/z between 300 and 500</span>
+<span class="py-more">... </span>   <span class="py-keyword">print</span> <span class="py-string">'mz: %s, rt: %f'</span> % (peaks[<span class="py-string">'base peak m/z'</span>], float(peaks[<span class="py-string">'scan start time'</span>])*60)     <span class="py-comment"># print the m/z and rt information from each peak                            </span>
+<span class="py-output">mz: 350.983703613281, rt: 12.288000</span>
+<span class="py-output">mz: 348.990600585938, rt: 50.532000</span>
+<span class="py-output">mz: 412.955871582031, rt: 573.270000</span>
+<span class="py-output">mz: 348.990142822266, rt: 588.264000</span>
+<span class="py-output">mz: 412.629333496094, rt: 2981.304000</span>
+<span class="py-output">mz: 348.990112304688, rt: 2996.268000</span></pre>
+  <p>Printing the m/z and retention time of all the peaks with an rt 
+  between 0 and 60 &gt;&gt;&gt; from pyMSA import parsePeaksMzML 
+  &gt;&gt;&gt; from pyMSA import getWindow &gt;&gt;&gt; peaks = 
+  parsePeaksMzML.Reader('example_peak_file.peaks.mzML')
+  # read in the peaks file and make an instance of parsePeaksMzML.Reader 
+  class &gt;&gt;&gt; for peak in peakLocation.getPeaks_rtWindow(0,60):
+  # get a getWindow.PeakLocation instance with the parsePeaksMzML.Reader 
+  instance as input ...    print peaks['base peak m/z']
+  # loop through all he peaks that have an rt between 0 and 60 ...    print
+  'mz: %s, rt: %f' % (peaks['base peak m/z'], float(peaks['scan start 
+  time'])*60)     # print the m/z and rt infomration from each peak mz: 
+  350.983703613281, rt: 12.288000 mz: 348.990600585938, rt: 50.532000</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="featureRetrieval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">featureRetrieval</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="example_scripts.specific_peaks_and_feature_retrieval-pysrc.html#featureRetrieval">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Example of how to retrieve the m/z and retention time of features in a
+  window of m/z or retention time.</p>
+  <p>This example script uses the following classes and functions:</p>
+  <ul>
+    <li>
+      <a href="pyMSA.parseFeatureXML.Reader-class.html" 
+      class="link">parseFeatureXML.Reader</a>
+    </li>
+    <li>
+      <a href="pyMSA.getWindow.FeatureLocation-class.html" 
+      class="link">getWindow.FeatureLocation</a>
+    </li>
+    <li>
+      <a 
+      href="pyMSA.getWindow.FeatureLocation-class.html#getFeatures_mzWindow"
+      class="link">getWindow.FeatureLocation.getFeatures_mzWindow</a>
+    </li>
+    <li>
+      <a 
+      href="pyMSA.getWindow.FeatureLocation-class.html#getFeatures_rtWindow"
+      class="link">getWindow.FeatureLocation.getFeatures_rtWindow</a>
+    </li>
+  </ul>
+  <p>Printing the m/z and retention time of all the peaks with an m/z 
+  between 300 and 500</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">from</span> pyMSA <span class="py-keyword">import</span> parseFeatureXML
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">from</span> pyMSA <span class="py-keyword">import</span> getWindow
+<span class="py-prompt">&gt;&gt;&gt; </span>features = parseFeatureXML.Reader(<span class="py-string">'example_featureXML_file.featureXML'</span>)                          <span class="py-comment"># read in the peaks file and make an instance of parseFeatureXML.Reader class</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>featureLocation = getWindow.FeatureLocation(features)                                            <span class="py-comment"># get a getWindow.FeatureLocation instance with the parseFeatureXML.Reader instance as input</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> feature <span class="py-keyword">in</span> featureLocation.getFeatures_mzWindow(300,500):                                    <span class="py-comment"># loop through all he features that have an m/z between 300 and 500</span>
+<span class="py-more">... </span>   <span class="py-keyword">print</span> <span class="py-string">'mz: %s, rt: %f'</span> % (features[<span class="py-string">'base peak m/z'</span>], float(features[<span class="py-string">'scan start time'</span>])*60)   <span class="py-comment"># print the m/z and rt information from each feature                            </span>
+<span class="py-output">mz: 336.251104825, rt: 5109.29224</span>
+<span class="py-output">mz: 428.197275997, rt: 4009.58726</span>
+<span class="py-output">mz: 337.251104825, rt: 5107.29224</span></pre>
+  <p>Printing the m/z and retention time of all the peaks with an rt 
+  between 0 and 60 &gt;&gt;&gt; from pyMSA import parseFeatureXML 
+  &gt;&gt;&gt; from pyMSA import getWindow &gt;&gt;&gt; features = 
+  parseFeatureXML.Reader('example_featureXML_file.featureXML')
+  # read in the peaks file and make an instance of parseFeatureXML.Reader 
+  class &gt;&gt;&gt; featureLocation = getWindow.FeatureLocation(features)
+  # get a getWindow.FeatureLocation instance with the 
+  parseFeatureXML.Reader instance as input &gt;&gt;&gt; for feature in 
+  featureLocation.getFeatures_rtWindow(0,60):
+  # loop through all he features that have an rt between 0 and 360 (this in
+  in seconds, unlike the peaks which is in minutes. Need to be changed) ...
+  print 'mz: %s, rt: %f' % (features['base peak m/z'], float(features['scan
+  start time'])*60)   # print the m/z and rt information from each feature 
+  mz: 428.197275997, rt: 4009.58726</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:32 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

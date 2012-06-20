@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMS.parsePeaksMzML.Reader</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMS-module.html">Package&nbsp;pyMS</a> ::
+        <a href="pyMS.parsePeaksMzML-module.html">Module&nbsp;parsePeaksMzML</a> ::
+        Class&nbsp;Reader
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMS.parsePeaksMzML.Reader-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Reader</h1><p class="nomargin-top"><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader">source&nbsp;code</a></span></p>
+<p>Generator object with functions to acces information from peaks.mzML 
+  files easily. For a big part it could be done using pymzml, the problem 
+  being that .peaks.mzML file have the following format for some of the 
+  relevant values (but not for all...):</p>
+<pre class="literalblock">
+   &lt;cvParam cvRef=&quot;MS&quot; accession=&quot;MS:1000504&quot; name=&quot;base peak m/z&quot; value=&quot;350.98370361328125&quot; unitCvRef=&quot;MS&quot; unitAccession=&quot;MS:1000040&quot; unitName=&quot;m/z&quot;/&gt;
+   &lt;cvParam cvRef=&quot;MS&quot; accession=&quot;MS:1000505&quot; name=&quot;base peak intensity&quot; value=&quot;24486.63671875&quot; unitCvRef=&quot;MS&quot; unitAccession=&quot;MS:1000131&quot; unitName=&quot;number of counts&quot;/&gt;
+   &lt;cvParam cvRef=&quot;MS&quot; accession=&quot;MS:1000285&quot; name=&quot;total ion current&quot; value=&quot;130991.71875&quot;/&gt;
+   &lt;cvParam cvRef=&quot;MS&quot; accession=&quot;MS:1000528&quot; name=&quot;lowest observed m/z&quot; value=&quot;335.00112820357106&quot; unitCvRef=&quot;MS&quot; unitAccession=&quot;MS:1000040&quot; unitName=&quot;m/z&quot;/&gt;
+   &lt;cvParam cvRef=&quot;MS&quot; accession=&quot;MS:1000527&quot; name=&quot;highest observed m/z&quot; value=&quot;1807.2383440459291&quot; unitCvRef=&quot;MS&quot; unitAccession=&quot;MS:1000040&quot; unitName=&quot;m/z&quot;/&gt;
+</pre>
+  <p>instead of mzML's format of the same values:</p>
+<pre class="literalblock">
+   &lt;userParam name=&quot;base peak m/z&quot; type=&quot;xsd:double&quot; value=&quot;350.983703613281&quot;/&gt;
+   &lt;userParam name=&quot;base peak intensity&quot; type=&quot;xsd:double&quot; value=&quot;24486.63671875&quot;/&gt;
+   &lt;userParam name=&quot;total ion current&quot; type=&quot;xsd:double&quot; value=&quot;130991.71875&quot;/&gt;
+   &lt;userParam name=&quot;lowest observed m/z&quot; type=&quot;xsd:double&quot; value=&quot;335.001128203571&quot;/&gt;
+   &lt;userParam name=&quot;highest observed m/z&quot; type=&quot;xsd:double&quot; value=&quot;1807.23834404593&quot;/&gt;
+</pre>
+  <p>pymzML does not find these differently formatted values. It would 
+  probably be easy to change this in pymzml, but for clarity I want to keep
+  this separated.</p>
+  <p>Reader() applies a __getitem__ function so information can be 
+  retrieved from the feature elements using the dictionary [key] 
+  syntax.</p>
+  <p><b>Example</b></p>
+  <p>Print feature id and intensity example with example output:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>peaksMzML = Reader(<span class="py-string">'example_peaks_file.peaks.mzML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>spectra = peaksMzML.getSpectra()                    <span class="py-comment"># get all the spectra of the Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> spectrum <span class="py-keyword">in</span> spectra:                            <span class="py-comment"># loop through all the spectra</span>
+<span class="py-more">... </span>    <span class="py-keyword">print</span> <span class="py-string">'total ion current of'</span>, peaksMzML[<span class="py-string">'id'</span>],<span class="py-string">' = '</span>,peaksMzML[<span class="py-string">'total ion current'</span>]    <span class="py-comment"># print the id and ion current of the spectrum</span></pre>
+  <p><b>&lt;TODO&gt;</b></p>
+  <p>Do something about the minute-second interchangability between peaks, 
+  features and spectra</p>
+  <p><b>To change (?)</b></p>
+  <p>The class is a bit weirdly designed, because it has both the generator
+  functions and the __getitem__ function you need to loop through the 
+  spectra but then use the Reader instance to get the item (see the 
+  example, for spectrum in spectra: peaksMzML['id']). This can be changed 
+  by having a different class called spectrum (maybe use pymzml's spec, but
+  then again, I didn't use pymzml's spec because it wasn't working) which 
+  has a __getitem__ function, and yield the spectrum from the Reader 
+  instance. However, this method <i>does</i> work, so it is not high on 
+  priority (unless it causes a lot of confusion with the user). Same goes 
+  for <a href="pyMS.parseFeatureXML.Reader-class.html" 
+  class="link">parseFeatureXML.Reader</a>.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span><br />
+      Initialize the Reader instance and check if the file is a valid 
+      peaks.mzML file and put it in a fileHandling.FileHandle instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#getAllElements" class="summary-sig-name">getAllElements</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the elements in the file given to 
+      Reader()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getAllElements">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#getSimpleSpectraInfo" class="summary-sig-name">getSimpleSpectraInfo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the feature elements in the file 
+      given to Reader() It saves info from the features in a dict, 
+      self.spectraInfo, which is used in the <a 
+      href="pyMS.parsePeaksMzML.Reader-class.html#__getitem__" 
+      class="link">Reader.__getitem__</a> retrieval function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getSimpleSpectraInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Element</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#getAllSpectraInfo" class="summary-sig-name">getAllSpectraInfo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Iterator function that yields all the feature elements in the file 
+      given to Reader().</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getAllSpectraInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Set</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#getKeys" class="summary-sig-name">getKeys</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the set of element keys that can be used as a key on a Reader 
+      instance</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getKeys">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.parsePeaksMzML.Reader-class.html#__getitem__" class="summary-sig-name">__getitem__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>)</span><br />
+      'Magic' function to make it possible to get information from an 
+      element using dictionary [key] syntax</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.__getitem__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">path</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the Reader instance and check if the file is a valid 
+  peaks.mzML file and put it in a fileHandling.FileHandle instance.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>path</code></strong> (string) - The path of the feature XML file</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAllElements"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAllElements</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getAllElements">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the elements in the file given to 
+  Reader()</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No elements in the file
+        <p><b>Example</b>:</p>
+        <p>Printing all elements in a file:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>featureXML = Reader(<span class="py-string">'example_feature_file.featureXML'</span>)    <span class="py-comment"># make a read instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>allElements = featureXML.getAllElements()    <span class="py-comment"># get all elements of the reader instance, you can now iterate over allElements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> element <span class="py-keyword">in</span> allElements:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> element
+<span class="py-output">&lt;Element 'software' at 0x166a05a0&gt;</span>
+<span class="py-output">&lt;Element 'processingAction' at 0x166a0600&gt;</span>
+<span class="py-output">&lt;Element 'feature' at 0x6184270&gt;</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSimpleSpectraInfo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSimpleSpectraInfo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getSimpleSpectraInfo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the feature elements in the file 
+  given to Reader() It saves info from the features in a dict, 
+  self.spectraInfo, which is used in the <a 
+  href="pyMS.parsePeaksMzML.Reader-class.html#__getitem__" 
+  class="link">Reader.__getitem__</a> retrieval function. This function has
+  predefined information like intensity, overallquality, convexhull etc 
+  that make for easier browsing, but because of this it does not contain 
+  all information. If you want to get all information exactly as found in 
+  the xml file, use <a 
+  href="pyMS.parsePeaksMzML.Reader-class.html#getAllSpectraInfo" 
+  class="link">parsePeaksMzML.Reader.getAllSpectraInfo</a>.</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file where element.tag == 
+          'spectrum'</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No features in the file
+        <p><b>Example</b>:</p>
+        <p>Print all the information of all the MS/MS spectra in 
+        examplePeaksfile.peaks.mzML. Only showing one result:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>peaksMzML = Reader(<span class="py-string">'example_peaks_file.peaks.mzML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>spectra = peaksMzML.getSpectra()                    <span class="py-comment"># get all the spectra of the Reader instance</span>
+<span class="py-more">... </span>    <span class="py-keyword">for</span> spectrum <span class="py-keyword">in</span> spectra:                               <span class="py-comment"># loop through all the spectra</span>
+<span class="py-more">... </span>       <span class="py-keyword">if</span> int(peaksMzML[<span class="py-string">'ms level'</span>]) == 2:
+<span class="py-more">... </span>           <span class="py-keyword">for</span> <span class="py-builtin">keys</span> <span class="py-keyword">in</span> peaksMzML.getKeys():
+<span class="py-more">... </span>               <span class="py-keyword">print</span> <span class="py-string">'key: '</span>+str(<span class="py-builtin">keys</span>)+<span class="py-string">'    value: '</span>+str(peaksMzML[<span class="py-builtin">keys</span>])
+<span class="py-more">... </span>           <span class="py-keyword">print</span> <span class="py-string">'-'</span>*20
+<span class="py-output">key: scan_id    value: 1</span>
+<span class="py-output">key: centroid spectrum    value: centroid spectrum</span>
+<span class="py-output">key: ms level    value: 2</span>
+<span class="py-output">key: mass spectrum    value: mass spectrum</span>
+<span class="py-output">key: positive scan    value: positive scan</span>
+<span class="py-output">key: base peak m/z    value: 368.750823974609</span>
+<span class="py-output">key: base peak intensity    value: 37719.2890625</span>
+<span class="py-output">key: total ion current    value: 110887.0078125</span>
+<span class="py-output">key: lowest observed m/z    value: 108.770645141602</span>
+<span class="py-output">key: highest observed m/z    value: 754.29296875</span>
+<span class="py-output">key: filter string    value: ITMS + c NSI d Full ms2 377.67@cid35.00 [90.00-770.00]</span>
+<span class="py-output">key: preset scan configuration    value: 4</span>
+<span class="py-output">key: no combination    value: no combination</span>
+<span class="py-output">key: scan start time    value: 1158.9672</span>
+<span class="py-output">key: [thermo trailer extra]monoisotopic m/z:    value: 377.673858642578</span>
+<span class="py-output">key: scan window lower limit    value: 90</span>
+<span class="py-output">key: scan window upper limit    value: 770</span>
+<span class="py-output">key: isolation window target m/z    value: 377.673858642578</span>
+<span class="py-output">key: isolation window lower offset    value: 1</span>
+<span class="py-output">key: isolation window upper offset    value: 1</span>
+<span class="py-output">key: selected ion m/z    value: 377.673858642578</span>
+<span class="py-output">key: charge state    value: 2</span>
+<span class="py-output">key: peak intensity    value: 55344.1875</span>
+<span class="py-output">key: activation energy    value: 0</span>
+<span class="py-output">key: collision-induced dissociation    value: collision-induced dissociation</span>
+<span class="py-output">key: collision energy    value: 35</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAllSpectraInfo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAllSpectraInfo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getAllSpectraInfo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Iterator function that yields all the feature elements in the file 
+  given to Reader(). It saves info from the features in a dict, 
+  self.spectraInfo, which is used in the <a 
+  href="pyMS.parsePeaksMzML.Reader-class.html#__getitem__" 
+  class="link">Reader.__getitem__</a> retrieval function. This function 
+  gets all the information from a feature element and does no processing. 
+  Because of this the key names are not very intuitive. If you want a more 
+  intuitive key-name system, use <a 
+  href="pyMS.parsePeaksMzML.Reader-class.html#getSimpleSpectraInfo" 
+  class="link">parsePeaksMzML.Reader.getSimpleSpectraInfo</a>. That comes 
+  at the cost of loss of information though.</p>
+  <dl class="fields">
+    <dt>Returns: Element</dt>
+        <dd>Iterator of all the elements in the file where element.tag == 
+          'spectrum'</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>RuntimeError</strong></code> - No features in the file
+        <p><b>Example</b>:</p>
+        <p>&lt;TODO&gt;</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getKeys"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getKeys</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.getKeys">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the set of element keys that can be used as a key on a Reader 
+  instance</p>
+  <dl class="fields">
+    <dt>Returns: Set</dt>
+        <dd>All usable Reader instance keys
+          <p><b>Example</b>:</p>
+          <p>Printing the keys that can be used to get information from all
+          spectra. Removed part of the result for ... for clarity:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>peaksMzML = Reader(<span class="py-string">'example_peaks_file.peaks.mzML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>spectra = peaksMzML.getSpectra()                    <span class="py-comment"># get all the spectra of the Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> spectrum <span class="py-keyword">in</span> spectra:
+<span class="py-more">... </span>   <span class="py-keyword">print</span> peaksMzML.getKeys()
+<span class="py-output">[...,'preset scan configuration', 'no combination', 'scan start time', '[thermo trailer extra]monoisotopic m/z:', 'scan window lower limit', 'scan window upper limit', 'isolation window target m/z', 'isolation window lower offset', ...]</span>
+<span class="py-output">[...,'preset scan configuration', 'no combination', 'scan start time', '[thermo trailer extra]monoisotopic m/z:', 'scan window lower limit', 'scan window upper limit', 'isolation window target m/z', 'isolation window lower offset', ...]</span>
+<span class="py-output">[...,'preset scan configuration', 'no combination', 'scan start time', 'scan window lower limit', 'scan window upper limit', 'm/z array', '64-bit float', 'no compression', 'intensity array', '32-bit float', 'no compression']</span></pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__getitem__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__getitem__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>)</span>
+    <br /><em class="fname">(Indexing operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.parsePeaksMzML-pysrc.html#Reader.__getitem__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>'Magic' function to make it possible to get information from an 
+  element using dictionary [key] syntax</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (string) - Name of the value to get information from</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>The [key] value of the current element</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>Exception</strong></code> - The value given to __getitem__ is not a string
+        <p><b>Example</b>:</p>
+        <p>Print the spectrum id and base peak intensity, making use of the
+        dictionary [key] sytax:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>peaksMzML = Reader(<span class="py-string">'example_peaks_file.peaks.mzML'</span>)   <span class="py-comment"># make a Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>spectra = peaksMzML.getSpectra()                    <span class="py-comment"># get all the spectra of the Reader instance</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> spectrum <span class="py-keyword">in</span> spectra:                            <span class="py-comment"># loop through all the spectra</span>
+<span class="py-more">... </span>    <span class="py-keyword">print</span> <span class="py-string">'base peak intensity intensity of'</span>, peaksMzML[<span class="py-string">'scan_id'</span>],<span class="py-string">' = '</span>, [<span class="py-string">'base peak intensity'</span>]    <span class="py-comment"># print the id and intensity of the feature</span>
+<span class="py-output">base peak intensity intensity of 1133  =  4176.33203125</span>
+<span class="py-output">base peak intensity intensity of 1134  =  203653.625</span>
+<span class="py-output">base peak intensity intensity of 1135  =  14828.59765625</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Apr 11 12:01:50 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

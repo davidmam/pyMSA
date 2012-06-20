@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.test.test_fillDatabase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        <a href="pyMSA.test-module.html">Package&nbsp;test</a> ::
+        Module&nbsp;test_fillDatabase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.test.test_fillDatabase-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyMSA.test.test_fillDatabase-module.html">Module pyMSA.test.test_fillDatabase</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (c) 2012 - N.P. de Klein</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">#     This file is part of Python Mass Spec Analyzer (PyMSA).</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is free software: you can redistribute it and/or modify</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#     it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">#     the Free Software Foundation, either version 3 of the License, or</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#     (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#     GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#     along with Python Mass Spec Analyzer (PyMSA).  If not, see &lt;http://www.gnu.org/licenses/&gt;.")</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">Unit test of fillDatabase.py</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># author: ndeklein</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># date:10/02/2012</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># summary: Unit testing functionality of the fillDatabase.py script</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt>  </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment"># to be able to import unittest2 from a locally installed unittest2</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">    <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'/homes/ndeklein/python2.6/site-packages'</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pymzml</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-comment"># some magic to import from pyMS. dirname(dirname(__file__)) gets the two directories closer to the root.</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-comment"># this is so that pyMS is added to the pythonpath and you can do import fileHandling.py</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-comment"># if this is made in a package from pyMS import fileHandling should also work</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-name">dirname</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">unittest2</tt> <tt class="py-keyword">as</tt> <tt class="py-name">unittest</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyMSA.config=pyMSA.config-module.html,Variable pyMSA.output.config=pyMSA.output-module.html#config,Variable pyMSA.test.test_compareFeatureXMLmzML.config=pyMSA.test.test_compareFeatureXMLmzML-module.html#config,Variable pyMSA.test.test_compareRuns.config=pyMSA.test.test_compareRuns-module.html#config,Variable pyMSA.test.test_elementFunctions.config=pyMSA.test.test_elementFunctions-module.html#config,Variable pyMSA.test.test_featureFunctions.config=pyMSA.test.test_featureFunctions-module.html#config,Variable pyMSA.test.test_featureMapping.config=pyMSA.test.test_featureMapping-module.html#config,Variable pyMSA.test.test_fileHandling.config=pyMSA.test.test_fileHandling-module.html#config,Variable pyMSA.test.test_fillDatabase.config=pyMSA.test.test_fillDatabase-module.html#config,Variable pyMSA.test.test_getWindow.config=pyMSA.test.test_getWindow-module.html#config,Variable pyMSA.test.test_mzmlFunctions.config=pyMSA.test.test_mzmlFunctions-module.html#config,Variable pyMSA.test.test_output.config=pyMSA.test.test_output-module.html#config,Variable pyMSA.test.test_parseFeatureXML.config=pyMSA.test.test_parseFeatureXML-module.html#config,Variable pyMSA.test.test_parsePeaksMzML.config=pyMSA.test.test_parsePeaksMzML-module.html#config,Variable pyMSA.test.test_plots.config=pyMSA.test.test_plots-module.html#config,Variable pyMSA.test.test_rFunctions.config=pyMSA.test.test_rFunctions-module.html#config,Variable pyMSA.test.test_rPlotGenerics.config=pyMSA.test.test_rPlotGenerics-module.html#config"><a title="pyMSA.config
+pyMSA.output.config
+pyMSA.test.test_compareFeatureXMLmzML.config
+pyMSA.test.test_compareRuns.config
+pyMSA.test.test_elementFunctions.config
+pyMSA.test.test_featureFunctions.config
+pyMSA.test.test_featureMapping.config
+pyMSA.test.test_fileHandling.config
+pyMSA.test.test_fillDatabase.config
+pyMSA.test.test_getWindow.config
+pyMSA.test.test_mzmlFunctions.config
+pyMSA.test.test_output.config
+pyMSA.test.test_parseFeatureXML.config
+pyMSA.test.test_parsePeaksMzML.config
+pyMSA.test.test_plots.config
+pyMSA.test.test_rFunctions.config
+pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-0', 'config', 'link-0');">config</a></tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyMSA.fillDatabase=pyMSA.fillDatabase-module.html"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-1', 'fillDatabase', 'link-1');">fillDatabase</a></tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Module pyMSA.parseFeatureXML=pyMSA.parseFeatureXML-module.html"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-2', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-comment"># to be able to import pysqlite2</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'/sw/opt/lib/python2.6/site-packages/'</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">pysqlite2</tt> <tt class="py-keyword">import</tt> <tt class="py-name">dbapi2</tt> <tt class="py-keyword">as</tt> <tt class="py-name">sqlite</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pyMSA.output.configHandle=pyMSA.output-module.html#configHandle,Variable pyMSA.test.test_compareFeatureXMLmzML.configHandle=pyMSA.test.test_compareFeatureXMLmzML-module.html#configHandle,Variable pyMSA.test.test_compareRuns.configHandle=pyMSA.test.test_compareRuns-module.html#configHandle,Variable pyMSA.test.test_elementFunctions.configHandle=pyMSA.test.test_elementFunctions-module.html#configHandle,Variable pyMSA.test.test_featureFunctions.configHandle=pyMSA.test.test_featureFunctions-module.html#configHandle,Variable pyMSA.test.test_featureMapping.configHandle=pyMSA.test.test_featureMapping-module.html#configHandle,Variable pyMSA.test.test_fileHandling.configHandle=pyMSA.test.test_fileHandling-module.html#configHandle,Variable pyMSA.test.test_fillDatabase.configHandle=pyMSA.test.test_fillDatabase-module.html#configHandle,Variable pyMSA.test.test_getWindow.configHandle=pyMSA.test.test_getWindow-module.html#configHandle,Variable pyMSA.test.test_mzmlFunctions.configHandle=pyMSA.test.test_mzmlFunctions-module.html#configHandle,Variable pyMSA.test.test_output.configHandle=pyMSA.test.test_output-module.html#configHandle,Variable pyMSA.test.test_parseFeatureXML.configHandle=pyMSA.test.test_parseFeatureXML-module.html#configHandle,Variable pyMSA.test.test_parsePeaksMzML.configHandle=pyMSA.test.test_parsePeaksMzML-module.html#configHandle,Variable pyMSA.test.test_plots.configHandle=pyMSA.test.test_plots-module.html#configHandle,Variable pyMSA.test.test_rFunctions.configHandle=pyMSA.test.test_rFunctions-module.html#configHandle,Variable pyMSA.test.test_rPlotGenerics.configHandle=pyMSA.test.test_rPlotGenerics-module.html#configHandle"><a title="pyMSA.output.configHandle
+pyMSA.test.test_compareFeatureXMLmzML.configHandle
+pyMSA.test.test_compareRuns.configHandle
+pyMSA.test.test_elementFunctions.configHandle
+pyMSA.test.test_featureFunctions.configHandle
+pyMSA.test.test_featureMapping.configHandle
+pyMSA.test.test_fileHandling.configHandle
+pyMSA.test.test_fillDatabase.configHandle
+pyMSA.test.test_getWindow.configHandle
+pyMSA.test.test_mzmlFunctions.configHandle
+pyMSA.test.test_output.configHandle
+pyMSA.test.test_parseFeatureXML.configHandle
+pyMSA.test.test_parsePeaksMzML.configHandle
+pyMSA.test.test_plots.configHandle
+pyMSA.test.test_rFunctions.configHandle
+pyMSA.test.test_rPlotGenerics.configHandle" class="py-name" href="#" onclick="return doclink('link-3', 'configHandle', 'link-3');">configHandle</a></tt> <tt class="py-op">=</tt>  <tt id="link-4" class="py-name"><a title="pyMSA.config
+pyMSA.output.config
+pyMSA.test.test_compareFeatureXMLmzML.config
+pyMSA.test.test_compareRuns.config
+pyMSA.test.test_elementFunctions.config
+pyMSA.test.test_featureFunctions.config
+pyMSA.test.test_featureMapping.config
+pyMSA.test.test_fileHandling.config
+pyMSA.test.test_fillDatabase.config
+pyMSA.test.test_getWindow.config
+pyMSA.test.test_mzmlFunctions.config
+pyMSA.test.test_output.config
+pyMSA.test.test_parseFeatureXML.config
+pyMSA.test.test_parsePeaksMzML.config
+pyMSA.test.test_plots.config
+pyMSA.test.test_rFunctions.config
+pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-4', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Class pyMSA.config.ConfigHandle=pyMSA.config.ConfigHandle-class.html"><a title="pyMSA.config.ConfigHandle" class="py-name" href="#" onclick="return doclink('link-5', 'ConfigHandle', 'link-5');">ConfigHandle</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt id="link-6" class="py-name"><a title="pyMSA.config
+pyMSA.output.config
+pyMSA.test.test_compareFeatureXMLmzML.config
+pyMSA.test.test_compareRuns.config
+pyMSA.test.test_elementFunctions.config
+pyMSA.test.test_featureFunctions.config
+pyMSA.test.test_featureMapping.config
+pyMSA.test.test_fileHandling.config
+pyMSA.test.test_fillDatabase.config
+pyMSA.test.test_getWindow.config
+pyMSA.test.test_mzmlFunctions.config
+pyMSA.test.test_output.config
+pyMSA.test.test_parseFeatureXML.config
+pyMSA.test.test_parsePeaksMzML.config
+pyMSA.test.test_plots.config
+pyMSA.test.test_rFunctions.config
+pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-6', 'config', 'link-0');">config</a></tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="pyMSA.output.configHandle
+pyMSA.test.test_compareFeatureXMLmzML.configHandle
+pyMSA.test.test_compareRuns.configHandle
+pyMSA.test.test_elementFunctions.configHandle
+pyMSA.test.test_featureFunctions.configHandle
+pyMSA.test.test_featureMapping.configHandle
+pyMSA.test.test_fileHandling.configHandle
+pyMSA.test.test_fillDatabase.configHandle
+pyMSA.test.test_getWindow.configHandle
+pyMSA.test.test_mzmlFunctions.configHandle
+pyMSA.test.test_output.configHandle
+pyMSA.test.test_parseFeatureXML.configHandle
+pyMSA.test.test_parsePeaksMzML.configHandle
+pyMSA.test.test_plots.configHandle
+pyMSA.test.test_rFunctions.configHandle
+pyMSA.test.test_rPlotGenerics.configHandle" class="py-name" href="#" onclick="return doclink('link-7', 'configHandle', 'link-3');">configHandle</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyMSA.config.ConfigHandle.getConfig()=pyMSA.config.ConfigHandle-class.html#getConfig"><a title="pyMSA.config.ConfigHandle.getConfig" class="py-name" href="#" onclick="return doclink('link-8', 'getConfig', 'link-8');">getConfig</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable pyMSA.test.test_compareFeatureXMLmzML.testFolder=pyMSA.test.test_compareFeatureXMLmzML-module.html#testFolder,Variable pyMSA.test.test_compareRuns.testFolder=pyMSA.test.test_compareRuns-module.html#testFolder,Variable pyMSA.test.test_elementFunctions.testFolder=pyMSA.test.test_elementFunctions-module.html#testFolder,Variable pyMSA.test.test_featureFunctions.testFolder=pyMSA.test.test_featureFunctions-module.html#testFolder,Variable pyMSA.test.test_featureMapping.testFolder=pyMSA.test.test_featureMapping-module.html#testFolder,Variable pyMSA.test.test_fileHandling.testFolder=pyMSA.test.test_fileHandling-module.html#testFolder,Variable pyMSA.test.test_fillDatabase.testFolder=pyMSA.test.test_fillDatabase-module.html#testFolder,Variable pyMSA.test.test_getWindow.testFolder=pyMSA.test.test_getWindow-module.html#testFolder,Variable pyMSA.test.test_mzmlFunctions.testFolder=pyMSA.test.test_mzmlFunctions-module.html#testFolder,Variable pyMSA.test.test_output.testFolder=pyMSA.test.test_output-module.html#testFolder,Variable pyMSA.test.test_parseFeatureXML.testFolder=pyMSA.test.test_parseFeatureXML-module.html#testFolder,Variable pyMSA.test.test_parsePeaksMzML.testFolder=pyMSA.test.test_parsePeaksMzML-module.html#testFolder,Variable pyMSA.test.test_plots.testFolder=pyMSA.test.test_plots-module.html#testFolder,Variable pyMSA.test.test_rFunctions.testFolder=pyMSA.test.test_rFunctions-module.html#testFolder,Variable pyMSA.test.test_rPlotGenerics.testFolder=pyMSA.test.test_rPlotGenerics-module.html#testFolder"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-9', 'testFolder', 'link-9');">testFolder</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="pyMSA.config
+pyMSA.output.config
+pyMSA.test.test_compareFeatureXMLmzML.config
+pyMSA.test.test_compareRuns.config
+pyMSA.test.test_elementFunctions.config
+pyMSA.test.test_featureFunctions.config
+pyMSA.test.test_featureMapping.config
+pyMSA.test.test_fileHandling.config
+pyMSA.test.test_fillDatabase.config
+pyMSA.test.test_getWindow.config
+pyMSA.test.test_mzmlFunctions.config
+pyMSA.test.test_output.config
+pyMSA.test.test_parseFeatureXML.config
+pyMSA.test.test_parsePeaksMzML.config
+pyMSA.test.test_plots.config
+pyMSA.test.test_rFunctions.config
+pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-10', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt><tt class="py-string">'testfilefolder'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable pyMSA.test.test_fillDatabase.testDatabase=pyMSA.test.test_fillDatabase-module.html#testDatabase,Variable pyMSA.test.test_plots.testDatabase=pyMSA.test.test_plots-module.html#testDatabase"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-11', 'testDatabase', 'link-11');">testDatabase</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-12" class="py-name"><a title="pyMSA.config
+pyMSA.output.config
+pyMSA.test.test_compareFeatureXMLmzML.config
+pyMSA.test.test_compareRuns.config
+pyMSA.test.test_elementFunctions.config
+pyMSA.test.test_featureFunctions.config
+pyMSA.test.test_featureMapping.config
+pyMSA.test.test_fileHandling.config
+pyMSA.test.test_fillDatabase.config
+pyMSA.test.test_getWindow.config
+pyMSA.test.test_mzmlFunctions.config
+pyMSA.test.test_output.config
+pyMSA.test.test_parseFeatureXML.config
+pyMSA.test.test_parsePeaksMzML.config
+pyMSA.test.test_plots.config
+pyMSA.test.test_rFunctions.config
+pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-12', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'testdatabase'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">warnings</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase"></a><div id="testFillDatabase-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="testFillDatabase-toggle" onclick="return toggle('testFillDatabase');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a><tt class="py-op">(</tt><tt class="py-base-class">unittest</tt><tt class="py-op">.</tt><tt class="py-base-class">TestCase</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="testFillDatabase-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">    A test class for the fileHandling module.</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">    B{TODO:}</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    Write some assertions to make sure the right values get inserted (some do, but some only check if there is no error when inserting)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">     </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">     </tt>
+<a name="testFillDatabase.setUp"></a><div id="testFillDatabase.setUp-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="testFillDatabase.setUp-toggle" onclick="return toggle('testFillDatabase.setUp');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#setUp">setUp</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.setUp-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.setUp-expanded"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">        set up data used in the tests.</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">        setUp is called before each test function execution.</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">     </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-comment"># Initialize the con variable to None. In case we could not create a connection to the database (for example the disk is full), we would not have a connection variable defined. This would lead to an error in the finally clause.</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">            <tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">            <tt class="py-comment"># connect to the pyMS_database.db database. The connect() method returns a connection object.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt> <tt class="py-op">=</tt> <tt class="py-name">sqlite</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-13', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-comment"># From the connection, get the cursor object. The cursor is used to traverse the records from the result set. </tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-comment"># In case of an exception,  print an error message and exit the script with an error code 1.</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt class="py-name">sqlite</tt><tt class="py-op">.</tt><tt class="py-name">Error</tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">sqlite</tt><tt class="py-op">.</tt><tt class="py-name">Error</tt><tt class="py-op">,</tt> <tt class="py-string">'Error trying to connect to database: %s'</tt> <tt class="py-op">%</tt> <tt class="py-name">e</tt><tt class="py-op">.</tt><tt class="py-name">args</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">         </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-comment"># enable enforcing foreign key</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"PRAGMA foreign_keys=ON"</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-comment"># because I don't want to see warnings everytime when testing (and the test already checks if the warning is raise)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">warnings</tt><tt class="py-op">.</tt><tt class="py-name">filterwarnings</tt><tt class="py-op">(</tt><tt class="py-string">'ignore'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">     </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.test_FillDatabaseException"></a><div id="testFillDatabase.test_FillDatabaseException-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_FillDatabaseException-toggle" onclick="return toggle('testFillDatabase.test_FillDatabaseException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_FillDatabaseException">test_FillDatabaseException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">IOError</tt><tt class="py-op">,</tt> <tt id="link-14" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-14', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Class pyMSA.fillDatabase.FillDatabase=pyMSA.fillDatabase.FillDatabase-class.html"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-15', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'/not/an/existing/database/path'</tt><tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">veryLongDescription</tt> <tt class="py-op">=</tt> <tt class="py-string">'a'</tt><tt class="py-op">*</tt><tt class="py-number">501</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">TypeError</tt><tt class="py-op">,</tt> <tt id="link-16" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-16', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-17', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-name">veryLongDescription</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.sanitizeString"></a><div id="testFillDatabase.sanitizeString-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="testFillDatabase.sanitizeString-toggle" onclick="return toggle('testFillDatabase.sanitizeString');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#sanitizeString">sanitizeString</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.sanitizeString-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.sanitizeString-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-18" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-18', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-19', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-20', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt class="py-name">replace</tt> <tt class="py-op">=</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.sanitizeString()=pyMSA.fillDatabase.FillDatabase-class.html#sanitizeString,Method pyMSA.test.test_fillDatabase.testFillDatabase.sanitizeString()=pyMSA.test.test_fillDatabase.testFillDatabase-class.html#sanitizeString"><a title="pyMSA.fillDatabase.FillDatabase.sanitizeString
+pyMSA.test.test_fillDatabase.testFillDatabase.sanitizeString" class="py-name" href="#" onclick="return doclink('link-21', 'sanitizeString', 'link-21');">sanitizeString</a></tt><tt class="py-op">(</tt><tt class="py-string">"Fo\x00o!"</tt><tt class="py-op">,</tt> <tt class="py-string">"replace"</tt><tt class="py-op">)</tt> <tt class="py-comment"># "Fo?o!"</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-name">ignore</tt> <tt class="py-op">=</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.sanitizeString
+pyMSA.test.test_fillDatabase.testFillDatabase.sanitizeString" class="py-name" href="#" onclick="return doclink('link-22', 'sanitizeString', 'link-21');">sanitizeString</a></tt><tt class="py-op">(</tt><tt class="py-string">"Fo\x00o!"</tt><tt class="py-op">,</tt> <tt class="py-string">"ignore"</tt><tt class="py-op">)</tt>   <tt class="py-comment"># "Foo!"</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">         </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">replace</tt> <tt class="py-op">=</tt> <tt class="py-string">"Fo?o!"</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">ignore</tt> <tt class="py-op">=</tt> <tt class="py-string">"Foo!"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">         </tt>
+<a name="testFillDatabase.sanitizeStringError"></a><div id="testFillDatabase.sanitizeStringError-def"><a name="L114"></a><tt class="py-lineno">114</tt> <a class="py-toggle" href="#" id="testFillDatabase.sanitizeStringError-toggle" onclick="return toggle('testFillDatabase.sanitizeStringError');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#sanitizeStringError">sanitizeStringError</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.sanitizeStringError-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.sanitizeStringError-expanded"><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-23" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-23', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-24', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-25', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'atest_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">UnicodeEncodeError</tt><tt class="py-op">,</tt> <tt class="py-string">"Fo\x00o!"</tt><tt class="py-op">)</tt>  <tt class="py-comment"># raises UnicodeEncodeError</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">UnicodeEncodeError</tt><tt class="py-op">,</tt> <tt class="py-name">chr</tt><tt class="py-op">(</tt><tt class="py-number">0xD800</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-comment"># raises UnicodeEncodeError</tt> </tt>
+</div><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">     </tt>
+<a name="testFillDatabase.test_fillMsrun"></a><div id="testFillDatabase.test_fillMsrun-def"><a name="L119"></a><tt class="py-lineno">119</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillMsrun-toggle" onclick="return toggle('testFillDatabase.test_fillMsrun');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrun">test_fillMsrun</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillMsrun-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillMsrun-expanded"><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-26" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-26', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-27', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-28" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-28', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillMsrun()=pyMSA.fillDatabase.FillDatabase-class.html#fillMsrun"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-29', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT msrun_name FROM `msrun`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchone</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">     </tt>
+<a name="testFillDatabase.test_fillMsrunException"></a><div id="testFillDatabase.test_fillMsrunException-def"><a name="L126"></a><tt class="py-lineno">126</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillMsrunException-toggle" onclick="return toggle('testFillDatabase.test_fillMsrunException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrunException">test_fillMsrunException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillMsrunException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillMsrunException-expanded"><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-30" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-30', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-31', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-32" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-32', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-33', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-34" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-34', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-35', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-36', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">sqlite</tt><tt class="py-op">.</tt><tt class="py-name">IntegrityError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-37', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">         </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">         </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">         </tt>
+<a name="testFillDatabase.test_updateDescription"></a><div id="testFillDatabase.test_updateDescription-def"><a name="L135"></a><tt class="py-lineno">135</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_updateDescription-toggle" onclick="return toggle('testFillDatabase.test_updateDescription');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_updateDescription">test_updateDescription</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_updateDescription-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_updateDescription-expanded"><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-comment"># updating from within the same instance</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-38" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-38', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-39', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-40" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-40', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-41', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.updateDescription()=pyMSA.fillDatabase.FillDatabase-class.html#updateDescription"><a title="pyMSA.fillDatabase.FillDatabase.updateDescription" class="py-name" href="#" onclick="return doclink('link-42', 'updateDescription', 'link-42');">updateDescription</a></tt><tt class="py-op">(</tt><tt class="py-string">'update from same instance'</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">         </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT description FROM `msrun` WHERE msrun_name = 'test'"</tt><tt class="py-op">)</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchone</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'update from same instance'</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">         </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-comment"># updating from within a different instance</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-43" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-43', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-44', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'some other description. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-45" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-45', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.updateDescription" class="py-name" href="#" onclick="return doclink('link-46', 'updateDescription', 'link-42');">updateDescription</a></tt><tt class="py-op">(</tt><tt class="py-string">'update from different instance'</tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                 </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT description FROM `msrun` WHERE msrun_name = 'test'"</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchone</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'update from different instance'</tt><tt class="py-op">)</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">         </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>     </tt>
+</div><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">     </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">     </tt>
+<a name="testFillDatabase.test_updatedDescriptionException"></a><div id="testFillDatabase.test_updatedDescriptionException-def"><a name="L154"></a><tt class="py-lineno">154</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_updatedDescriptionException-toggle" onclick="return toggle('testFillDatabase.test_updatedDescriptionException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_updatedDescriptionException">test_updatedDescriptionException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_updatedDescriptionException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_updatedDescriptionException-expanded"><a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-47" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-47', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-48', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-49" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-49', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">            <tt class="py-comment"># msrun_name test doesn't exist, should give RuntimeError</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.updateDescription" class="py-name" href="#" onclick="return doclink('link-50', 'updateDescription', 'link-42');">updateDescription</a></tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                 </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">            <tt class="py-comment"># for next test, fill msrun</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-51', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-name">veryLongDescription</tt> <tt class="py-op">=</tt> <tt class="py-string">'a'</tt><tt class="py-op">*</tt><tt class="py-number">501</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">            <tt class="py-comment"># description can be only 500 chars max</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">TypeError</tt><tt class="py-op">,</tt> <tt id="link-52" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-52', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-53', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.updateDescription" class="py-name" href="#" onclick="return doclink('link-54', 'updateDescription', 'link-42');">updateDescription</a></tt><tt class="py-op">,</tt> <tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-name">veryLongDescription</tt><tt class="py-op">)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">         </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">         </tt>
+<a name="testFillDatabase.test_fillFeatures"></a><div id="testFillDatabase.test_fillFeatures-def"><a name="L167"></a><tt class="py-lineno">167</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillFeatures-toggle" onclick="return toggle('testFillDatabase.test_fillFeatures');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatures">test_fillFeatures</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillFeatures-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillFeatures-expanded"><a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-name">expectedNumResult</tt> <tt class="py-op">=</tt> <tt class="py-number">4</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">        <tt class="py-name">featureXML</tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-55', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name" targets="Class pyMSA.parseFeatureXML.Reader=pyMSA.parseFeatureXML.Reader-class.html,Class pyMSA.parsePeaksMzML.Reader=pyMSA.parsePeaksMzML.Reader-class.html"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-56', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-57" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-57', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_1.featureXML'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-58" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-58', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-59', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-60" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-60', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-61', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillFeatures()=pyMSA.fillDatabase.FillDatabase-class.html#fillFeatures"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-62', 'fillFeatures', 'link-62');">fillFeatures</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML</tt><tt class="py-op">)</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">         </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">        <tt class="py-name">actualResult</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">feature</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML</tt><tt class="py-op">.</tt><tt id="link-63" class="py-name" targets="Method pyMSA.parseFeatureXML.Reader.getSimpleFeatureInfo()=pyMSA.parseFeatureXML.Reader-class.html#getSimpleFeatureInfo"><a title="pyMSA.parseFeatureXML.Reader.getSimpleFeatureInfo" class="py-name" href="#" onclick="return doclink('link-63', 'getSimpleFeatureInfo', 'link-63');">getSimpleFeatureInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT * FROM `feature` WHERE feature_id = ?"</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">featureXML</tt><tt class="py-op">[</tt><tt class="py-string">'id'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">            <tt class="py-name">actualResult</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchone</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">actualResult</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">expectedNumResult</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.test_fillFeaturesException"></a><div id="testFillDatabase.test_fillFeaturesException-def"><a name="L183"></a><tt class="py-lineno">183</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillFeaturesException-toggle" onclick="return toggle('testFillDatabase.test_fillFeaturesException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeaturesException">test_fillFeaturesException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillFeaturesException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillFeaturesException-expanded"><a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">        <tt class="py-name">featureXML</tt> <tt class="py-op">=</tt> <tt id="link-64" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-64', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-65', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-66" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-66', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_1.featureXML'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-67" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-67', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-68', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-69', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-70" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-70', 'fillFeatures', 'link-62');">fillFeatures</a></tt><tt class="py-op">,</tt> <tt class="py-name">featureXML</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line"> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.test_fillFeatureMapping"></a><div id="testFillDatabase.test_fillFeatureMapping-def"><a name="L189"></a><tt class="py-lineno">189</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillFeatureMapping-toggle" onclick="return toggle('testFillDatabase.test_fillFeatureMapping');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMapping">test_fillFeatureMapping</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillFeatureMapping-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillFeatureMapping-expanded"><a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">        <tt class="py-name">featureXML_1</tt> <tt class="py-op">=</tt> <tt id="link-71" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-71', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-72', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-73" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-73', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_1.featureXML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">        <tt class="py-name">featureXML_2</tt> <tt class="py-op">=</tt> <tt id="link-74" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-74', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-75" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-75', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-76" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-76', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_2.featureXML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">        <tt class="py-name">trafoXML</tt> <tt class="py-op">=</tt> <tt id="link-77" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-77', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_2.trafoXML'</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-78" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-78', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-79', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-80" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-80', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-81" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-81', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-82', 'fillFeatures', 'link-62');">fillFeatures</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_1</tt><tt class="py-op">)</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-83" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-83', 'fillFeatures', 'link-62');">fillFeatures</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_2</tt><tt class="py-op">)</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-84" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillFeatureMapping()=pyMSA.fillDatabase.FillDatabase-class.html#fillFeatureMapping"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatureMapping" class="py-name" href="#" onclick="return doclink('link-84', 'fillFeatureMapping', 'link-84');">fillFeatureMapping</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_1</tt><tt class="py-op">,</tt> <tt class="py-name">featureXML_2</tt><tt class="py-op">,</tt><tt class="py-name">trafoXML</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">                </tt>
+<a name="testFillDatabase.test_fillFeatureMappingException"></a><div id="testFillDatabase.test_fillFeatureMappingException-def"><a name="L199"></a><tt class="py-lineno">199</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillFeatureMappingException-toggle" onclick="return toggle('testFillDatabase.test_fillFeatureMappingException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMappingException">test_fillFeatureMappingException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillFeatureMappingException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillFeatureMappingException-expanded"><a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">        <tt class="py-name">featureXML</tt> <tt class="py-op">=</tt> <tt id="link-85" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-85', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-86" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-86', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-87" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-87', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_1.featureXML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-name">featureXML_2</tt> <tt class="py-op">=</tt> <tt id="link-88" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-88', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-89" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-89', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-90" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-90', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_2.featureXML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">        <tt class="py-name">trafoXML</tt> <tt class="py-op">=</tt> <tt id="link-91" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-91', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_2.trafoXML'</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-92" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-92', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-93" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-93', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-94" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-94', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatureMapping" class="py-name" href="#" onclick="return doclink('link-95', 'fillFeatureMapping', 'link-84');">fillFeatureMapping</a></tt><tt class="py-op">,</tt> <tt class="py-name">featureXML</tt><tt class="py-op">,</tt> <tt class="py-name">featureXML_2</tt><tt class="py-op">,</tt> <tt class="py-name">trafoXML</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.test_fillSpectrum"></a><div id="testFillDatabase.test_fillSpectrum-def"><a name="L206"></a><tt class="py-lineno">206</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillSpectrum-toggle" onclick="return toggle('testFillDatabase.test_fillSpectrum');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrum">test_fillSpectrum</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillSpectrum-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillSpectrum-expanded"><a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt class="py-name">expectedNumResult</tt> <tt class="py-op">=</tt> <tt class="py-number">8</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-name">mzMLinstance</tt> <tt class="py-op">=</tt> <tt class="py-name">pymzml</tt><tt class="py-op">.</tt><tt class="py-name">run</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-96', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-97" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-97', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'mzml_test_file_1.mzML'</tt><tt class="py-op">,</tt> <tt class="py-string">'MS:1000527'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">         </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-name">actualResult</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-98" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-98', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-99', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-100" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-100', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-101" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-101', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-102" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillSpectrum()=pyMSA.fillDatabase.FillDatabase-class.html#fillSpectrum"><a title="pyMSA.fillDatabase.FillDatabase.fillSpectrum" class="py-name" href="#" onclick="return doclink('link-102', 'fillSpectrum', 'link-102');">fillSpectrum</a></tt><tt class="py-op">(</tt><tt class="py-name">mzMLinstance</tt><tt class="py-op">)</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT * FROM `spectrum`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">result</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchall</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">                <tt class="py-name">actualResult</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">result</tt><tt class="py-op">)</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">         </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">expectedNumResult</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">actualResult</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">     </tt>
+<a name="testFillDatabase.test_fillSpectrumException"></a><div id="testFillDatabase.test_fillSpectrumException-def"><a name="L220"></a><tt class="py-lineno">220</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_fillSpectrumException-toggle" onclick="return toggle('testFillDatabase.test_fillSpectrumException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrumException">test_fillSpectrumException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_fillSpectrumException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_fillSpectrumException-expanded"><a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt class="py-name">mzMLinstance</tt> <tt class="py-op">=</tt> <tt class="py-name">pymzml</tt><tt class="py-op">.</tt><tt class="py-name">run</tt><tt class="py-op">.</tt><tt id="link-103" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-103', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-104" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-104', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'mzml_test_file_1.mzML'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-105" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-105', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-106" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-106', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-107" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-107', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-108" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillSpectrum" class="py-name" href="#" onclick="return doclink('link-108', 'fillSpectrum', 'link-102');">fillSpectrum</a></tt><tt class="py-op">,</tt> <tt class="py-name">mzMLinstance</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.test_linkSpectrumToFeature"></a><div id="testFillDatabase.test_linkSpectrumToFeature-def"><a name="L225"></a><tt class="py-lineno">225</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_linkSpectrumToFeature-toggle" onclick="return toggle('testFillDatabase.test_linkSpectrumToFeature');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeature">test_linkSpectrumToFeature</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_linkSpectrumToFeature-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_linkSpectrumToFeature-expanded"><a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">        <tt class="py-name">expectedNumResult</tt> <tt class="py-op">=</tt> <tt class="py-number">2</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">         </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">        <tt class="py-name">mzMLinstance</tt> <tt class="py-op">=</tt> <tt class="py-name">pymzml</tt><tt class="py-op">.</tt><tt class="py-name">run</tt><tt class="py-op">.</tt><tt id="link-109" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-109', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-110" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-110', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'mzml_test_file_1.mzML'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">        <tt class="py-name">featureXML</tt> <tt class="py-op">=</tt> <tt id="link-111" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-111', 'parseFeatureXML', 'link-2');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-112" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-112', 'Reader', 'link-56');">Reader</a></tt><tt class="py-op">(</tt><tt id="link-113" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_compareRuns.testFolder
+pyMSA.test.test_elementFunctions.testFolder
+pyMSA.test.test_featureFunctions.testFolder
+pyMSA.test.test_featureMapping.testFolder
+pyMSA.test.test_fileHandling.testFolder
+pyMSA.test.test_fillDatabase.testFolder
+pyMSA.test.test_getWindow.testFolder
+pyMSA.test.test_mzmlFunctions.testFolder
+pyMSA.test.test_output.testFolder
+pyMSA.test.test_parseFeatureXML.testFolder
+pyMSA.test.test_parsePeaksMzML.testFolder
+pyMSA.test.test_plots.testFolder
+pyMSA.test.test_rFunctions.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-113', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'featurexmlTestFile_1.featureXML'</tt><tt class="py-op">)</tt>   <tt class="py-comment"># make a Reader instance</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-114" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-114', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-115" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-115', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-116" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-116', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-117" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-117', 'fillMsrun', 'link-29');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-118" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-118', 'fillFeatures', 'link-62');">fillFeatures</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML</tt><tt class="py-op">)</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-119" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillSpectrum" class="py-name" href="#" onclick="return doclink('link-119', 'fillSpectrum', 'link-102');">fillSpectrum</a></tt><tt class="py-op">(</tt><tt class="py-name">mzMLinstance</tt><tt class="py-op">)</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-120" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.linkSpectrumToFeature()=pyMSA.fillDatabase.FillDatabase-class.html#linkSpectrumToFeature"><a title="pyMSA.fillDatabase.FillDatabase.linkSpectrumToFeature" class="py-name" href="#" onclick="return doclink('link-120', 'linkSpectrumToFeature', 'link-120');">linkSpectrumToFeature</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line">        <tt class="py-name">actualResult</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"SELECT * FROM `spectrum_has_feature`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">result</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">fetchall</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">            <tt class="py-name">actualResult</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">result</tt><tt class="py-op">)</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">             </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertEqual</tt><tt class="py-op">(</tt><tt class="py-name">expectedNumResult</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">actualResult</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">         </tt>
+<a name="testFillDatabase.test_linkSpectrumToFeatureException"></a><div id="testFillDatabase.test_linkSpectrumToFeatureException-def"><a name="L242"></a><tt class="py-lineno">242</tt> <a class="py-toggle" href="#" id="testFillDatabase.test_linkSpectrumToFeatureException-toggle" onclick="return toggle('testFillDatabase.test_linkSpectrumToFeatureException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeatureException">test_linkSpectrumToFeatureException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.test_linkSpectrumToFeatureException-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.test_linkSpectrumToFeatureException-expanded"><a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-121" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-121', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-122" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-122', 'FillDatabase', 'link-15');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt> <tt class="py-string">'this is a test input. should be deleted after use'</tt><tt class="py-op">,</tt> <tt class="py-name">databaseName</tt> <tt class="py-op">=</tt> <tt id="link-123" class="py-name"><a title="pyMSA.test.test_fillDatabase.testDatabase
+pyMSA.test.test_plots.testDatabase" class="py-name" href="#" onclick="return doclink('link-123', 'testDatabase', 'link-11');">testDatabase</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_pyMSA_database.db'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-124" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.linkSpectrumToFeature" class="py-name" href="#" onclick="return doclink('link-124', 'linkSpectrumToFeature', 'link-120');">linkSpectrumToFeature</a></tt><tt class="py-op">)</tt>   </tt>
+</div><a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">     </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"> </tt>
+<a name="testFillDatabase.tearDown"></a><div id="testFillDatabase.tearDown-def"><a name="L247"></a><tt class="py-lineno">247</tt> <a class="py-toggle" href="#" id="testFillDatabase.tearDown-toggle" onclick="return toggle('testFillDatabase.tearDown');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#tearDown">tearDown</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="testFillDatabase.tearDown-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="testFillDatabase.tearDown-expanded"><a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">        <tt class="py-comment"># delete the added msrun and close the connection after every test </tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `feature_has_userParam_names_has_userParam_value`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `feature_has_userParam_names`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `MSMS_precursor`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `convexhull`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `feature_mapping`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `spectrum_has_feature`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `userParam_names`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `userParam_value`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `feature`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `spectrum`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DELETE FROM `msrun`"</tt><tt class="py-op">)</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connection</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">        </tt>
+<a name="suite"></a><div id="suite-def"><a name="L263"></a><tt class="py-lineno">263</tt> <a class="py-toggle" href="#" id="suite-toggle" onclick="return toggle('suite');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_fillDatabase-module.html#suite">suite</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="suite-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="suite-expanded"><a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">    <tt id="link-125" class="py-name" targets="Function pyMSA.test.test_compareFeatureXMLmzML.suite()=pyMSA.test.test_compareFeatureXMLmzML-module.html#suite,Function pyMSA.test.test_compareRuns.suite()=pyMSA.test.test_compareRuns-module.html#suite,Function pyMSA.test.test_config.suite()=pyMSA.test.test_config-module.html#suite,Function pyMSA.test.test_elementFunctions.suite()=pyMSA.test.test_elementFunctions-module.html#suite,Function pyMSA.test.test_featureFunctions.suite()=pyMSA.test.test_featureFunctions-module.html#suite,Function pyMSA.test.test_featureMapping.suite()=pyMSA.test.test_featureMapping-module.html#suite,Function pyMSA.test.test_fileHandling.suite()=pyMSA.test.test_fileHandling-module.html#suite,Function pyMSA.test.test_fillDatabase.suite()=pyMSA.test.test_fillDatabase-module.html#suite,Function pyMSA.test.test_getWindow.suite()=pyMSA.test.test_getWindow-module.html#suite,Function pyMSA.test.test_mzmlFunctions.suite()=pyMSA.test.test_mzmlFunctions-module.html#suite,Function pyMSA.test.test_output.suite()=pyMSA.test.test_output-module.html#suite,Function pyMSA.test.test_parseFeatureXML.suite()=pyMSA.test.test_parseFeatureXML-module.html#suite,Function pyMSA.test.test_parsePeaksMzML.suite()=pyMSA.test.test_parsePeaksMzML-module.html#suite,Function pyMSA.test.test_plots.suite()=pyMSA.test.test_plots-module.html#suite,Function pyMSA.test.test_rFunctions.suite()=pyMSA.test.test_rFunctions-module.html#suite,Function pyMSA.test.test_rPlotGenerics.suite()=pyMSA.test.test_rPlotGenerics-module.html#suite"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
+pyMSA.test.test_compareRuns.suite
+pyMSA.test.test_config.suite
+pyMSA.test.test_elementFunctions.suite
+pyMSA.test.test_featureFunctions.suite
+pyMSA.test.test_featureMapping.suite
+pyMSA.test.test_fileHandling.suite
+pyMSA.test.test_fillDatabase.suite
+pyMSA.test.test_getWindow.suite
+pyMSA.test.test_mzmlFunctions.suite
+pyMSA.test.test_output.suite
+pyMSA.test.test_parseFeatureXML.suite
+pyMSA.test.test_parsePeaksMzML.suite
+pyMSA.test.test_plots.suite
+pyMSA.test.test_rFunctions.suite
+pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-125', 'suite', 'link-125');">suite</a></tt> <tt class="py-op">=</tt> <tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">TestSuite</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">    <tt class="py-comment"># adding the unit tests to the test suite</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">    <tt id="link-126" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
+pyMSA.test.test_compareRuns.suite
+pyMSA.test.test_config.suite
+pyMSA.test.test_elementFunctions.suite
+pyMSA.test.test_featureFunctions.suite
+pyMSA.test.test_featureMapping.suite
+pyMSA.test.test_fileHandling.suite
+pyMSA.test.test_fillDatabase.suite
+pyMSA.test.test_getWindow.suite
+pyMSA.test.test_mzmlFunctions.suite
+pyMSA.test.test_output.suite
+pyMSA.test.test_parseFeatureXML.suite
+pyMSA.test.test_parsePeaksMzML.suite
+pyMSA.test.test_plots.suite
+pyMSA.test.test_rFunctions.suite
+pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-126', 'suite', 'link-125');">suite</a></tt><tt class="py-op">.</tt><tt class="py-name">addTest</tt><tt class="py-op">(</tt><tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">makeSuite</tt><tt class="py-op">(</tt><tt id="link-127" class="py-name" targets="Class pyMSA.test.test_fillDatabase.testFillDatabase=pyMSA.test.test_fillDatabase.testFillDatabase-class.html"><a title="pyMSA.test.test_fillDatabase.testFillDatabase" class="py-name" href="#" onclick="return doclink('link-127', 'testFillDatabase', 'link-127');">testFillDatabase</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-128" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
+pyMSA.test.test_compareRuns.suite
+pyMSA.test.test_config.suite
+pyMSA.test.test_elementFunctions.suite
+pyMSA.test.test_featureFunctions.suite
+pyMSA.test.test_featureMapping.suite
+pyMSA.test.test_fileHandling.suite
+pyMSA.test.test_fillDatabase.suite
+pyMSA.test.test_getWindow.suite
+pyMSA.test.test_mzmlFunctions.suite
+pyMSA.test.test_output.suite
+pyMSA.test.test_parseFeatureXML.suite
+pyMSA.test.test_parsePeaksMzML.suite
+pyMSA.test.test_plots.suite
+pyMSA.test.test_rFunctions.suite
+pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-128', 'suite', 'link-125');">suite</a></tt> </tt>
+</div><a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Apr 20 15:33:05 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

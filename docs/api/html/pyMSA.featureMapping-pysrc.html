@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.featureMapping</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        Module&nbsp;featureMapping
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.featureMapping-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyMSA.featureMapping-module.html">Module pyMSA.featureMapping</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (c) 2012 - N.P. de Klein</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">#     This file is part of Python Mass Spec Analyzer (PyMSA).</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is free software: you can redistribute it and/or modify</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#     it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">#     the Free Software Foundation, either version 3 of the License, or</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#     (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#     GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#     along with Python Mass Spec Analyzer (PyMSA).  If not, see &lt;http://www.gnu.org/licenses/&gt;.")</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">Maps two feature files to eachother by comparing the trafoXML file and the original featureXML files.  </tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># author: ndeklein</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># date:02/04/2012</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># summary: Compares quality of data of two mapped featureXML files.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyMSA.parseFeatureXML=pyMSA.parseFeatureXML-module.html"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-0', 'parseFeatureXML', 'link-0');">parseFeatureXML</a></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">etree</tt> <tt class="py-keyword">import</tt> <tt class="py-name">cElementTree</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyMSA.elementFunctions=pyMSA.elementFunctions-module.html"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-1', 'elementFunctions', 'link-1');">elementFunctions</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="Map"></a><div id="Map-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="Map-toggle" onclick="return toggle('Map');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html">Map</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Map-expanded"><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">    FeatureMappingQuality contains functions to compare two mapped featureXML files.     </tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">    B{Changes:}</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">    I don't really like how I did this class, it's inconsistent, has some redundancy and difficult to understand. Could use a revamp.   </tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="Map.__init__"></a><div id="Map.__init__-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="Map.__init__-toggle" onclick="return toggle('Map.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">mapped_featureXML_1</tt><tt class="py-op">,</tt> <tt class="py-param">mapped_featureXML_2</tt><tt class="py-op">,</tt> <tt class="py-param">trafoXML_file</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Map.__init__-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">        @type mapped_featureXML_1: pyMS.pareFeatureXML.Reader</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">        @param mapped_featureXML_1: An instance of L{parseFeatureXML.Reader}. This is one of the files mapped by OpenMS's MapAlignerPoseClustering.</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">        @type mapped_featureXML_2: pyMS.pareFeatureXML.Reader</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">        @param mapped_featureXML_2: An instance of L{parseFeatureXML.Reader}. This is one of the files mapped by OpenMS's MapAlignerPoseClustering.</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">        @type trafoXML_file: string</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">        @param trafoXML_file: path to the trafoXML file that corresponds to featureXML instance 1 and featureXML instance 2. Has to be the linear file, because the identity file doesn't contain transformations</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        @raise IOError: trafoXML is an identity file (need a linear file)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        @raise RuntimeError: FeatureXML and trafo_xml didn't match up</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-comment"># self.retentionDict_1 will contain all the feature info with retention time as key of featureXML file 1</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-comment"># self.retentionDict_2 will contain all the feature info with retention time as key of featureXML file 2</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-comment"># this method is more expensive on memory, but a lot faster than old method (old method used getWindow, which looped through the list each time)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-comment"># this makes the retention time the key value, so that the retention time can be found with O(1)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-comment"># the retention time is rounded to second point after decimal because that is unique enough</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">feature</tt> <tt class="py-keyword">in</tt> <tt class="py-name">mapped_featureXML_1</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method pyMSA.parseFeatureXML.Reader.getSimpleFeatureInfo()=pyMSA.parseFeatureXML.Reader-class.html#getSimpleFeatureInfo"><a title="pyMSA.parseFeatureXML.Reader.getSimpleFeatureInfo" class="py-name" href="#" onclick="return doclink('link-2', 'getSimpleFeatureInfo', 'link-2');">getSimpleFeatureInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">mapped_featureXML_1</tt><tt class="py-op">[</tt><tt class="py-string">'retention time'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'intensity'</tt><tt class="py-op">:</tt><tt class="py-name">mapped_featureXML_1</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method pyMSA.parseFeatureXML.Reader.getElementInfo()=pyMSA.parseFeatureXML.Reader-class.html#getElementInfo"><a title="pyMSA.parseFeatureXML.Reader.getElementInfo" class="py-name" href="#" onclick="return doclink('link-3', 'getElementInfo', 'link-3');">getElementInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'feature_id'</tt><tt class="py-op">:</tt><tt class="py-name">mapped_featureXML_1</tt><tt class="py-op">[</tt><tt class="py-string">'id'</tt><tt class="py-op">]</tt><tt class="py-op">}</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">feature</tt> <tt class="py-keyword">in</tt> <tt class="py-name">mapped_featureXML_2</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="pyMSA.parseFeatureXML.Reader.getSimpleFeatureInfo" class="py-name" href="#" onclick="return doclink('link-4', 'getSimpleFeatureInfo', 'link-2');">getSimpleFeatureInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">mapped_featureXML_2</tt><tt class="py-op">[</tt><tt class="py-string">'retention time'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'intensity'</tt><tt class="py-op">:</tt><tt class="py-name">mapped_featureXML_2</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="pyMSA.parseFeatureXML.Reader.getElementInfo" class="py-name" href="#" onclick="return doclink('link-5', 'getElementInfo', 'link-3');">getElementInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'feature_id'</tt><tt class="py-op">:</tt><tt class="py-name">mapped_featureXML_2</tt><tt class="py-op">[</tt><tt class="py-string">'id'</tt><tt class="py-op">]</tt><tt class="py-op">}</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-comment"># to keep the to and rom changes in a list of dictionairies with as keys 'from' and 'to' and as values the retention times</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">trafoXML_list</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">         </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">event</tt><tt class="py-op">,</tt> <tt class="py-name">element</tt> <tt class="py-keyword">in</tt> <tt class="py-name">cElementTree</tt><tt class="py-op">.</tt><tt class="py-name">iterparse</tt><tt class="py-op">(</tt><tt class="py-name">trafoXML_file</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">element</tt><tt class="py-op">.</tt><tt class="py-name">tag</tt> <tt class="py-op">==</tt> <tt class="py-string">'Transformation'</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt id="link-6" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-6', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Function pyMSA.elementFunctions.getItems()=pyMSA.elementFunctions-module.html#getItems"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-7', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'name'</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'identity'</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                    <tt class="py-keyword">raise</tt> <tt class="py-name">IOError</tt><tt class="py-op">,</tt> <tt class="py-name">trafoXML_file</tt><tt class="py-op">+</tt><tt class="py-string">' is a trafoXML identity file (see the Transformation node). There is no information in the identity file. Use the \'linear\' file as input'</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">element</tt><tt class="py-op">.</tt><tt class="py-name">tag</tt> <tt class="py-op">==</tt> <tt class="py-string">'Pair'</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                    <tt class="py-name">fromFeatureID</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-8', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-9', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'from'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'feature_id'</tt><tt class="py-op">]</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                    <tt class="py-keyword">pass</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                    <tt class="py-name">toFeatureID</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt id="link-10" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-10', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-11', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'to'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'feature_id'</tt><tt class="py-op">]</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                    <tt class="py-keyword">pass</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                    <tt class="py-name">fromFeatureID</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-12" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-12', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-13', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'from'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'feature_id'</tt><tt class="py-op">]</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                    <tt class="py-keyword">pass</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                    <tt class="py-name">toFeatureID</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-14" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-14', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-15', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'to'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'feature_id'</tt><tt class="py-op">]</tt>                 </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                    <tt class="py-keyword">pass</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">trafoXML_list</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-op">{</tt><tt class="py-string">'from_featureID'</tt><tt class="py-op">:</tt><tt class="py-name">fromFeatureID</tt><tt class="py-op">,</tt> <tt class="py-string">'to_featureID'</tt><tt class="py-op">:</tt><tt class="py-name">toFeatureID</tt><tt class="py-op">,</tt> <tt class="py-string">'from'</tt><tt class="py-op">:</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-16', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-17', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'from'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'to'</tt><tt class="py-op">:</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="pyMSA.elementFunctions" class="py-name" href="#" onclick="return doclink('link-18', 'elementFunctions', 'link-1');">elementFunctions</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyMSA.elementFunctions.getItems" class="py-name" href="#" onclick="return doclink('link-19', 'getItems', 'link-7');">getItems</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-string">'to'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">UnboundLocalError</tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                    <tt class="py-keyword">raise</tt> <tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-string">'Something wrong with the input files. Probably the featureXML files didn\'t match the trafoXML file. Check your input. Actual error raised was: '</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">e</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                     </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-comment"># bool to know which file is the mapping file and which file is the mapped file (identity file is the mapping file, linear file is the mapped file)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">identityFile</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-comment"># to keep the mapped and non-mapped retention times. This way, if you use unmappedIntensities() and mappedIntensities() it will only run them once</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">     </tt>
+<a name="Map.mapping"></a><div id="Map.mapping-def"><a name="L96"></a><tt class="py-lineno"> 96</tt> <a class="py-toggle" href="#" id="Map.mapping-toggle" onclick="return toggle('Map.mapping');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html#mapping">mapping</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map.mapping-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Map.mapping-expanded"><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        Map the retention times of the two featureXML file to the corresponding trafoXML file. </tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">       </tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: dict</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Return the retention times of both featureXML_1 and featureXML_2 (those given to __init__) that don't and do map. They are returned in a dict with keys 'featureXML_1_mapped', 'featureXML_1_not_mapped','featureXML_2_mapped' and 'featureXML_2_not_mapped. The values are a list of retention times.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">        @attention: This function might b e useless, possibly the same thing is already archieved in the __init__. Have't come around to check this yet to make sure though. </tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        B{Example:}</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import parseFeatureXML</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import featureMapping as fm</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_1 = parseFeatureXML.Reader('featureXML_example.featureXML')            </tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_2 = parseFeatureXML.Reader('featureXML_example.featureXML')</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureMapping = fm.FeatureMapping(featureXML_1, featureXML_2, 'trafoXML_example.trafoXML')</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; print featureMapping.mapping()</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">        {'featureXML_1_mapped': set(['4009.59', '5107.29', '5109.29']),'featureXML_1_not_mapped': set(['7052.29']), 'featureXML_2_mapped': set(['3969.59', '5189.29', '5197.29']),'featureXML_2_not_mapped': set(['5345.29'])} </tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-comment"># featureXML_set_1 and 2 will contain the retention times of the featureXML files </tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-name">featureXML_set_1</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">featureXML_set_2</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-comment"># trafo_from_set will contain the retention times of the trafoXML file from the 'from' node</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">trafo_from_set</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-comment"># trafo_from_set will contain the retention times of the trafoXML file from the 'to' node</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-name">trafo_to_set</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">         </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-comment"># add all the retention times to the right set</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_1</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">retentionTime</tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_2</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">retentionTime</tt><tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">trafoXML_list</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">            <tt class="py-comment"># because the rt values in featureXML files are rounded to 8 decimals, do the same for trafoxml</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">            <tt class="py-name">trafo_from_set</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">retentionTime</tt><tt class="py-op">[</tt><tt class="py-string">'from'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">            <tt class="py-name">trafo_to_set</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">retentionTime</tt><tt class="py-op">[</tt><tt class="py-string">'to'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-comment"># if the length of featureXML_set_1 - trafo_to_set is smaller than - trafo from set,</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-comment"># use the to_set, otherwise, use the from_set. The correct one will always remove more retention times</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">featureXML_set_1_minus_trafo_to_set</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1</tt><tt class="py-op">.</tt><tt class="py-name">difference</tt><tt class="py-op">(</tt><tt class="py-name">trafo_to_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-name">featureXML_set_1_minus_trafo_from_set</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1</tt><tt class="py-op">.</tt><tt class="py-name">difference</tt><tt class="py-op">(</tt><tt class="py-name">trafo_from_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">featureXML_set_1_minus_trafo_to_set</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">featureXML_set_1_minus_trafo_from_set</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">            <tt class="py-comment"># featureXML_set_1 is the identity</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">            <tt class="py-comment"># featureXML_set_2 is the linear</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">identityFile</tt> <tt class="py-op">=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_1_not_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1_minus_trafo_to_set</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_1_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1</tt><tt class="py-op">.</tt><tt class="py-name">intersection</tt><tt class="py-op">(</tt><tt class="py-name">trafo_to_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_2_not_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_2</tt><tt class="py-op">.</tt><tt class="py-name">difference</tt><tt class="py-op">(</tt><tt class="py-name">trafo_from_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_2_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_2</tt><tt class="py-op">.</tt><tt class="py-name">intersection</tt><tt class="py-op">(</tt><tt class="py-name">trafo_from_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">featureXML_set_1_minus_trafo_to_set</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">featureXML_set_1_minus_trafo_from_set</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">identityFile</tt> <tt class="py-op">=</tt> <tt class="py-number">2</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-comment"># featureXML_set_1 is the linear</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-comment"># featureXML_set_2 is the identity</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_1_not_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1_minus_trafo_from_set</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_1_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_1</tt><tt class="py-op">.</tt><tt class="py-name">intersection</tt><tt class="py-op">(</tt><tt class="py-name">trafo_from_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_2_not_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_2</tt><tt class="py-op">.</tt><tt class="py-name">difference</tt><tt class="py-op">(</tt><tt class="py-name">trafo_to_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">            <tt class="py-name">featureXML_set_2_mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">featureXML_set_2</tt><tt class="py-op">.</tt><tt class="py-name">intersection</tt><tt class="py-op">(</tt><tt class="py-name">trafo_to_set</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">RuntimeError</tt><tt class="py-op">,</tt> <tt class="py-string">'Something is wrong with the featureXML files and/or trafoXML files. None of the retention times '</tt>\ </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                                <tt class="py-op">+</tt><tt class="py-string">'of the trafoXML mapped to the the first featureXML instance given. Make sure that the trafoXML file '</tt>\ </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                                <tt class="py-op">+</tt><tt class="py-string">'corresponds to the two featureXML instances given'</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">        </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'featureXML_1_mapped'</tt><tt class="py-op">:</tt><tt class="py-name">featureXML_set_1_mapped</tt><tt class="py-op">,</tt> <tt class="py-string">'featureXML_1_not_mapped'</tt><tt class="py-op">:</tt><tt class="py-name">featureXML_set_1_not_mapped</tt><tt class="py-op">,</tt>  </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                <tt class="py-string">'featureXML_2_mapped'</tt><tt class="py-op">:</tt><tt class="py-name">featureXML_set_2_mapped</tt><tt class="py-op">,</tt> <tt class="py-string">'featureXML_2_not_mapped'</tt><tt class="py-op">:</tt><tt class="py-name">featureXML_set_2_not_mapped</tt><tt class="py-op">}</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">         </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mapped</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt> </tt>
+</div><a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">     </tt>
+<a name="Map.getMappedFeatureIds"></a><div id="Map.getMappedFeatureIds-def"><a name="L164"></a><tt class="py-lineno">164</tt> <a class="py-toggle" href="#" id="Map.getMappedFeatureIds-toggle" onclick="return toggle('Map.getMappedFeatureIds');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html#getMappedFeatureIds">getMappedFeatureIds</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map.getMappedFeatureIds-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Map.getMappedFeatureIds-expanded"><a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">        Return self.trafoXML_list. Because this class was such a mess this function used to be redundant, calling self.mapping() when it's not necesarry etc.</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-docstring">        Might be more fixable.</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-docstring">                </tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: list</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Return the mapping feature ids and the mapped feature ids as a list of dictionaries</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">                                </tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">        B{Example:}</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import parseFeatureXML</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import featureMapping as fm</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_1 = parseFeatureXML.Reader('featureXML_example.featureXML')            </tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_2 = parseFeatureXML.Reader('featureXML_example.featureXML')</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureMapping = fm.FeatureMapping(featureXML_1, featureXML_2, 'trafoXML_example.trafoXML')</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; for feautureID_dict in featureMapping.getMappedFeatureIds():</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-docstring">        ...    print feaureID_dict</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-docstring">        {'from_featureID': 'f_13020522388175237334','to_featureID': 'f_13020522388175237334'}</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">        {'from_featureID': 'f_43922326584371237334','to_featureID': 'f_43922326584371237334'}</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-docstring">        {'from_featureID': 'f_8613715360396561740', 'to_featureID': 'f_8613715360396561740'} </tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt class="py-comment"># if mappingDict is empty, mapping has not run for this instance of FeatureMappingQuality yet. Run it.</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt class="py-comment">#if not self.mappingDict:</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">        <tt class="py-comment">#    self.mapping()</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">         </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">trafoXML_list</tt> </tt>
+</div><a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">     </tt>
+<a name="Map.unmappedIntensities"></a><div id="Map.unmappedIntensities-def"><a name="L191"></a><tt class="py-lineno">191</tt> <a class="py-toggle" href="#" id="Map.unmappedIntensities-toggle" onclick="return toggle('Map.unmappedIntensities');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html#unmappedIntensities">unmappedIntensities</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map.unmappedIntensities-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Map.unmappedIntensities-expanded"><a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-docstring">        Get the intensities of the features that weren't mapped.</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: two lists</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Two lists with the intensities of all the features of the first and second featureXML given to FeatureMappingQuality that weren't in the trafoXML file </tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"><tt class="py-docstring">        B{Example:}</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line"><tt class="py-docstring">        Get the intensities of all the non-mapped features of both featureXML files</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import parseFeatureXML</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import featureMapping as fm</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_1 = parseFeatureXML.Reader('featureXML_example.featureXML')            </tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_2 = parseFeatureXML.Reader('featureXML_example.featureXML')</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureMapping = fm.FeatureMapping(featureXML_1, featureXML_2, 'trafoXML_example.trafoXML')</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; print featureMapping.unmappedIntensities()</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line"><tt class="py-docstring">        (['556384', '111429', '234284'], ['524284', '111329', '524284'])</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-comment"># if mappingDict is empty, mapping has not run for this instance of FeatureMappingQuality yet. Run it.</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">:</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method pyMSA.featureMapping.Map.mapping()=pyMSA.featureMapping.Map-class.html#mapping"><a title="pyMSA.featureMapping.Map.mapping" class="py-name" href="#" onclick="return doclink('link-20', 'mapping', 'link-20');">mapping</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">        <tt class="py-comment"># the non-mapped values in the first featureXML instance</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">        <tt class="py-name">featureXML_unmapped_1</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">[</tt><tt class="py-string">'featureXML_1_not_mapped'</tt><tt class="py-op">]</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">        <tt class="py-comment"># the non-mapped values in the second featureXML instance</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">        <tt class="py-name">featureXML_unmapped_2</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">[</tt><tt class="py-string">'featureXML_2_not_mapped'</tt><tt class="py-op">]</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">         </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">        <tt class="py-comment"># lists to contain the intensities of the unmapped features</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">        <tt class="py-name">unmappedList_1</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt class="py-name">unmappedList_2</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">        <tt class="py-comment"># loop through all the retention times of the non-mapped features and look it up in the retentionDict corresponding</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">        <tt class="py-comment"># that the right number of featureXML instance</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML_unmapped_1</tt><tt class="py-op">:</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">            <tt class="py-name">unmappedList_1</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">[</tt><tt class="py-name">retentionTime</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">             </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML_unmapped_2</tt><tt class="py-op">:</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">            <tt class="py-name">unmappedList_2</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">[</tt><tt class="py-name">retentionTime</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">         </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">unmappedList_1</tt><tt class="py-op">,</tt> <tt class="py-name">unmappedList_2</tt> </tt>
+</div><a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">         </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">     </tt>
+<a name="Map.mappedIntensities"></a><div id="Map.mappedIntensities-def"><a name="L233"></a><tt class="py-lineno">233</tt> <a class="py-toggle" href="#" id="Map.mappedIntensities-toggle" onclick="return toggle('Map.mappedIntensities');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.featureMapping.Map-class.html#mappedIntensities">mappedIntensities</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Map.mappedIntensities-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Map.mappedIntensities-expanded"><a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-docstring">        Calculate how many features did get mapped and what their intensities are.</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: two lists</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Two lists with the intensities of all the features of the first and second featureXML given to FeatureMappingQuality that were in the trafoXML file </tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"><tt class="py-docstring">        B{Example:}</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"><tt class="py-docstring">        Get the intensities of all mapped features of both featureXML files.</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import parseFeatureXML</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; import featureMapping as fms</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_1 = parseFeatureXML.Reader('featureXML_example.featureXML')            </tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureXML_2 = parseFeatureXML.Reader('featureXML_example.featureXML')</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; featureMappingQuality = fm.FeatureMapping(featureXML_1, featureXML_2, 'trafoXML_example.trafoXML')</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; print featureMapping.mappedIntensities()</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-docstring">        (['52234'], ['524284'])</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">        <tt class="py-comment"># if mappingDict is empty, mapping has not run for this instance of FeatureMappingQuality yet. Run it.</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">:</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="pyMSA.featureMapping.Map.mapping" class="py-name" href="#" onclick="return doclink('link-21', 'mapping', 'link-20');">mapping</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">             </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">        <tt class="py-comment"># the non-mapped values in the first featureXML instance</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">        <tt class="py-name">featureXML_mapped_1</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">[</tt><tt class="py-string">'featureXML_1_mapped'</tt><tt class="py-op">]</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">        <tt class="py-comment"># the non-mapped values in the second featureXML instance</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">        <tt class="py-name">featureXML_mapped_2</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mappingDict</tt><tt class="py-op">[</tt><tt class="py-string">'featureXML_2_mapped'</tt><tt class="py-op">]</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">         </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">        <tt class="py-comment"># lists to contain the intensities of the unmapped features</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">        <tt class="py-name">mappedList_1</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">        <tt class="py-name">mappedList_2</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">        <tt class="py-comment"># loop through all the retention times of the non-mapped features and look it up in the retentionDict corresponding</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">        <tt class="py-comment"># that the right number of featureXML instance</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML_mapped_1</tt><tt class="py-op">:</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">            <tt class="py-name">mappedList_1</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_1</tt><tt class="py-op">[</tt><tt class="py-name">retentionTime</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">retentionTime</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML_mapped_2</tt><tt class="py-op">:</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">            <tt class="py-name">mappedList_2</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">retentionDict_2</tt><tt class="py-op">[</tt><tt class="py-name">retentionTime</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'intensity'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line">         </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">mappedList_1</tt><tt class="py-op">,</tt> <tt class="py-name">mappedList_2</tt> </tt>
+</div></div><a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:35 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

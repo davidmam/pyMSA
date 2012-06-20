@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>example_scripts.comparing_runs</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="example_scripts-module.html">Package&nbsp;example_scripts</a> ::
+        Module&nbsp;comparing_runs
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="example_scripts.comparing_runs-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="example_scripts.comparing_runs-module.html">Module example_scripts.comparing_runs</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (c) 2012 - N.P. de Klein</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">#     This file is part of Python Mass Spec Analyzer (PyMSA).</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is free software: you can redistribute it and/or modify</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#     it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment">#     the Free Software Foundation, either version 3 of the License, or</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#     (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#     GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment">#     You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment">#     along with Python Mass Spec Analyzer (PyMSA).  If not, see &lt;http://www.gnu.org/licenses/&gt;.")</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">Example how to compare two (or more) msruns</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-comment"># author: ndeklein</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-comment"># date:30/03/2012</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-comment"># summary: Example how to compare two (or more) msruns</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-comment"># for me, PyMSA_dev is not in my default python path</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'/homes/ndeklein/workspace/MS/Trunk/PyMSA_dev'</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyMSA=pyMSA-module.html"><a title="pyMSA" class="py-name" href="#" onclick="return doclink('link-0', 'pyMSA', 'link-0');">pyMSA</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyMSA.compareRuns=pyMSA.compareRuns-module.html"><a title="pyMSA.compareRuns" class="py-name" href="#" onclick="return doclink('link-1', 'compareRuns', 'link-1');">compareRuns</a></tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pymzml</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">rpy2</tt><tt class="py-op">.</tt><tt class="py-name">robjects</tt> <tt class="py-keyword">as</tt> <tt class="py-name">R</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyMSA" class="py-name" href="#" onclick="return doclink('link-2', 'pyMSA', 'link-0');">pyMSA</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyMSA.rPlotGenerics=pyMSA.rPlotGenerics-module.html"><a title="pyMSA.rPlotGenerics" class="py-name" href="#" onclick="return doclink('link-3', 'rPlotGenerics', 'link-3');">rPlotGenerics</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">rPlots</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="compare_msrun"></a><div id="compare_msrun-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="compare_msrun-toggle" onclick="return toggle('compare_msrun');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="example_scripts.comparing_runs-module.html#compare_msrun">compare_msrun</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="compare_msrun-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="compare_msrun-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-docstring">    Example how to compare two runs and plot a histogram of the similarity of all the matching spectra. It can compare</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">    any two mzML files but works best when comparing two aligned files. It compares the retention time of all the spectra</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring">    of both msruns with each other and when they are the same, uses pymzml's spec1.similarityTo(spec2) function. This returns</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">    a value between 0-1 for each compared spectrum which can then be plotted. </tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">    Also possible is to put in 3 or more msrun files, this will compare all msruns with eachother (so: 1 to 2, 1 to 3 and 2 to 3.) </tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-docstring">    This example script uses the following classes and functions:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-docstring">      - L{compareRuns.CompareRuns}</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt class="py-docstring">      - L{compareRuns.CompareRuns.compare_mzML}</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-docstring">    Comparing two msruns and plotting a histogram of the similarity between the spectra</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; from pyMSA import compareRuns                                    </tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; import pymzml</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; msrun1 = pymzml.run.Reader(r'example_files/input/example_aligned_file_1.aligned.mzML')                                    # Make an instance of pymzml.run.Reader with file you want to compare as input</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; msrun2 = pymzml.run.Reader(r'example_files/input/example_aligned_file_2.aligned.mzML')                                    # Make another instance of pymzml.run.Reader with file you want to compare as input</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; compare = compareRuns.CompareRuns(msrun1, msrun2)                                                                         # Make an instance of compareRuns.CompareRuns with the two instances of pymzml.run.Reader that you want to compare</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; similarityList, missCount1, missCount2 = compare.compare_mzML()                                                           # Compare the two files and retrieve a list of similarities</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; floatVector = R.FloatVector(similarityList)                                                                               # Make a FloatVector out of the list</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; plots = rPlots.Plots()                                                                                                    # Make an instance of rPlots.Plots</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt class="py-docstring">    &gt;&gt;&gt; plots.histogram('example_files/output/similarity_histogram.png', floatVector,                                             # Plot a histogram of the results</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt class="py-docstring">    ...     xlab='similarity', ylab='# of spectra', width=600, height=600, </tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line"><tt class="py-docstring">    ...     title='compare example 1 and example 2. Missed in first: '+str(missCount1)+' missed in second: '+str(missCount2))</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">     </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">    <tt class="py-comment"># Make an instance of pymzml.run.Reader with file you want to compare as input</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">    <tt class="py-name">msrun1</tt> <tt class="py-op">=</tt> <tt class="py-name">pymzml</tt><tt class="py-op">.</tt><tt class="py-name">run</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Class pyMSA.parseFeatureXML.Reader=pyMSA.parseFeatureXML.Reader-class.html,Class pyMSA.parseMascot.Reader=pyMSA.parseMascot.Reader-class.html,Class pyMSA.parsePeaksMzML.Reader=pyMSA.parsePeaksMzML.Reader-class.html"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parseMascot.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-4', 'Reader', 'link-4');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-string">r'example_files/input/example_aligned_file_1.aligned.mzML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">    <tt class="py-comment"># Make another instance of pymzml.run.Reader with file you want to compare as input</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">    <tt class="py-name">msrun2</tt> <tt class="py-op">=</tt> <tt class="py-name">pymzml</tt><tt class="py-op">.</tt><tt class="py-name">run</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parseMascot.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-5', 'Reader', 'link-4');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-string">r'example_files/input/example_aligned_file_2.aligned.mzML'</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">    <tt class="py-comment"># Make an instance of compareRuns.CompareRuns with the two instances of pymzml.run.Reader that you want to compare</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">    <tt class="py-name">compare</tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="pyMSA.compareRuns" class="py-name" href="#" onclick="return doclink('link-6', 'compareRuns', 'link-1');">compareRuns</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Class pyMSA.compareRuns.CompareRuns=pyMSA.compareRuns.CompareRuns-class.html"><a title="pyMSA.compareRuns.CompareRuns" class="py-name" href="#" onclick="return doclink('link-7', 'CompareRuns', 'link-7');">CompareRuns</a></tt><tt class="py-op">(</tt><tt class="py-name">msrun1</tt><tt class="py-op">,</tt> <tt class="py-name">msrun2</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">    <tt class="py-comment"># Compare the two files and retrieve a list of similarities</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">    <tt class="py-name">similarityList</tt><tt class="py-op">,</tt> <tt class="py-name">missCount1</tt><tt class="py-op">,</tt> <tt class="py-name">missCount2</tt> <tt class="py-op">=</tt> <tt class="py-name">compare</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyMSA.compareRuns.CompareRuns.compare_mzML()=pyMSA.compareRuns.CompareRuns-class.html#compare_mzML"><a title="pyMSA.compareRuns.CompareRuns.compare_mzML" class="py-name" href="#" onclick="return doclink('link-8', 'compare_mzML', 'link-8');">compare_mzML</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">    <tt class="py-comment"># Make a FloatVector out of the list</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">    <tt class="py-name">floatVector</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">FloatVector</tt><tt class="py-op">(</tt><tt class="py-name">similarityList</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">    <tt class="py-comment"># Make an instance of rPlots.Plots</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">    <tt id="link-9" class="py-name" targets="Module pyMSA.plots=pyMSA.plots-module.html"><a title="pyMSA.plots" class="py-name" href="#" onclick="return doclink('link-9', 'plots', 'link-9');">plots</a></tt> <tt class="py-op">=</tt> <tt class="py-name">rPlots</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Class pyMSA.rPlotGenerics.Plots=pyMSA.rPlotGenerics.Plots-class.html"><a title="pyMSA.rPlotGenerics.Plots" class="py-name" href="#" onclick="return doclink('link-10', 'Plots', 'link-10');">Plots</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">    <tt class="py-comment"># Plot a histogram of the results. Width and height is set to 600 because the title is quite long and it doesn't fit on the default (300 by 300)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">    <tt id="link-11" class="py-name"><a title="pyMSA.plots" class="py-name" href="#" onclick="return doclink('link-11', 'plots', 'link-9');">plots</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method pyMSA.rPlotGenerics.Plots.histogram()=pyMSA.rPlotGenerics.Plots-class.html#histogram"><a title="pyMSA.rPlotGenerics.Plots.histogram" class="py-name" href="#" onclick="return doclink('link-12', 'histogram', 'link-12');">histogram</a></tt><tt class="py-op">(</tt><tt class="py-string">'example_files/output/similarity_histogram.png'</tt><tt class="py-op">,</tt> <tt class="py-name">floatVector</tt><tt class="py-op">,</tt> <tt class="py-name">xlab</tt><tt class="py-op">=</tt><tt class="py-string">'similarity'</tt><tt class="py-op">,</tt> <tt class="py-name">ylab</tt><tt class="py-op">=</tt><tt class="py-string">'# of spectra'</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-number">600</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-number">600</tt><tt class="py-op">,</tt>  </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">                        <tt class="py-name">title</tt><tt class="py-op">=</tt><tt class="py-string">'compare example 1 and example 2. Missed in first: '</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">missCount1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">' missed in second: '</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">missCount2</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">                                 </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line"> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Function example_scripts.comparing_runs.compare_msrun()=example_scripts.comparing_runs-module.html#compare_msrun"><a title="example_scripts.comparing_runs.compare_msrun" class="py-name" href="#" onclick="return doclink('link-13', 'compare_msrun', 'link-13');">compare_msrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:36 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

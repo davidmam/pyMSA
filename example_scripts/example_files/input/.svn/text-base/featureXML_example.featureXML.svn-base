@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<featureMap version="1.4" id="fm_2007447552192692304"
+	xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/FeatureXML_1_4.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataProcessing completion_time="2011-04-05T21:35:02">
+		<software name="FeatureFinder" version="1.8.0" />
+		<processingAction name="Quantitation" />
+		<userParam type="string" name="parameter: in"
+			value="C:/Users/DMAMAR~1/AppData/Local/Temp/TOPPView_2011-04-05_164711_LS23428_1372_1_in" />
+		<userParam type="string" name="parameter: out"
+			value="C:/Users/DMAMAR~1/AppData/Local/Temp/TOPPView_2011-04-05_164711_LS23428_1372_1_out" />
+		<userParam type="string" name="parameter: ini"
+			value="C:/Users/DMAMAR~1/AppData/Local/Temp/TOPPView_2011-04-05_164711_LS23428_1372_1_ini" />
+		<userParam type="string" name="parameter: no_progress"
+			value="true" />
+		<userParam type="string" name="parameter: seeds" value="" />
+		<userParam type="string" name="parameter: type" value="isotope_wavelet" />
+		<userParam type="string" name="parameter: log" value="" />
+		<userParam type="int" name="parameter: debug" value="0" />
+		<userParam type="int" name="parameter: threads" value="1" />
+		<userParam type="string" name="parameter: test" value="false" />
+		<userParam type="int" name="parameter: algorithm:max_charge"
+			value="3" />
+		<userParam type="float" name="parameter: algorithm:intensity_threshold"
+			value="5" />
+		<userParam type="string" name="parameter: algorithm:intensity_type"
+			value="ref" />
+		<userParam type="string" name="parameter: algorithm:check_ppm"
+			value="false" />
+		<userParam type="string" name="parameter: algorithm:hr_data"
+			value="true" />
+		<userParam type="int"
+			name="parameter: algorithm:sweep_line:rt_votes_cutoff" value="5" />
+		<userParam type="int"
+			name="parameter: algorithm:sweep_line:rt_interleave" value="1" />
+	</dataProcessing>
+	<featureList count="1354">
+		<feature id="f_13020522388175237334">
+			<position dim="0">5109.29224</position>
+			<position dim="1">336.251104824796</position>
+			<intensity>524284</intensity>
+			<quality dim="0">0</quality>
+			<quality dim="1">0</quality>
+			<overallquality>225053</overallquality>
+			<charge>2</charge>
+			<convexhull nr="0">
+				<pt x="5105.9217" y="336.125209180674" />
+				<pt x="5108.7642" y="336.124751115092" />
+				<pt x="5109.6031" y="336.124841989895" />
+				<pt x="5110.4848" y="336.12529301464" />
+				<pt x="5111.6874" y="336.124957942644" />
+				<pt x="5111.6874" y="338.251041063348" />
+				<pt x="5110.4848" y="338.251376135343" />
+				<pt x="5109.6031" y="338.250925110599" />
+				<pt x="5108.7642" y="338.250834235796" />
+				<pt x="5105.9217" y="338.251292301377" />
+			</convexhull>
+			<userParam type="int" name="spectrum_index" value="3916" />
+			<userParam type="string" name="spectrum_native_id"
+				value="controllerType=0 controllerNumber=1 scan=18484" />
+		</feature>
+		<feature id="f_8613715360396561740">
+			<position dim="0">4009.58726</position>
+			<position dim="1">428.197275997238</position>
+			<intensity>111329</intensity>
+			<quality dim="0">0</quality>
+			<quality dim="1">0</quality>
+			<overallquality>35753.2</overallquality>
+			<charge>2</charge>
+			<convexhull nr="0">
+				<pt x="4001.7973" y="428.071338720547" />
+				<pt x="4004.4017" y="428.071177661641" />
+				<pt x="4009.2555" y="428.071136832932" />
+				<pt x="4014.7713" y="428.071491868401" />
+				<pt x="4017.7105" y="428.070943557216" />
+				<pt x="4017.7105" y="430.19702667792" />
+				<pt x="4014.7713" y="430.197574989105" />
+				<pt x="4009.2555" y="430.197219953635" />
+				<pt x="4004.4017" y="430.197260782345" />
+				<pt x="4001.7973" y="430.197421841251" />
+			</convexhull>
+			<userParam type="int" name="spectrum_index" value="2895" />
+			<userParam type="string" name="spectrum_native_id"
+				value="controllerType=0 controllerNumber=1 scan=15394" />
+		</feature>
+		<feature id="f_43922326584371237334">
+			<position dim="0">5107.29224</position>
+			<position dim="1">337.251104824796</position>
+			<intensity>524284</intensity>
+			<quality dim="0">0</quality>
+			<quality dim="1">0</quality>
+			<overallquality>225053</overallquality>
+			<charge>2</charge>
+			<convexhull nr="0">
+				<pt x="5107.9217" y="337.125209180674" />
+				<pt x="5108.7642" y="337.124751115092" />
+				<pt x="5109.6031" y="337.124841989895" />
+				<pt x="5110.4848" y="337.12529301464" />
+				<pt x="5112.6874" y="337.124957942644" />
+				<pt x="5111.6874" y="339.251041063348" />
+				<pt x="5110.4848" y="339.251376135343" />
+				<pt x="5109.6031" y="339.250925110599" />
+				<pt x="5108.7642" y="339.250834235796" />
+				<pt x="5108.9217" y="339.251292301377" />
+			</convexhull>
+			<userParam type="int" name="spectrum_index" value="3916" />
+			<userParam type="string" name="spectrum_native_id"
+				value="controllerType=0 controllerNumber=1 scan=18484" />
+		</feature>
+	</featureList>
+</featureMap>

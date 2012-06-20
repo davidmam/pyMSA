@@ -1,0 +1,7 @@
+
+
+
+This file does not contain all the todo's, just the ones I remember to write down and which I can't do immediatly. 
+
+
+- Update the database_scheme.pdf

@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Introduction &mdash; PyMSA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyMSA 0.2.6 documentation" href="index.html" />
+    <link rel="next" title="2. Usage" href="2. Usage.html" />
+    <link rel="prev" title="Welcome to PyMSA’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="2. Usage.html" title="2. Usage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to PyMSA’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyMSA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-started">
+<h2>1.1 Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-pymsa">
+<h3>1.1.1 Installing PyMSA<a class="headerlink" href="#installing-pymsa" title="Permalink to this headline">¶</a></h3>
+<p>To install PyMSA do:</p>
+<div class="highlight-python"><pre>sudo python setup.py install</pre>
+</div>
+</div>
+<div class="section" id="using-pymsa">
+<h3>1.1.2 Using PyMSA<a class="headerlink" href="#using-pymsa" title="Permalink to this headline">¶</a></h3>
+<p>To use PyMSA add:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyMSA</span>
+</pre></div>
+</div>
+<p>to any script you want to use pyMSA with. For usage see 2. Usage.</p>
+</div>
+</div>
+<div class="section" id="about">
+<h2>1.2 About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>Python Mass Spec Analyzer (PyMSA) is a python package to analyze Tandem Mass Spectrometry experiments.
+It tries to give you, the user, as much control as possible. This is archieved by keeping the functions
+as high leveled as possible and as such is not meant to be a one line solution for all possible MS/MS analys.
+This means that getting started might not be very straight forward, hopefully the example scripts provided
+can help you on the way. The example scripts show some of the functionality to help you on the way, but I encourage
+you to go through the API documentation, as there are quite a lot of functions I&#8217;m not showing in the example scripts
+which might be useful for you.
+If you have any questions, feel free to contact me (see 1.2.1 Contact information for my details).</p>
+<p>Copyright 2012 by:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Niek de Klein</div>
+</div>
+</div></blockquote>
+<div class="section" id="contact-information">
+<h3>1.2.1 Contact information<a class="headerlink" href="#contact-information" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Niek de Klein</div>
+<div class="line">Email: <a class="reference external" href="mailto:NiekdeKlein&#37;&#52;&#48;gmail&#46;com">NiekdeKlein<span>&#64;</span>gmail<span>&#46;</span>com</a></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>1.3 Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>PyMSA is a python package that offers:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Handles for the most common MS/MS XML files (mzML, peaks.mzML, featureXML, trafoXML)</li>
+<li>Functions for easy retrieval of spectra, peaks and features through the handles</li>
+<li>An easy way to fill an SQLite database with information on spectra, features and feature transversion per msrun</li>
+<li>Some basic R plots to plot results.</li>
+<li>SQLite and MySQL database logic for fast querying between MS/MS results.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="download">
+<h2>1.4 Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p>PyMSA is not downloadable yet. It can be checked out from svn if you have access (contact <a class="reference external" href="mailto:NiekdeKlein&#37;&#52;&#48;gmail&#46;com">NiekdeKlein<span>&#64;</span>gmail<span>&#46;</span>com</a> if you think you need access)</p>
+</div>
+<div class="section" id="dependencies">
+<h2>1.5 Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>PyMSA has several dependencies. The versions given are the ones used during development and testing, other version might work but can&#8217;t be guaranteed.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Python 2.6.*</li>
+<li>pymzml 0.7.4</li>
+<li>SQLite 3.7.10         or MySQL 5.1.52</li>
+<li>pysqlite 2.6.3        or MySQL-python-1.2.3</li>
+<li>requests 0.13.1</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="citation">
+<h2>1.6 Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>There is no citation (yet [hopefully])</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Introduction</a><ul>
+<li><a class="reference internal" href="#getting-started">1.1 Getting started</a><ul>
+<li><a class="reference internal" href="#installing-pymsa">1.1.1 Installing PyMSA</a></li>
+<li><a class="reference internal" href="#using-pymsa">1.1.2 Using PyMSA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#about">1.2 About</a><ul>
+<li><a class="reference internal" href="#contact-information">1.2.1 Contact information</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary">1.3 Summary</a></li>
+<li><a class="reference internal" href="#download">1.4 Download</a></li>
+<li><a class="reference internal" href="#dependencies">1.5 Dependencies</a></li>
+<li><a class="reference internal" href="#citation">1.6 Citation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to PyMSA&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="2. Usage.html"
+                        title="next chapter">2. Usage</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/1. Introduction.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="2. Usage.html" title="2. Usage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to PyMSA’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">PyMSA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+
+4. Database
+***********
+
+4.1 Description
+===============
+
+The PyMSA database is developed to work with both MySQL and SQLite. To make the SQLite database, run createDatabase.py from pyMSA/database/. To make the MySQL database,
+use the MySQL_create_pyMSA_database.sql file (on MySQL commandline: mysql> source /path/to/PyMSA/database/MySQL_create_pyMSA_database.sql.
+See usage for how to change between SQLite and MySQL when filling or querying the database. 
+
+4.2 Database scheme
+===================
+
+For the database scheme, see :download:`pyMS database scheme <../../database/pyMSA_database_scheme.pdf>`

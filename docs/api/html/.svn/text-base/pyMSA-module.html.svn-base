@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pyMSA
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package pyMSA</h1><p class="nomargin-top"><span class="codelink"><a href="pyMSA-pysrc.html">source&nbsp;code</a></span></p>
+<!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Submodules</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Submodules"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="pyMSA.compareFeatureXMLmzML-module.html">pyMSA.compareFeatureXMLmzML</a></strong>: <em class="summary">Compares information from featureXML and mzML files with eachother.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.compareRuns-module.html">pyMSA.compareRuns</a></strong>: <em class="summary">Comparing how alike two MS runs are by using pymzml's 
+        compareSpectra.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.config-module.html">pyMSA.config</a></strong>: <em class="summary">Get all the information out of the config.ini file that is located 
+        in the pyMS package folder and checks for correctness (e.g if files
+        exist etc)</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.database-module.html">pyMSA.database</a></strong>: <em class="summary">Fill the pyMS database with from featureXML, pymzml, trafoxml, 
+        peaks.mzml files.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.elementFunctions-module.html">pyMSA.elementFunctions</a></strong>: <em class="summary">Functions that get information out of cElementTree elements</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.featureFunctions-module.html">pyMSA.featureFunctions</a></strong>: <em class="summary">Functions that get information out of a feature element</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.featureMapping-module.html">pyMSA.featureMapping</a></strong>: <em class="summary">Maps two feature files to eachother by comparing the trafoXML file 
+        and the original featureXML files.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.fileHandling-module.html">pyMSA.fileHandling</a></strong>: <em class="summary">Handling the opening of files, checking for file vadility and 
+        existence.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.fillDatabase-module.html">pyMSA.fillDatabase</a></strong>: <em class="summary">Fill the pyMS database with from featureXML, pymzml, trafoxml, 
+        peaks.mzml files.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.getWindow-module.html">pyMSA.getWindow</a></strong>: <em class="summary">Classes to get a certain 'window' of information out of featureXML,
+        mzML or peaks.mzML file.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.mzmlFunctions-module.html">pyMSA.mzmlFunctions</a></strong>: <em class="summary">Functions to extract information from pymzml.run.Reader() instances</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.output-module.html">pyMSA.output</a></strong>: <em class="summary">Multiple classes to write information to output.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.parseFeatureXML-module.html">pyMSA.parseFeatureXML</a></strong>: <em class="summary">Parser to extract relevant data from a .featureXML file.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.parseMascot-module.html">pyMSA.parseMascot</a></strong>: <em class="summary">Parser to extract relevant data from a mascot result xml file.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.parsePeaksMzML-module.html">pyMSA.parsePeaksMzML</a></strong>: <em class="summary">Parser to extract relevant data from a .peaks.mzML file.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.plots-module.html">pyMSA.plots</a></strong>: <em class="summary">Different plot functions.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.rFunctions-module.html">pyMSA.rFunctions</a></strong>: <em class="summary">Functions that make use of the rpy2 library to work with matrices, 
+        dataframes, csv files etc.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.rPlotGenerics-module.html">pyMSA.rPlotGenerics</a></strong>: <em class="summary">Contains a Plot class which has functions for generic plots by R.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test-module.html">pyMSA.test</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a></strong>: <em class="summary">Unit test of compareFeatureXMLmzML.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a></strong>: <em class="summary">Unit test of compareRuns.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_config-module.html">pyMSA.test.test_config</a></strong>: <em class="summary">Unit test of config.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a></strong>: <em class="summary">Unit test of database.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a></strong>: <em class="summary">Unit test of baseFunctions.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a></strong>: <em class="summary">Unit test of featureFunctions.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a></strong>: <em class="summary">Unit test of featureMapping.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a></strong>: <em class="summary">Unit test of fileHandling.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a></strong>: <em class="summary">Unit test of fillDatabase.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a></strong>: <em class="summary">Unit test of getWindow.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a></strong>: <em class="summary">Unit test of mzmlFunctions.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a></strong>: <em class="summary">Unit test of output.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a></strong>: <em class="summary">Unit test of parseFeatureXML.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a></strong>: <em class="summary">Unit test of parseMascot.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a></strong>: <em class="summary">Unit test of parsePeaksMzML.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a></strong>: <em class="summary">Unit test of test_Plots.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a></strong>: <em class="summary">Unit test of rFunctions.py</em>    </li>
+    <li> <strong class="uidlink"><a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a></strong>: <em class="summary">Unit test of rPlotGenerics.py</em>    </li>
+    </ul>
+    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="None">None</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:32 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

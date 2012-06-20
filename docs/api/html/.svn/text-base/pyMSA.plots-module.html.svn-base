@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.plots</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        Module&nbsp;plots
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.plots-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module plots</h1><p class="nomargin-top"><span class="codelink"><a href="pyMSA.plots-pysrc.html">source&nbsp;code</a></span></p>
+<p>Different plot functions.</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.plots-module.html#massWindow_XIC_plot" class="summary-sig-name">massWindow_XIC_plot</a>(<span class="summary-sig-arg">retentionList</span>,
+        <span class="summary-sig-arg">intensityList</span>,
+        <span class="summary-sig-arg">outpath</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot.png</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">title</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">xlab</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">retention time (seconds)</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ylab</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">summed intensity</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">extra_arguments</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">l</code><code class="variable-quote">'</code><code class="variable-group">}</code></span>)</span><br />
+      Plot XIC for a mass window (aggregated) against run time.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.plots-pysrc.html#massWindow_XIC_plot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.plots-module.html#parent_to_XIC_plot" class="summary-sig-name">parent_to_XIC_plot</a>(<span class="summary-sig-arg">mzmlInstance</span>,
+        <span class="summary-sig-arg">parentMass</span>,
+        <span class="summary-sig-arg">maxCharge</span>=<span class="summary-sig-default">4</span>,
+        <span class="summary-sig-arg">outpath</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot.png</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">title</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">xlab</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">retention time (seconds)</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ylab</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">summed intensity</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">extra_arguments</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">l</code><code class="variable-quote">'</code><code class="variable-group">}</code></span>)</span><br />
+      Makes an XIC overlapping plot of all the charge variations of the parentving the sum and RT as the y and X point respectively for the plot.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.plots-pysrc.html#parent_to_XIC_plot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'pyMSA'"><code class="variable-quote">'</code><code class="variable-string">pyMSA</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="massWindow_XIC_plot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">massWindow_XIC_plot</span>(<span class="sig-arg">retentionList</span>,
+        <span class="sig-arg">intensityList</span>,
+        <span class="sig-arg">outpath</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot.png</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">title</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">xlab</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">retention time (seconds)</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ylab</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">summed intensity</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">extra_arguments</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">l</code><code class="variable-quote">'</code><code class="variable-group">}</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.plots-pysrc.html#massWindow_XIC_plot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot XIC for a mass window (aggregated) against run time.</p>
+  <p>Essentially you are taking the area under the intensity-m/z curve as 
+  the single intensity point.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>retentionList</code></strong> (list) - Sorted list of the retention times corresponding to the 
+          intensities in intensityList.</li>
+        <li><strong class="pname"><code>intensityList</code></strong> (list) - Sorted list of intensities correpsonding to the retention times 
+          in retentionList</li>
+        <li><strong class="pname"><code>outpath</code></strong> (string) - The path and name of the file to write out (default = 
+          XIC_plot.png)</li>
+        <li><strong class="pname"><code>title</code></strong> (string) - Title for the plot (default = XIC_plot)</li>
+        <li><strong class="pname"><code>xlab</code></strong> (string) - Description of the x-axis of the plot (default = retention time 
+          (seconds))</li>
+        <li><strong class="pname"><code>ylab</code></strong> (string) - Description of the y-axis of the plot (default = retention time 
+          (seconds))</li>
+        <li><strong class="pname"><code>extra_arguments</code></strong> (dict) - extra arguments to give to the plot, with as key the argument 
+          name and value the argument value (can use all the R arguments 
+          [see 
+          http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html]).
+          (default = {'type':'l'})</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - intensityDict or extraArguments not a dict and/or outpath, title, 
+        xlab, ylab not a string
+        <p><b>Example:</b></p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> pymzml
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> mzmlFunctions
+<span class="py-prompt">&gt;&gt;&gt; </span>mzmlInstance = pymzml.run.Reader(<span class="py-string">'/example_file.mzML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>intensityDict = mzmlFunctions.massWindow_XIC_plot(mzmlInstance, 800, 804)
+<span class="py-prompt">&gt;&gt;&gt; </span>massWind_XIC_plot(intensityDict)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="parent_to_XIC_plot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parent_to_XIC_plot</span>(<span class="sig-arg">mzmlInstance</span>,
+        <span class="sig-arg">parentMass</span>,
+        <span class="sig-arg">maxCharge</span>=<span class="sig-default">4</span>,
+        <span class="sig-arg">outpath</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot.png</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">title</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">XIC_plot</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">xlab</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">retention time (seconds)</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ylab</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">summed intensity</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">extra_arguments</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">l</code><code class="variable-quote">'</code><code class="variable-group">}</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.plots-pysrc.html#parent_to_XIC_plot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Makes an XIC overlapping plot of all the charge variations of the parentving the sum and RT as the y and X point respectively for the plot.
+mass, up to the charge given to maxCharge.
+  E.g., if you run parent_to_XIC_plot(1200, 4), this will plot the XIC for 600 (2+), 400 (3+) and 300 (4+).
+  
+  @type mzmlInstance: pymzml.run.Reader
+  @param mzmlInstance: Instance of pymzml.run.Reader class which you want to use to plot the XIC from
+  @type parentMass: Number
+  @param parentMass: The mass of the peptide you want the different charge plots to be made from.
+  @type maxCharge: Number
+  @type outpath: string
+  @param outpath: The path and name of the file to write out (default = XIC_plot.png)
+  @type title: string
+  @param title: Title for the plot (default = XIC_plot)
+  @type xlab: string
+  @param xlab: Description of the x-axis of the plot (default = retention time (seconds))
+  @type ylab: string
+  @param ylab: Description of the y-axis of the plot (default = retention time (seconds))
+  @type extra_arguments: dict
+  @param extra_arguments: extra arguments to give to the plot, with as key the argument name and value the argument value (can use all the R arguments [see http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html]). (default = {'type':'l'})
+  @param maxCharge: The maximum z charge to calculate the m/z for. (default=4)
+  @raise TypeError: intensityDict or extraArguments not of tpye dict and/or outpath, title, xlab, ylab not a string and/or parentMass and maxCharge not of type int and/or mzmlInstance not of type pymzml.run.Reader 
+  @raise RuntimeError: maxCharge has to be 2 or higher
+  
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:33 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+1. Introduction
+***************
+
+
+1.1 Getting started
+===================
+
+1.1.1 Installing PyMSA
+----------------------
+
+To install PyMSA do::
+
+  sudo python setup.py install
+
+1.1.2 Using PyMSA
+-----------------
+
+To use PyMSA add::
+
+  import pyMSA
+	
+to any script you want to use pyMSA with. For usage see 2. Usage.
+
+1.2 About
+=========
+
+Python Mass Spec Analyzer (PyMSA) is a python package to analyze Tandem Mass Spectrometry experiments. 
+It tries to give you, the user, as much control as possible. This is archieved by keeping the functions
+as high leveled as possible and as such is not meant to be a one line solution for all possible MS/MS analys. 
+This means that getting started might not be very straight forward, hopefully the example scripts provided
+can help you on the way. The example scripts show some of the functionality to help you on the way, but I encourage 
+you to go through the API documentation, as there are quite a lot of functions I'm not showing in the example scripts
+which might be useful for you.
+If you have any questions, feel free to contact me (see 1.2.1 Contact information for my details). 
+
+Copyright 2012 by:
+
+  | Niek de Klein
+
+1.2.1 Contact information
+-------------------------
+
+Please refer to
+
+  | Niek de Klein 
+  | Email: NiekdeKlein@gmail.com 
+
+1.3 Summary
+===========
+
+PyMSA is a python package that offers:
+
+	* Handles for the most common MS/MS XML files (mzML, peaks.mzML, featureXML, trafoXML)
+	* Functions for easy retrieval of spectra, peaks and features through the handles
+	* An easy way to fill an SQLite database with information on spectra, features and feature transversion per msrun
+	* Some basic R plots to plot results.
+	* SQLite and MySQL database logic for fast querying between MS/MS results.
+
+1.4 Download
+============
+
+PyMSA is not downloadable yet. It can be checked out from svn if you have access (contact NiekdeKlein@gmail.com if you think you need access)
+
+
+1.5 Dependencies
+================
+
+PyMSA has several dependencies. The versions given are the ones used during development and testing, other version might work but can't be guaranteed.
+
+	* Python 2.6.*
+	* pymzml 0.7.4
+	* SQLite 3.7.10 	or MySQL 5.1.52
+	* pysqlite 2.6.3 	or MySQL-python-1.2.3
+	* requests 0.13.1	
+	
+1.6 Citation
+============
+
+There is no citation (yet [hopefully]) 

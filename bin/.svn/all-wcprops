@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/barton/!svn/ver/5537/ndeklein/MS/Trunk/PyMSA_dev/bin
+END
+test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/barton/!svn/ver/5535/ndeklein/MS/Trunk/PyMSA_dev/bin/test.sh
+END
+featureMapper.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/barton/!svn/ver/5537/ndeklein/MS/Trunk/PyMSA_dev/bin/featureMapper.sh
+END
+featureFinder.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/barton/!svn/ver/5537/ndeklein/MS/Trunk/PyMSA_dev/bin/featureFinder.sh
+END

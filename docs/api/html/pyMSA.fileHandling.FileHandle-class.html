@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMSA.fileHandling.FileHandle</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMSA-module.html">Package&nbsp;pyMSA</a> ::
+        <a href="pyMSA.fileHandling-module.html">Module&nbsp;fileHandling</a> ::
+        Class&nbsp;FileHandle
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMSA.fileHandling.FileHandle-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class FileHandle</h1><p class="nomargin-top"><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle">source&nbsp;code</a></span></p>
+<p>A handle to easily validate the correctness of a file</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'exampleFeatureXMLfile.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isXML()
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isFeatureXML()</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#isXML" class="summary-sig-name">isXML</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check if &lt;?xml is in the first line of the file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isXML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#isFeatureXML" class="summary-sig-name">isFeatureXML</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check if &lt;featureMap is in the second line of the file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isFeatureXML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#isMzML" class="summary-sig-name">isMzML</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check if &lt;mzML is in the second or third line of the file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isMzML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#isMascot" class="summary-sig-name">isMascot</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check if &lt;mascot_search_results is in the second line of the file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isMascot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMSA.fileHandling.FileHandle-class.html#getFile" class="summary-sig-name">getFile</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the absolute path of the file given to FileHandle</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.getFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">path</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>path</code></strong> (string) - Path of a file</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isXML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isXML</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isXML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check if &lt;?xml is in the first line of the file.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>IOError</strong></code> - File given to FileHandle is not a valid XML file.
+        <p><b>Example</b>:</p>
+        <p>Check if a file is valid XML</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'example_featureXML_file.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isXML() <span class="py-comment"># returns None if it is valid, raises error if it is invalid</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isFeatureXML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isFeatureXML</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isFeatureXML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check if &lt;featureMap is in the second line of the file.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>IOError</strong></code> - File given to FileHandle is not a valid .featXML file.</li>
+        <li><code><strong class='fraise'>Warning</strong></code> - File given to FileHandle does not have 'software' in the 4th line</li>
+        <li><code><strong class='fraise'>Warning</strong></code> - Version of software is not of 1.9.0 or higher
+        <p><b>Example</b>:</p>
+        <p>Checking if a featureXML file is valid</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'example_featureXML_file.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isFeatureXML() <span class="py-comment"># returns None if it is valid, raises error if it is invalid</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isMzML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isMzML</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isMzML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check if &lt;mzML is in the second or third line of the file.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>IOError</strong></code> - File given to FileHandle is not a valid .mzML or .peaks.mzML file.
+        <p><b>Example</b>:</p>
+        <p>Checking if an mzml file is valid</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'exampleMzMLfile.mzML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isXML() <span class="py-comment"># returns None if it is valid, raises error if it is invalid</span></pre>
+        <p>Checking if a peaks.mzml file is valid</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'example_peaks_mzML_file.peaks.mzML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isMzML()</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isMascot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isMascot</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.isMascot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check if &lt;mascot_search_results is in the second line of the 
+  file.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>IOError</strong></code> - File given to FileHandle is not a valid mascot result XML file.
+        <p><b>Example</b>:</p>
+        <p>Checking if an mascot file is valid</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'exampleMascotFile.xml'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle.isMascot() <span class="py-comment"># returns None if it is valid, raises error if it is invalid</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getFile</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMSA.fileHandling-pysrc.html#FileHandle.getFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the absolute path of the file given to FileHandle</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The absolute path of the file given to FileHandle
+          <p><b>Example</b>:</p>
+          <p>Print the full path of a file given to FileHandle:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>fileHandle = FileHandle(<span class="py-string">'example_featureXML_file.featureXML'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> <span class="py-string">'The full path is:'</span>,fileHandle.getFile()
+<span class="py-output">The full path is: example_featureXML_file.featureXML</span></pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:33 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

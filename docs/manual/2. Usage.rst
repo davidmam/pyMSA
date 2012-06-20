@@ -1,0 +1,179 @@
+
+2. Usage
+********
+
+To use PyMSA, after installation simply import it into your scripts. The following usage examples all assume you have done this at the top of your script::
+
+    import pyMSA
+
+
+2.1 Parsing
+===========
+
+2.1.1 mzML
+----------
+
+To parse mzML files and print the spectra::
+
+    parsePeaksMzML.Reader('/path/to/mzmlfile.mzML')
+	spectra = peaksMzML.getSpectra()
+    for spectrum in spectra:
+        print 'total ion current of', peaksMzML['id'],' = ',peaksMzML['total ion current']
+	
+2.1.2 featureXML
+----------------
+
+To parse featureXML files and print the features::
+
+    featureXML = parseFeatureXML.Reader('/path/to/featureFile.featureXML')   
+    features = featureXML.getSimpleFeatureInfo()
+    for feature in features:                               # loop through all the features
+         print feature
+    
+2.1.3 MASCOT result XML files
+-----------------------------
+
+To parse MASCOT results files and print the assigned and unassigned peptides::
+
+    mascot = parseMascot.Reader('/path/to/masotResultFile.xml')
+    for peptide_info in mascot.getAssignedPeptidesMZandRTvalue():
+    	print peptide_info
+
+    for peptide_info in mascot.getUnassignedPeptidesMZandRTvalue():
+    	print peptide_info
+    	
+
+
+2.2 MS/MS experiment analysing workflow: a walkthrough
+======================================================
+
+The following is a walkthrough of steps to go from one or more mzML files to a filled PyMSA database, and how to proceed analysing the data from there on.
+Every step will detail what I found the easiest way to do it for both 1 input file and multiple input files. The multiple input files part uses qsub to submit an array job to a cluster.
+If you do not have a cluster you can follow the advice for one file, but use python (or some other language) to loop over multiple files and follow the steps. The reason that the multiple
+files parts use a cluster and qsub is that some parts take a really long time, so submitting jobs to multiple nodes can speed up the process. Where I developed this we used qsub so that's
+why the scripts for multiple files are designed like this. 
+
+I made this workflow on Centos 5.6 and some parts will work only on linux machines. I listed most dependencies for the python programs in 1.5 Dependencies, but I might have forgotten to include some. 
+In that case, installing the newest version of the dependent module should be sufficient (and if possible let me know that I missed something, so that I can add it). The configuration values 
+used for various programs are the same I used during analysis of some small data, but you might want to use different values.These are not optimal values for every scenario. 
+
+
+2.2.1 MS/MS analysing workflow
+------------------------------
+
+As shown in this workflow the a featureXML and MASCOT XML file need to be produced from the mzML file and the data from all the files must be inserted into the database. 
+The easiest way to do this is to first get all the data files and then add them all to the database in one go. I found it easiest to get a different folder for each type of 
+output file and configuration file. I called my main directory analysis/ and in that directory make the directories analysis/mzml/, analysis/featureXML/, analysis/featureFinderConfig/,
+analysis/MASCOT_results/ and analysis/trafoXML/.
+
+2.2.2 Finding features
+----------------------
+
+FeatureXML files can be create from a raw mzML file or a peaks.mzML file. Anecdotally tested, finding features using the raw mzML file works better than using the peaks.mzML file 
+(although this probably differs per situation). For this walkthrough we use the raw mzML files. 
+
+
+You can create the featureXML file using the command line program  
+`FeaturFinderRaw <http://ftp.mi.fu-berlin.de/OpenMS/documentation/html/TOPP_FeatureFinderRaw.html>`_ of OpenMS::
+
+  ./FeatureFinderRaw -in analysis/mzml/example.mzML -out analysis/featureXML/example.featureXML
+
+This will run FeatureFinderRaw with example.mzML on default configuration settings. If you want to know what the default settings are, you can write out the configuration file with::
+
+  ./FeatureFinderRaw -write_ini analysis/featureXML_config
+
+This will use analysis/mzml/example.mzML as input file and will write analysis/featureXML/example.featureXML as output. 
+
+To make it easier to do this for multiple mzML files you can use the featureFinder.sh script (only works on linux). There is no python wrapper for it yet, so you have to run it directly
+from the command line for now (if time permits this will be changed, helps with the pipelining). To run featureFinder.sh, cd into the folder where it is located (it's in PyMSA/bin)  
+and run ./featureFinder [options] <mzML file or folder containing mzML files>. There are 7 options:
+
+-f <path>				Path were FeatureFinderRaw is located. Default: /sw/local/bin/
+-i <intensity>          Intensity cut-off to run the FeatureFinderRaw at. Can't be set with -a. Default: 10000
+-a <start:stop:step>    Will run FeatureFinderRaw with each intensity between start-stop with steps of step. Can't be set with -i
+-c <path>               Path to a folder where to write the FeatureFinderRaw config file out to. Default: featureFinderConfig/
+-o <path>               Path to a folder where to write the output .featureXML file to. Default: featureXML/
+-t <threads>            Number of threads to run FeatureFinderRaw with. Default: 20
+-h                      Print this message and exit.
+ 
+Some example input::
+
+  ./featureFinder -i 5000 example.mzML	-o /homes/output/	# runs FeatureFinderRaw on example.mzML with intensity cut-off 5000. The output is written to /homes/output/ 
+  ./featureFinder -a 4000:5000:500 /homes/mzml/			# runs FeatureFinderRaw on all .mzML files in /homes/mzml with intensity cut-off 4000, 4500 and 5000 (start 4000, end 5000, steps of 500). The config and output folder are created in the same location as where the script is called from.
+
+featureFinder.sh checks the output folder if the file he is about to make already exists or is being made. So when you run this on a cluster with an array job it will make sure that they are not all working
+on the same output file. If you have a cluster and use qsub you can give the following command::
+
+  qsub -q ningal.q -cwd -V -t 1-3 /homes/ndeklein/workspace/MS/Trunk/PyMSA_dev/scripts/featureFinder.sh -a 17000:20000:1000 /homes/mzml/ 	# will run 3 jobs on the cluster, running FeatureFinderRaw for all mzML files in /homes/mzml with intensity 17000,18000, 19000 and 20000. 
+  
+Using this method you can only change the intensity parameter. If you want to change multiple parameters, change the featureFinder.sh script. 
+
+2.2.3 Feature Mapping
+---------------------
+
+After the features are found for multiple mzML files, the featureXML files can be mapped together. You can map two featureXML files together using 
+`MapAlignerPoseClustering <http://ftp.mi.fu-berlin.de/OpenMS/documentation/html/TOPP_MapAlignerPoseClustering.html>`_ of OpenMS::
+
+  ./MapAlignerPoseClustering -in /homes/featureXML/example1.featureXML /homes/featureXML/example2.featureXML -out /homes/mapped/example1.mapped.featureXML /homes/trafoXML/example2.mapped.featureXML -trafo_out /homes/trafoXML/example1.trafoXML /homes/trafoXML/example2.trafoXML
+  
+This will run MapAlignerPoseClustering on default settings with example1.featureXML and example2.featureXML as input files. The mapped.featureXML output files will be adjusted featureXML files. The trafoXML output files contain the shift in retention time. 
+
+You can use featureMapper.sh found in PyMSA/bin. This only runs on default setting, but makes it easy to run a bunch of jobs on a cluster. 
+
+2.2.4 MASCOT
+------------
+
+For now the MASCOT search still has to be done manually. First make an .mgf file out of your .mzML file with `FileConverter <http://www-bs2.informatik.uni-tuebingen.de/services/OpenMS/OpenMS-release/html/TOPP__FileConverter.html>`_ of OpenMS::
+
+  ./FileConverter -in /homes/mzml/example.mzML -in_type mzML -out /homes/mgf/example.mgf -out_type mgf
+
+You can upload this to `Mascot <http://www.matrixscience.com/cgi/search_form.pl?FORMVER=2&SEARCH=MIS>`_ or if you have access to it, `Dundee's Mascot <http://mascot.proteomics.dundee.ac.uk/cgi/search_form.pl?FORMVER=2&SEARCH=MIS>`_. 
+Fill in the correct options, upload the .mgf file and start search. Once it's finished you can export the results as an XML file. 
+
+Now that we have all the result files (example1.mzML, example2.mzML, example1.featureXML, example2.featureXML, example1.trafoXML, example2.trafoXML, mascotResult1.XML, mascotResult2.XML) we can fill the database
+
+2.2.5 Filling the database
+--------------------------
+
+To create the database (MySQL or SQLite) read the database section (4. Database). There is only one difference between filling the database with MySQL or SQLite. MySQL uses the database.ConnectMySQL
+function to connect to the database. SQLite uses the database.ConnectSQLite function to connect to the database. The example show the MySQL way, but the comment after it shows what to change if you 
+want to use SQLite::
+
+  with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:    	  # SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
+      fillDatabase = database.FillDatabase(sqlCon, 'example1')									  # First, instantiate FillDatabase with the name of the mzML file 
+      fillDatabase.fillMsrun('/path/to/mzmlFile/example1.mzML')									  # Use the mzML file to fill the msrun table (gives it an id and a name and optionally a description, see API doc)
+      mzmlInstance = pymzml.run.Reader('/path/to/mzmlFile/example1.mzML')						  # Parse the mzML file
+      fillDatabase.fillSpectrum(mzmlInstance)													  # Fill the spectrum table
+      fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example1.featureXML'), intensity_cutoff = 1000)		# Fill the features table 
+      fillDatabase.linkSpectrumToFeature()														  # Link the spectrum to the features
+      mascot = parseMascot.Reader('/path/to/mascotResultFile/example1.XML')						  # Parse the mascot result file
+      fillDatabase.fillMascot(mascot)															  # Fill the mascot table
+
+  Repeat this for the second file::
+
+  with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:    	  # SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
+      fillDatabase = database.FillDatabase(sqlCon, 'example2')
+      fillDatabase.fillMsrun('/path/to/mzmlFile/example2.mzML')
+      mzmlInstance = pymzml.run.Reader('/path/to/mzmlFile/example2.mzML')
+      fillDatabase.fillSpectrum(mzmlInstance)
+      fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example2.featureXML'), intensity_cutoff = 1000) 
+      fillDatabase.linkSpectrumToFeature()
+      mascot = parseMascot.Reader('/path/to/mascotResultFile/example2.XML')
+      fillDatabase.fillMascot(mascot)
+
+  Map the features of example1.featureXML with example2.featureXML
+
+  with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:      	# SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
+      fillDatabase = database.FillDatabase(sqlCon, 'None')
+      fillDatabase.fillFeatureMapping(parseFeatureXML.Reader('/path/to/featureXMLfile/example1.featureXML'), parseFeatureXML.Reader('/path/to/featureXMLfile/example2.featureXML'), '/path/to/trafoXMLfile/example1_mapped_example2.trafoXML')
+
+To query the database, use the ConnectMySQL::
+
+  with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:		# SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
+      sqlCon.cursor.execute("SELECT * FROM msrun")
+
+
+2.2.6 Analysis
+--------------
+
+<todo>

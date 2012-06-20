@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input
+END
+profile-mass-spectrum.mzml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/profile-mass-spectrum.mzml
+END
+example_trafoXML.trafoXML
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/example_trafoXML.trafoXML
+END
+featureXML_example.featureXML
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/featureXML_example.featureXML
+END
+feature.csv
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/feature.csv
+END
+feature_precursor.csv
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/feature_precursor.csv
+END
+mzML.csv
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/mzML.csv
+END
+example_aligned_file_1.aligned.mzML
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/example_aligned_file_1.aligned.mzML
+END
+example_aligned_file_2.aligned.mzML
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/example_aligned_file_2.aligned.mzML
+END
+peaks_example.peaks.mzML
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/barton/!svn/ver/5294/ndeklein/MS/Trunk/PyMSA_dev/example_scripts/example_files/input/peaks_example.peaks.mzML
+END

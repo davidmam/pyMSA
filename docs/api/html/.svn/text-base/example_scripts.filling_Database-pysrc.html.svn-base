@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>example_scripts.filling_Database</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="example_scripts-module.html">Package&nbsp;example_scripts</a> ::
+        Module&nbsp;filling_Database
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="example_scripts.filling_Database-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="example_scripts.filling_Database-module.html">Module example_scripts.filling_Database</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (c) 2012 - N.P. de Klein</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">#     This file is part of Python Mass Spec Analyzer (PyMSA).</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is free software: you can redistribute it and/or modify</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#     it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment">#     the Free Software Foundation, either version 3 of the License, or</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#     (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment">#     Python Mass Spec Analyzer (PyMSA) is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#     GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment">#     You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment">#     along with Python Mass Spec Analyzer (PyMSA).  If not, see &lt;http://www.gnu.org/licenses/&gt;.")</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">Example how to fill the database.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-comment"># author: ndeklein</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-comment"># date: 19/04/2012</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-comment"># summary: Example how to fill the database.</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-comment"># for me, PyMSA_dev is not in my default python path</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'/homes/ndeklein/workspace/MS/Trunk/PyMSA_dev'</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyMSA=pyMSA-module.html"><a title="pyMSA" class="py-name" href="#" onclick="return doclink('link-0', 'pyMSA', 'link-0');">pyMSA</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyMSA.fillDatabase=pyMSA.fillDatabase-module.html"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-1', 'fillDatabase', 'link-1');">fillDatabase</a></tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyMSA" class="py-name" href="#" onclick="return doclink('link-2', 'pyMSA', 'link-0');">pyMSA</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyMSA.parseFeatureXML=pyMSA.parseFeatureXML-module.html"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-3', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="main"></a><div id="main-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="main-toggle" onclick="return toggle('main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="example_scripts.filling_Database-module.html#main">main</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="main-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="main-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-docstring">    Example how to fill the pyMSA database.</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">    <tt class="py-comment"># list of all the files I want to add</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-name">featureXML_files</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'/homes/dmamartin/Documents/PROTEOMICS/Cantrell/openMS/JG-C1-1.raw.i_c1000.featureXML'</tt><tt class="py-op">,</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                        <tt class="py-string">'/homes/dmamartin/Documents/PROTEOMICS/Cantrell/openMS/JG-C1-1.raw.i_c4000.featureXML'</tt><tt class="py-op">,</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                        <tt class="py-string">'/homes/dmamartin/Documents/PROTEOMICS/Cantrell/openMS/JG-C1-1A.raw.i_c1000.featureXML'</tt><tt class="py-op">,</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">                        <tt class="py-string">'/homes/dmamartin/Documents/PROTEOMICS/Cantrell/openMS/JG-C1-1A.raw.i_c4000.featureXML'</tt><tt class="py-op">]</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-name">trafoXML_files</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'/homes/ndeklein/analysis/trafoXML/JG-C1-1__JG-C1-1A.raw.i_c1000__file_1.trafoXML'</tt><tt class="py-op">,</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">                      <tt class="py-string">'/homes/ndeklein/analysis/trafoXML/JG-C1-1__JG-C1-1A.raw.i_c4000__file_1.trafoXML'</tt><tt class="py-op">]</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">     </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">featureXML_path</tt> <tt class="py-keyword">in</tt> <tt class="py-name">featureXML_files</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt id="link-4" class="py-name"><a title="pyMSA.fillDatabase" class="py-name" href="#" onclick="return doclink('link-4', 'fillDatabase', 'link-1');">fillDatabase</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Class pyMSA.fillDatabase.FillDatabase=pyMSA.fillDatabase.FillDatabase-class.html"><a title="pyMSA.fillDatabase.FillDatabase" class="py-name" href="#" onclick="return doclink('link-5', 'FillDatabase', 'link-5');">FillDatabase</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_path</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'/'</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">rstrip</tt><tt class="py-op">(</tt><tt class="py-string">'.featureXML'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">fd</tt><tt class="py-op">:</tt>       <tt class="py-comment"># make a FillDatabase instance with msrun named example, description of msrun 'example description' and default database</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillMsrun()=pyMSA.fillDatabase.FillDatabase-class.html#fillMsrun"><a title="pyMSA.fillDatabase.FillDatabase.fillMsrun" class="py-name" href="#" onclick="return doclink('link-6', 'fillMsrun', 'link-6');">fillMsrun</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt>                                                                <tt class="py-comment"># fill the msrun table. msrun name is 'example'</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">            <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillFeatures()=pyMSA.fillDatabase.FillDatabase-class.html#fillFeatures"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatures" class="py-name" href="#" onclick="return doclink('link-7', 'fillFeatures', 'link-7');">fillFeatures</a></tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-8', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Class pyMSA.parseFeatureXML.Reader=pyMSA.parseFeatureXML.Reader-class.html,Class pyMSA.parsePeaksMzML.Reader=pyMSA.parsePeaksMzML.Reader-class.html"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-9', 'Reader', 'link-9');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_path</tt><tt class="py-op">)</tt><tt class="py-op">)</tt>                                               <tt class="py-comment"># fill the other feature tables. </tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">featureXML_path</tt> <tt class="py-op">==</tt> <tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">                <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method pyMSA.fillDatabase.FillDatabase.fillFeatureMapping()=pyMSA.fillDatabase.FillDatabase-class.html#fillFeatureMapping"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatureMapping" class="py-name" href="#" onclick="return doclink('link-10', 'fillFeatureMapping', 'link-10');">fillFeatureMapping</a></tt><tt class="py-op">(</tt><tt id="link-11" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-11', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-12', 'Reader', 'link-9');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-13" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-13', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-14', 'Reader', 'link-9');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">trafoXML_files</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">featureXML_path</tt> <tt class="py-op">==</tt> <tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">                <tt class="py-name">fd</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pyMSA.fillDatabase.FillDatabase.fillFeatureMapping" class="py-name" href="#" onclick="return doclink('link-15', 'fillFeatureMapping', 'link-10');">fillFeatureMapping</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-16', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-17', 'Reader', 'link-9');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-18" class="py-name"><a title="pyMSA.parseFeatureXML" class="py-name" href="#" onclick="return doclink('link-18', 'parseFeatureXML', 'link-3');">parseFeatureXML</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyMSA.parseFeatureXML.Reader
+pyMSA.parsePeaksMzML.Reader" class="py-name" href="#" onclick="return doclink('link-19', 'Reader', 'link-9');">Reader</a></tt><tt class="py-op">(</tt><tt class="py-name">featureXML_files</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">trafoXML_files</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">    <tt id="link-20" class="py-name" targets="Function example_scripts.filling_Database.main()=example_scripts.filling_Database-module.html#main"><a title="example_scripts.filling_Database.main" class="py-name" href="#" onclick="return doclink('link-20', 'main', 'link-20');">main</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Apr 20 15:33:06 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

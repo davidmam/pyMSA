@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyMS.rFunctions</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyMS-module.html">Package&nbsp;pyMS</a> ::
+        Module&nbsp;rFunctions
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyMS.rFunctions-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module rFunctions</h1><p class="nomargin-top"><span class="codelink"><a href="pyMS.rFunctions-pysrc.html">source&nbsp;code</a></span></p>
+<p>Functions that make use of the rpy2 library to work with matrices, 
+  dataframes, csv files etc.</p>
+  <p><b>Possible additions:</b></p>
+  <p>Function that takes n amount of lists of different lengths and adds 
+  them in a dataframe, with all the short lists being filled up with NA's. 
+  Should be easy in combination with <a 
+  href="pyMS.rFunctions-module.html#fillNA" 
+  class="link">rFunctions.fillNA</a></p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">number</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#index" class="summary-sig-name">index</a>(<span class="summary-sig-arg">matrix</span>,
+        <span class="summary-sig-arg">columnName</span>)</span><br />
+      Get the column index number columnName in matrix.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#index">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">rpy2.robjects.vectors.DataFrame</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#getRowsWithUniqColumn" class="summary-sig-name">getRowsWithUniqColumn</a>(<span class="summary-sig-arg">matrix</span>,
+        <span class="summary-sig-arg">columnName</span>)</span><br />
+      Get all the rows from matrix with unique value in the column 
+      columnName.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#getRowsWithUniqColumn">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">rpy2.robjects.vectors.DataFrame</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#getColumns" class="summary-sig-name">getColumns</a>(<span class="summary-sig-arg">matrix</span>,
+        <span class="summary-sig-arg">*args</span>)</span><br />
+      Make a subset of a matrix or dataframe containing only the columns 
+      with column names given to *args.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#getColumns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Same as x</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#takeLog" class="summary-sig-name">takeLog</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">base</span>)</span><br />
+      Take the logarithm of an R type object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#takeLog">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">rpy2.robjects.vectors.DataFrame</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#readCsvFile" class="summary-sig-name">readCsvFile</a>(<span class="summary-sig-arg">csvFilePath</span>,
+        <span class="summary-sig-arg">sep</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">\t</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">head</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">na</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">N/A</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Read a csv file and return the content.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#readCsvFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyMS.rFunctions-module.html#fillNA" class="summary-sig-name">fillNA</a>(<span class="summary-sig-arg">vectorList</span>,
+        <span class="summary-sig-arg">amount</span>,
+        <span class="summary-sig-arg">rType</span>)</span><br />
+      Fills the given vector with the 'not available' R type (either 
+      NA_Logical, NA_Real, NA_Integer, NA_Character or NA_Complex)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyMS.rFunctions-pysrc.html#fillNA">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'pyMS'"><code class="variable-quote">'</code><code class="variable-string">pyMS</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="index"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">index</span>(<span class="sig-arg">matrix</span>,
+        <span class="sig-arg">columnName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#index">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the column index number columnName in matrix.</p>
+  <p>The index returned is a 'python' index, meaning it starts from 0. R 
+  indexing starts at 1, so if you want to use this with an R function add 1
+  to the return value.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>matrix</code></strong> (rpy2.robjects.vectors.DataFrame) - Matrix or DataFrame with named columns.</li>
+        <li><strong class="pname"><code>columnName</code></strong> (string) - Name of one of the columns in matrix</li>
+    </ul></dd>
+    <dt>Returns: number</dt>
+        <dd>Index of the given column name in the given matrix</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>KeyError</strong></code> - columnName does not exist in matrix</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - matrix is not of type rpy2.robjects.vectors.DataFrame</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Attention:</strong>
+        Returns a 'python' index, starting at 0. R indexes start at 1.
+        <p><b>Examples</b>:</p>
+        <p>Printing the index of the column 'test1' in exampleFrame:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>dict = {<span class="py-string">'test1'</span>: R.IntVector((12,12,15)), <span class="py-string">'test2'</span>: R.IntVector((32,4,12)), <span class="py-string">'test3'</span>: R.IntVector((3,12,26))} 
+<span class="py-prompt">&gt;&gt;&gt; </span>exampleFrame = R.DataFrame(dict)     <span class="py-comment"># example dataframe. Important to note: because of dictionaries ordering mechanism, in this example the order of columns is test1, test3, test2. The ordering does not affect index().</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> index(exampleFrame, <span class="py-string">'test1'</span>)   
+<span class="py-output">0</span></pre>
+        <p>Using the column index to extract the values of column 'test1' 
+        from testFrame with python's lists bracket syntax:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>dict = {<span class="py-string">'test1'</span>: R.IntVector((12,12,15)), <span class="py-string">'test2'</span>: R.IntVector((32,4,12)), <span class="py-string">'test3'</span>: R.IntVector((3,12,26))}       
+<span class="py-prompt">&gt;&gt;&gt; </span>exampleFrame = R.DataFrame(dict)     <span class="py-comment"># example dataframe.   </span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> testFrame[index(testFrame, <span class="py-string">'test2'</span>)]   <span class="py-comment"># get the values of column 'test2'</span>
+<span class="py-output">[1] 32  4 12</span></pre>
+        <p>Using the column index to extract the values of column 'test1' 
+        from testFrame with R's .rx() function. Note that +1 is added to 
+        the index because R's indexing starts at 1 instead of 0:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>dict = {<span class="py-string">'test1'</span>: R.IntVector((12,12,15)), <span class="py-string">'test2'</span>: R.IntVector((32,4,12)), <span class="py-string">'test3'</span>: R.IntVector((3,12,26))}    
+<span class="py-prompt">&gt;&gt;&gt; </span>exampleFrame = R.DataFrame(dict)    <span class="py-comment"># example dataframe</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> testFrame.rx(True, index(testFrame, <span class="py-string">'test2'</span>)+1)  <span class="py-comment"># note the +1, because testFrame.rx() is an R function, so the indexing starts at 1</span>
+<span class="py-output">[1] 32  4 12</span></pre>
+      </p>
+</div></td></tr></table>
+</div>
+<a name="getRowsWithUniqColumn"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRowsWithUniqColumn</span>(<span class="sig-arg">matrix</span>,
+        <span class="sig-arg">columnName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#getRowsWithUniqColumn">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all the rows from matrix with unique value in the column 
+  columnName.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>matrix</code></strong> (rpy2.robjects.vectors.DataFrame) - The matrix that you want a subset of</li>
+        <li><strong class="pname"><code>columnName</code></strong> (string) - The name or index of the column you only want the unique values 
+          of</li>
+    </ul></dd>
+    <dt>Returns: rpy2.robjects.vectors.DataFrame</dt>
+        <dd>A subset of matrix with only unique values in column.</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - column is not of type str
+        <p><b>Example</b>:</p>
+        <p>Printing a sub dataframe where the values in column 1 have to be
+        unique:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>dict = {<span class="py-string">'test1'</span>: R.IntVector((12,12,15)), <span class="py-string">'test2'</span>: R.IntVector((32,4,12)), <span class="py-string">'test3'</span>: R.IntVector((3,12,26))}       <span class="py-comment"># note that test1 has 12 in row 1 and row 2 </span>
+<span class="py-prompt">&gt;&gt;&gt; </span>exampleFrame = R.DataFrame(dict)    
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> getRowsWithUniqColumn(testFrame, <span class="py-string">'test1'</span>)  <span class="py-comment"># now only two of the three rows remain, because test1 had 12 twice in the row</span>
+<span class="py-output">  test1 test3 test2</span>
+<span class="py-output">1    12     3    32</span>
+<span class="py-output">3    15    26    12</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getColumns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getColumns</span>(<span class="sig-arg">matrix</span>,
+        <span class="sig-arg">*args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#getColumns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make a subset of a matrix or dataframe containing only the columns 
+  with column names given to *args.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>matrix</code></strong> (rpy2.robjects.vectors.DataFrame) - The matrix that you want the subset of</li>
+        <li><strong class="pname"><code>args</code></strong> (string) - One or more column names that you want in the subset</li>
+    </ul></dd>
+    <dt>Returns: rpy2.robjects.vectors.DataFrame</dt>
+        <dd>Subset of matrix only containing columns given to *args</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>InputError</strong></code> - No arguments given to *args</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - matrix is not of type rpy2.robjects.vectors.Matrix or 
+        rpy2.robjects.DataFrame</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - Names passed to *args are not of type str
+        <p><b>Example</b>:</p>
+        <p>Print a sub dataframe with only 2 of the 3 original columns:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>dict = {<span class="py-string">'test1'</span>: R.IntVector((12,12,15)), <span class="py-string">'test2'</span>: R.IntVector((32,4,12)), <span class="py-string">'test3'</span>: R.IntVector((3,12,26))}       <span class="py-comment"># note that test1 has 12 in row 1 and row 2 </span>
+<span class="py-prompt">&gt;&gt;&gt; </span>testFrame = R.DataFrame(dict)    
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> getColumns(testFrame, <span class="py-string">'test1'</span>, <span class="py-string">'test3'</span>)
+<span class="py-output">  test1 test3</span>
+<span class="py-output">1    12     3</span>
+<span class="py-output">2    12    12</span>
+<span class="py-output">3    15    26</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="takeLog"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">takeLog</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">base</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#takeLog">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Take the logarithm of an R type object. The R type is tested on a 
+  vector, see R documentation about ?log what other types can be used.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (R variable that works with log() e.g. IntVector. (see R 
+          documentation ?log)) - Object that you want to take the log of.</li>
+        <li><strong class="pname"><code>base</code></strong> (Number) - base for the logarithm</li>
+    </ul></dd>
+    <dt>Returns: Same as x</dt>
+        <dd>The logarithm of all the values in x.
+          <p><b>Example</b>:</p>
+          <p>Print the logarithm of a vector:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> rpy2.robjects <span class="py-keyword">as</span> R
+<span class="py-prompt">&gt;&gt;&gt; </span>vector = R.IntVector((59843, 34982, 12425, 90534, 34532, 54642, 1239, 43534))
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> takeLog(vector, 10)
+<span class="py-output">[1] 4.777013 4.543845 4.094296 4.956812 4.538222 4.737527 3.093071 4.638829</span></pre></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - base not a positive number</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="readCsvFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readCsvFile</span>(<span class="sig-arg">csvFilePath</span>,
+        <span class="sig-arg">sep</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">\t</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">head</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">na</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">N/A</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#readCsvFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read a csv file and return the content. Returns a dataframe of the csv
+  file data</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>csvFilePath</code></strong> (string) - The path to the csv file</li>
+        <li><strong class="pname"><code>sep</code></strong> (string) - The character to separate the csv file on (default = '  ')</li>
+        <li><strong class="pname"><code>head</code></strong> (bool) - Boolean if the file to read in has headers or not (default: True)</li>
+        <li><strong class="pname"><code>na</code></strong> (string) - What do the non available values look like (default = N/A)</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - Any additional options for to R.r['read.csv'] (read R's ?read.csv
+          documentation to see what arguments are possible)</li>
+    </ul></dd>
+    <dt>Returns: rpy2.robjects.vectors.DataFrame</dt>
+        <dd>Dataframe representation of the csv file
+          <p><b>Examples</b>:</p>
+          <p>reading a csv file separated by tabs, with headers and N/A as 
+          not available (the default settings):</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataFrame = readCsvFile(<span class="py-string">'exampleFile.csv'</span>)</pre>
+          <p>reading a csv file separated by spaces, no headers, not 
+          available as NA, and escapes are allowed:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>csvDataFrame2 = readCsvFile(<span class="py-string">'exampleFile2.csv'</span>, sep=<span class="py-string">' '</span>, head=False, na=<span class="py-string">'NA'</span>, allowEscapes=<span class="py-string">'True'</span>)</pre></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fillNA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fillNA</span>(<span class="sig-arg">vectorList</span>,
+        <span class="sig-arg">amount</span>,
+        <span class="sig-arg">rType</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyMS.rFunctions-pysrc.html#fillNA">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fills the given vector with the 'not available' R type (either 
+  NA_Logical, NA_Real, NA_Integer, NA_Character or NA_Complex)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>vectorList</code></strong> (list) - List to which 'not available' types will be appended.</li>
+        <li><strong class="pname"><code>amount</code></strong> (number) - The amount of 'not availables' to add to vector</li>
+        <li><strong class="pname"><code>rType</code></strong> (The type of 'not available' to use (either NA_Logical, NA_Real, 
+          NA_Integer, NA_Character or NA_Complex))</li>
+    </ul></dd>
+    <dt>Returns: list</dt>
+        <dd>List given to fillNA with added NA's</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>TypeError</strong></code> - rType did not contain allowed value</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - vectorList is not of type list</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - amount is not of type int
+        <p><b>Example:</b></p>
+        <p>Add 2 Na_Integers to a list</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> rFunctions.fillNA([1,2,3], 2, <span class="py-string">'NA_Integer'</span>)
+<span class="py-output">[1,2,3, R.NA_Integer, R.NA_Integer]</span></pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Apr 11 12:01:50 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

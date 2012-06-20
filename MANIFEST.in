@@ -1,0 +1,11 @@
+include *.txt
+include config.ini
+exclude TODO.txt
+exclude *.pyc
+exclude *.profile
+
+
+recursive-include example_scripts *
+recursive-include docs *
+recursive-include database *
+recursive-exclude pyMSA/test *
