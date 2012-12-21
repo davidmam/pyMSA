@@ -108,6 +108,9 @@ on the same output file. If you have a cluster and use qsub you can give the fol
   
 Using this method you can only change the intensity parameter. If you want to change multiple parameters, change the featureFinder.sh script. 
 
+IMPORTANT: If the scripts get killed externally and the featureFinder.sh script doesn't get an exit signal (killing cluster jobs, pc reset) there will be .tmp files in the output folder. Remove these before starting the next job. If the script is killed internally (ctrl+c on terminal job, exception happened and script exited) these temp files will be removed automatically. 
+
+
 2.2.3 Feature Mapping
 ---------------------
 
@@ -139,29 +142,40 @@ To create the database (MySQL or SQLite) read the database section (4. Database)
 function to connect to the database. SQLite uses the database.ConnectSQLite function to connect to the database. The example show the MySQL way, but the comment after it shows what to change if you 
 want to use SQLite::
 
+  from pyMSA import database,parseMascot,parseFeatureXML
+  import pymzml
   with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:    	  # SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
       fillDatabase = database.FillDatabase(sqlCon, 'example1')									  # First, instantiate FillDatabase with the name of the mzML file 
       fillDatabase.fillMsrun('/path/to/mzmlFile/example1.mzML')									  # Use the mzML file to fill the msrun table (gives it an id and a name and optionally a description, see API doc)
       mzmlInstance = pymzml.run.Reader('/path/to/mzmlFile/example1.mzML')						  # Parse the mzML file
       fillDatabase.fillSpectrum(mzmlInstance)													  # Fill the spectrum table
-      fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example1.featureXML'), intensity_cutoff = 1000)		# Fill the features table 
-      fillDatabase.linkSpectrumToFeature()														  # Link the spectrum to the features
-      mascot = parseMascot.Reader('/path/to/mascotResultFile/example1.XML')						  # Parse the mascot result file
-      fillDatabase.fillMascot(mascot)															  # Fill the mascot table
+     fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example1.featureXML'), intensity_cutoff = 1000)		# Fill the features table       fillDatabase.linkSpectrumToFeature()														  # Link the spectrum to the features
+     
+Title lines in the MGF can take a number of formats. Four regex can be defined to extract scan, RT, mz, and the fileroot for the source file. The method signature is::  
 
-  Repeat this for the second file::
+  parseMascot.Reader('/path/to/mascotResultFile/example1.XML', scan_re='Scan (\d+) ', mz_re='', rt_re='', file_re='(Inputfile.).RAW',) In each case the first matching group is taken as the value so remember to define the groups. 
+  
+There are no defaults. The code will first use the scan number (as spectrum_index) if it exists or alternatively try to match on (mz,rt).  
+
+When filling the database with a mascot file containing merged MS runs, the fileroot can be set so only the scans from the source file are used. the method signature is fillMascot(Reader, runfileroot='examplerun1') where runfileroot must match exactly the vlaue parsed by the file_re parameter in the reader. The reader can reset the RE with reader.setFileRE(re), reader.setMzRE(re), reader.setRtRE(re) and reader.setScanRE(re) as desired:: 
+
+  mascot = parseMascot.Reader('/path/to/mascotResultFile/example1.XML')						  # Parse the mascot result file
+  fillDatabase.fillMascot(mascot)															  # Fill the mascot table
+
+Repeat this for the second file::
 
   with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:    	  # SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
       fillDatabase = database.FillDatabase(sqlCon, 'example2')
       fillDatabase.fillMsrun('/path/to/mzmlFile/example2.mzML')
       mzmlInstance = pymzml.run.Reader('/path/to/mzmlFile/example2.mzML')
       fillDatabase.fillSpectrum(mzmlInstance)
-      fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example2.featureXML'), intensity_cutoff = 1000) 
+     
+  fillDatabase.fillFeatures(parseFeatureXML.Reader('/path/to/featureXMLfile/example2.featureXML'), intensity_cutoff = 1000) 
       fillDatabase.linkSpectrumToFeature()
       mascot = parseMascot.Reader('/path/to/mascotResultFile/example2.XML')
       fillDatabase.fillMascot(mascot)
 
-  Map the features of example1.featureXML with example2.featureXML
+Map the features of example1.featureXML with example2.featureXML::
 
   with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:      	# SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
       fillDatabase = database.FillDatabase(sqlCon, 'None')
@@ -169,8 +183,11 @@ want to use SQLite::
 
 To query the database, use the ConnectMySQL::
 
+  from pyMSA import database
   with database.ConnectMySQL('hostname', 'username', 'password','database name') as sqlCon:		# SQLite: with database.SQLite('/path/to/PyMSA/database/pyMSA_database.db') as sqlCon: 
       sqlCon.cursor.execute("SELECT * FROM msrun")
+
+
 
 
 2.2.6 Analysis

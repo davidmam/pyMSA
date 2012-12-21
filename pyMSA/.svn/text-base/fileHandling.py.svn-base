@@ -114,6 +114,55 @@ class FileHandle():
                     warnings.warn('pyMS is only tested on version 1.9.0 of FeatureFinder. Older versions might not work. Found version: '+str(version)+' for your file:' +str(self.path)+'')
             inFile.close()
     
+    # Check if the file provided is a consensusXML file
+    def isConsensusXML(self):
+        """
+        Check if <featureMap is in the second line of the file.
+
+        @raise IOError: File given to FileHandle is not a valid .featXML file. 
+        @raise Warning: File given to FileHandle does not have 'software' in the 4th line
+        @raise Warning: Version of software is not of 1.9.0 or higher
+        
+        B{Example}:
+        
+        Checking if a featureXML file is valid
+    
+        >>> fileHandle = FileHandle('example_featureXML_file.featureXML')
+        >>> fileHandle.isFeatureXML() # returns None if it is valid, raises error if it is invalid
+        
+        """
+        inFile = open(self.path)
+        # read the first line
+        line=inFile.readline()
+        while line.startswith('<?xml'):
+            line=inFile.readline()
+        # if the second line of the file doesn't start with <featureMap: Return 'Not a featureXML file'
+        if not line.startswith('<consensusXML'):
+            inFile.close()
+            raise IOError, self.path+' is not a valid consensusXML file'
+        else:
+            # read max of 10 lines (because the software line can be in different place with different version of featureXML
+            for i in range(0,9): # loop 10 times
+                # read each line
+                softwareLine = inFile.readline()
+                # if software == in softwareLine, break
+                if 'software' in softwareLine:
+                    break
+                
+            # if 'software' is not in softwareLine this means that the first 10 lines did not contain software
+            if not 'software' in softwareLine:
+                # give a warning because it is not vital for the functioning of the program
+                warnings.warn('software information of the consensusXML file: \''+str(self.path)+'\' not in the first 10 lines, software version used unknown')
+                inFile.close
+            else:
+                name=softwareLine.split('name="')[1].split('"')[0]
+                version = softwareLine.split('version="')[1].split('"')[0]
+                # if the version is not 1.7.0 - 1.9.0
+                if not int(version.replace('.','')) >= 190:
+                    warnings.warn('pyMSA is only tested on version 1.9.0 of OpenMS. Older versions might not work. Found version: '+str(version)+' for your file:' +str(self.path)+'')
+                    
+            inFile.close()
+    
     # check if the file provided is a mzml or peaks.mzml file
     def isMzML(self):
         """

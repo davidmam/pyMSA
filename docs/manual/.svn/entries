@@ -1,14 +1,14 @@
 9
 
 dir
-5540
+5977
 https://svn.lifesci.dundee.ac.uk/svn/barton/ndeklein/MS/Trunk/PyMSA_dev/docs/manual
 https://svn.lifesci.dundee.ac.uk/svn/barton
 
 
 
-2012-06-18T09:31:08.161478Z
-5538
+2012-06-21T11:26:04.766912Z
+5555
 ndeklein
 
 
@@ -25,6 +25,40 @@ svn:special svn:externals svn:needs-lock
 
 
 e3abac25-378b-4346-85de-24260fe3988d
+
+6. Coding standards.rst
+file
+
+
+
+
+2012-10-04T14:15:41.000000Z
+870692e57a4313ae59a1ac3ae4e9d15b
+2012-06-21T11:26:04.766912Z
+5555
+ndeklein
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1313
 
 _static
 dir
@@ -69,10 +103,10 @@ file
 
 
 
-2012-06-18T14:17:09.000000Z
-e0227288cc42e4961196ea2ac9a9bebc
-2012-06-18T09:31:08.161478Z
-5538
+2012-10-04T14:15:41.000000Z
+2e1dd4c93fb1777e223f57a3a2a5a7da
+2012-06-21T10:26:33.354307Z
+5554
 ndeklein
 
 
@@ -95,7 +129,7 @@ ndeklein
 
 
 
-11874
+13341
 
 3. Example scripts.rst
 file
@@ -279,10 +313,10 @@ file
 
 
 
-2012-06-18T14:17:09.000000Z
-e2a894cadc59f1c25505458dc9170fa0
-2012-04-13T16:55:33.150445Z
-5298
+2012-10-04T14:15:41.000000Z
+80ab2db3e0d699c829e6b8c53651d736
+2012-06-21T10:26:33.354307Z
+5554
 ndeklein
 
 
@@ -305,5 +339,5 @@ ndeklein
 
 
 
-531
+558
 

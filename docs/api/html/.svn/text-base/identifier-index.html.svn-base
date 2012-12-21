@@ -112,53 +112,45 @@
 <tr>
 <td width="33%" class="link-index"><a href="example_scripts.compare_aligned_features-module.html">compare_aligned_features</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#config">config</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html#configHandle">configHandle</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="example_scripts.comparing_runs-module.html#compare_msrun">compare_msrun()</a><br />
-<span class="index-where">(in&nbsp;<a href="example_scripts.comparing_runs-module.html">example_scripts.comparing_runs</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html#compare_mzML">compare_mzML()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="example_scripts.comparing_runs-module.html#compare_msrun">compare_msrun()</a><br />
+<span class="index-where">(in&nbsp;<a href="example_scripts.comparing_runs-module.html">example_scripts.comparing_runs</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareFeatureXMLmzML-module.html#compareCoordinate">compareCoordinate()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.compareFeatureXMLmzML-module.html">pyMSA.compareFeatureXMLmzML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html#compare_mzML">compare_mzML()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output.CompareDataWriter-class.html">CompareDataWriter</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.compareFeatureXMLmzML-module.html#compareCoordinate">compareCoordinate()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.compareFeatureXMLmzML-module.html">pyMSA.compareFeatureXMLmzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareFeatureXMLmzML-module.html">compareFeatureXMLmzML</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.output.CompareDataWriter-class.html">CompareDataWriter</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareRuns-module.html">compareRuns</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.compareFeatureXMLmzML-module.html">compareFeatureXMLmzML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
@@ -166,52 +158,60 @@
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns-module.html">pyMSA.compareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.compareRuns-module.html">compareRuns</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="example_scripts.comparing_runs-module.html">comparing_runs</a><br />
-<span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns-module.html">pyMSA.compareRuns</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.config-module.html">config</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
+<td width="33%" class="link-index"><a href="example_scripts.comparing_runs-module.html">comparing_runs</a><br />
+<span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output-module.html#config">config</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.config-module.html">config</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
+<td width="33%" class="link-index"><a href="pyMSA.output-module.html#config">config</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html#config">config</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#configHandle">configHandle</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
+</tr>
+<tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.config.ConfigHandle-class.html">ConfigHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.config-module.html">pyMSA.config</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#configHandle">configHandle</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#configHandle">configHandle</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html#config">config</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.output-module.html#configHandle">configHandle</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#configHandle">configHandle</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html#configHandle">configHandle</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#config">config</a><br />
@@ -244,6 +244,13 @@
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.output.CsvWriter-class.html">CsvWriter</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#config">config</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html#configHandle">configHandle</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
 </tr>
 </table>
 </td></tr>
@@ -652,82 +659,89 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.database.FillDatabase-class.html#sanitizeString">sanitizeString()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.database.FillDatabase-class.html">FillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="example_scripts.specific_peaks_and_feature_retrieval-module.html">specific_peaks_and_feature_retrieval</a><br />
-<span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#sanitizeString">sanitizeString()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.getWindow.SpectraLocation-class.html">SpectraLocation</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.getWindow-module.html">pyMSA.getWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
 </tr>
 <tr>
+<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#sanitizeString">sanitizeString()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.submitMascot-module.html">submitMascot</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
+</tr>
+<tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#sanitizeString">sanitizeString()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#sanitizeString">sanitizeString()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#sanitizeStringError">sanitizeStringError()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_config-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_config-module.html">pyMSA.test.test_config</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#sanitizeStringError">sanitizeStringError()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#setUp">setUp()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#setUp">setUp()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#setUp">setUp()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#setUp">setUp()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#suite">suite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#suite">suite()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="example_scripts.specific_peaks_and_feature_retrieval-module.html">specific_peaks_and_feature_retrieval</a><br />
+<span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#suite">suite()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
 </tr>
 </table>
 </td></tr>
@@ -737,397 +751,397 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.rFunctions-module.html#takeLog">takeLog()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.rFunctions-module.html">pyMSA.rFunctions</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getChargeStateAbundance">test_getChargeStateAbundance()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html">test_mzmlFunctions</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#tearDown">tearDown()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getColors">test_getColors()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html">test_output</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#tearDown">tearDown()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getColorsException">test_getColorsException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots.testPlots-class.html#test_parent_to_XIC_plot">test_parent_to_XIC_plot()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots.testPlots-class.html">testPlots</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test-module.html">test</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getColumns">test_getColumns()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#tearDown">tearDown()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getColorsException">test_getColorsException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html">test_parseFeatureXML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_barplot">test_barplot()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getColumnsException">test_getColumnsException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#tearDown">tearDown()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getColumns">test_getColumns()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html">test_parseMascot</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframe">test_boxplotDataframe()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureConvexhullCoordinates">test_getFeatureConvexhullCoordinates()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html">testFeatureFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test-module.html">test</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getColumnsException">test_getColumnsException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html">test_parsePeaksMzML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframeExceptions">test_boxplotDataframeExceptions()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureConvexhullCoordinatesException">test_getFeatureConvexhullCoordinatesException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.submitMascot-module.html#test">test()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.submitMascot-module.html">pyMSA.submitMascot</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureConvexhullCoordinates">test_getFeatureConvexhullCoordinates()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html">testFeatureFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html">test_plots</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotFormulae">test_boxplotFormulae()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_barplot">test_barplot()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureOverlap">test_getFeatureOverlap()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureConvexhullCoordinatesException">test_getFeatureConvexhullCoordinatesException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html">testFeatureFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_precursorPerFeatureCsvWriter">test_precursorPerFeatureCsvWriter()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotFormulaeException">test_boxplotFormulaeException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframe">test_boxplotDataframe()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_mzWindow">test_getFeatures_mzWindow()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html#test_getFeatureOverlap">test_getFeatureOverlap()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html">testFeatureFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_readCsvFile">test_readCsvFile()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_compare_mzML">test_compare_mzML()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_mzWindowException">test_getFeatures_mzWindowException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframeExceptions">test_boxplotDataframeExceptions()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_mzWindow">test_getFeatures_mzWindow()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_readCsvFileExceptions">test_readCsvFileExceptions()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML.testCompareFeatureXMLmzML-class.html#test_compareCoordinate">test_compareCoordinate()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML.testCompareFeatureXMLmzML-class.html">testCompareFeatureXMLmzML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_rtWindow">test_getFeatures_rtWindow()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotFormulae">test_boxplotFormulae()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_mzWindowException">test_getFeatures_mzWindowException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_Reader">test_Reader()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">test_compareFeatureXMLmzML</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_rtWindowException">test_getFeatures_rtWindowException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotFormulaeException">test_boxplotFormulaeException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_rtWindow">test_getFeatures_rtWindow()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot.testParseMascot-class.html#test_Reader">test_Reader()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot.testParseMascot-class.html">testParseMascot</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html">test_compareRuns</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_getFile">test_getFile()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_compare_mzML">test_compare_mzML()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getFeatures_rtWindowException">test_getFeatures_rtWindowException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_Reader">test_Reader()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_CompareRuns">test_CompareRuns()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_getInfo">test_getInfo()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML.testCompareFeatureXMLmzML-class.html#test_compareCoordinate">test_compareCoordinate()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML.testCompareFeatureXMLmzML-class.html">testCompareFeatureXMLmzML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_getFile">test_getFile()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_ReaderException">test_ReaderException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_CompareRunsException">test_CompareRunsException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_getInfoException">test_getInfoException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">test_compareFeatureXMLmzML</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_getInfo">test_getInfo()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_ReaderException">test_ReaderException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_config-module.html">test_config</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html">test_compareRuns</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getIntensityFromMZwindow">test_getIntensityFromMZwindow()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_getInfoException">test_getInfoException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html">test_rFunctions</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_config.testConfig-class.html#test_config">test_config()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_config.testConfig-class.html">testConfig</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getIntensityFromMZwindowException">test_getIntensityFromMZwindowException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_CompareRuns">test_CompareRuns()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getIntensityFromMZwindow">test_getIntensityFromMZwindow()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html">test_rPlotGenerics</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_ConnectMySQL">test_ConnectMySQL()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html#test_CompareRunsException">test_CompareRunsException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getIntensityFromMZwindowException">test_getIntensityFromMZwindowException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html">test_submitMascot</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_config-module.html">test_config</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html#test_getItems">test_getItems()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot.testSubmitMascot-class.html#test_submitMascot">test_submitMascot()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot.testSubmitMascot-class.html">testSubmitMascot</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_config.testConfig-class.html#test_config">test_config()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_config.testConfig-class.html">testConfig</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getitems">test_getitems()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_takeLog">test_takeLog()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_ConnectMySQL">test_ConnectMySQL()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html#test_getItemsException">test_getItemsException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_takeLogException">test_takeLogException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_ConnectSqlite">test_ConnectSqlite()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getitems">test_getitems()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_takeLogException">test_takeLogException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_ConnectSqliteException">test_ConnectSqliteException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html#test_getItemsException">test_getItemsException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getKeys">test_getKeys()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_unmappedIntensities">test_unmappedIntensities()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_csvWriteLine">test_csvWriteLine()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getKeys">test_getKeys()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_ConnectSqliteException">test_ConnectSqliteException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getKeys">test_getKeys()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_updatedDescriptionException">test_updatedDescriptionException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_csvWriteLineException">test_csvWriteLineException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_csvWriteLine">test_csvWriteLine()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getKeys">test_getKeys()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_default">test_getKeys_default()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_updatedDescriptionException">test_updatedDescriptionException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html">test_database</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_default">test_getKeys_default()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_csvWriteLineException">test_csvWriteLineException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_exclusive">test_getKeys_exclusive()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_updateDescription">test_updateDescription()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions-module.html">test_elementFunctions</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html">test_database</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_exclusive">test_getKeys_exclusive()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_inclusive">test_getKeys_inclusive()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_updateDescription">test_updateDescription()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FeatureCsvWriter">test_FeatureCsvWriter()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeys_inclusive">test_getKeys_inclusive()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions-module.html">test_elementFunctions</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeysException">test_getKeysException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_write">test_write()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html">test_featureFunctions</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getKeysException">test_getKeysException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FeatureCsvWriter">test_FeatureCsvWriter()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_getMappedFeatureIds">test_getMappedFeatureIds()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_writeException">test_writeException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html">test_featureMapping</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html">test_featureFunctions</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_getMappedFeatureIds">test_getMappedFeatureIds()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getParams">test_getParams()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML.testCompareFeatureXMLmzML-class.html">testCompareFeatureXMLmzML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_FeatureMappingException">test_FeatureMappingException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getParams">test_getParams()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html">test_featureMapping</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getParamsExceptions">test_getParamsExceptions()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns.testCompareRuns-class.html">testCompareRuns</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_fileHandleException">test_fileHandleException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getParamsExceptions">test_getParamsExceptions()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_FeatureMappingException">test_FeatureMappingException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_mzWindow">test_getPeaks_mzWindow()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_config.testConfig-class.html">testConfig</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_config-module.html">pyMSA.test.test_config</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html">test_fileHandling</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_mzWindow">test_getPeaks_mzWindow()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_fileHandleException">test_fileHandleException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_mzWindowException">test_getPeaks_mzWindowException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FileWriter">test_FileWriter()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_mzWindowException">test_getPeaks_mzWindowException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html">test_fileHandling</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_rtWindow">test_getPeaks_rtWindow()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#testDatabase">testDatabase</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FileWriterException">test_FileWriterException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FileWriter">test_FileWriter()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_rtWindow">test_getPeaks_rtWindow()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_rtWindowException">test_getPeaks_rtWindowException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#testDatabase">testDatabase</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html">test_fillDatabase</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getPeaks_rtWindowException">test_getPeaks_rtWindowException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_FileWriterException">test_FileWriterException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getPrecursorRtMz">test_getPrecursorRtMz()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#testDatabasePath">testDatabasePath</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_FillDatabaseException">test_FillDatabaseException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getPrecursorRtMz">test_getPrecursorRtMz()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html">test_fillDatabase</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getPrecursorRtMzException">test_getPrecursorRtMzException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatureMapping">test_fillFeatureMapping()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getPrecursorRtMzException">test_getPrecursorRtMzException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_FillDatabaseException">test_FillDatabaseException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getRowsWithUniqColumn">test_getRowsWithUniqColumn()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions.testFeatureFunctions-class.html">testFeatureFunctions</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMapping">test_fillFeatureMapping()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getRowsWithUniqColumn">test_getRowsWithUniqColumn()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatureMapping">test_fillFeatureMapping()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getRowsWithUniqColumnException">test_getRowsWithUniqColumnException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatureMappingException">test_fillFeatureMappingException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_getRowsWithUniqColumnException">test_getRowsWithUniqColumnException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMapping">test_fillFeatureMapping()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getSimpleFeatureInfo">test_getSimpleFeatureInfo()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMappingException">test_fillFeatureMappingException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getSimpleFeatureInfo">test_getSimpleFeatureInfo()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatureMappingException">test_fillFeatureMappingException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getSimpleFeatureInfoException">test_getSimpleFeatureInfoException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatures">test_fillFeatures()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getSimpleFeatureInfoException">test_getSimpleFeatureInfoException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatureMappingException">test_fillFeatureMappingException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getSpectra">test_getSpectra()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatures">test_fillFeatures()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getSpectra">test_getSpectra()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeatures">test_fillFeatures()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_mzWindow">test_getSpectra_mzWindow()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeaturesException">test_fillFeaturesException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_mzWindow">test_getSpectra_mzWindow()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeatures">test_fillFeatures()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_mzWindowException">test_getSpectra_mzWindowException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeaturesException">test_fillFeaturesException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_mzWindowException">test_getSpectra_mzWindowException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillFeaturesException">test_fillFeaturesException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_rtWindow">test_getSpectra_rtWindow()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMascot">test_fillMascot()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_rtWindow">test_getSpectra_rtWindow()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillFeaturesException">test_fillFeaturesException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_rtWindowException">test_getSpectra_rtWindowException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMascotException">test_fillMascotException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMascot">test_fillMascot()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html#test_getSpectra_rtWindowException">test_getSpectra_rtWindowException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getTotalMScount">test_getTotalMScount()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMsrun">test_fillMsrun()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMascotException">test_fillMascotException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getTotalMScount">test_getTotalMScount()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getUnassignedPeptidesMZandRTvalue">test_getUnassignedPeptidesMZandRTvalue()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot.testParseMascot-class.html">testParseMascot</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrun">test_fillMsrun()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMsrun">test_fillMsrun()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html">test_getWindow</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMsrunException">test_fillMsrunException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrun">test_fillMsrun()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_histogram">test_histogram()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrunException">test_fillMsrunException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillMsrunException">test_fillMsrunException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_histogramExceptions">test_histogramExceptions()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_fillNA">test_fillNA()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillMsrunException">test_fillMsrunException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_index">test_index()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_fillNAException">test_fillNAException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_fillNA">test_fillNA()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_indexException">test_indexException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
@@ -1135,49 +1149,57 @@
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillSpectrum">test_fillSpectrum()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html#test_fillNAException">test_fillNAException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isFeatureXML">test_isFeatureXML()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrum">test_fillSpectrum()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillSpectrum">test_fillSpectrum()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isFeatureXML_invalidException">test_isFeatureXML_invalidException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillSpectrumException">test_fillSpectrumException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrum">test_fillSpectrum()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isMascot">test_isMascot()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrumException">test_fillSpectrumException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_fillSpectrumException">test_fillSpectrumException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isMascotException">test_isMascotException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllElements">test_getAllElements()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_fillSpectrumException">test_fillSpectrumException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isMzML">test_isMzML()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#testFolder">testFolder</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllElements">test_getAllElements()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isMzMLException">test_isMzMLException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html#testFolder">testFolder</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
+</tr>
+<tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getAllElements">test_getAllElements()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot.testParseMascot-class.html">testParseMascot</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isMzMLException">test_isMzMLException()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isXML">test_isXML()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow.testGetWindow-class.html">testGetWindow</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
@@ -1185,7 +1207,7 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html#test_getAllElements">test_getAllElements()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isXML">test_isXML()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isXML_invalidException">test_isXML_invalidException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
@@ -1193,47 +1215,47 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllFeatureId">test_getAllFeatureId()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling.testFileHandling-class.html#test_isXML_invalidException">test_isXML_invalidException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling.testFileHandling-class.html">testFileHandling</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_linkSpectrumToFeature">test_linkSpectrumToFeature()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllFeatureIdException">test_getAllFeatureIdException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_linkSpectrumToFeature">test_linkSpectrumToFeature()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeature">test_linkSpectrumToFeature()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllFeatureInfo">test_getAllFeatureInfo()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeature">test_linkSpectrumToFeature()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_linkSpectrumToFeatureException">test_linkSpectrumToFeatureException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot.testParseMascot-class.html">testParseMascot</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllFeatureInfoException">test_getAllFeatureInfoException()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_database.testDatabase-class.html#test_linkSpectrumToFeatureException">test_linkSpectrumToFeatureException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database.testDatabase-class.html">testDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeatureException">test_linkSpectrumToFeatureException()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html">testParsePeaksMzML</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html#test_getAllNestedElementInformation">test_getAllNestedElementInformation()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html#test_linkSpectrumToFeatureException">test_linkSpectrumToFeatureException()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase.testFillDatabase-class.html">testFillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_mappedIntensities">test_mappedIntensities()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots.testPlots-class.html">testPlots</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html#test_getAllNestedItems">test_getAllNestedItems()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions.testElementFunctions-class.html">testElementFunctions</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_mappedIntensities">test_mappedIntensities()</a><br />
+<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_mapping">test_mapping()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions.testRFunctions-class.html">testRFunctions</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
@@ -1241,16 +1263,24 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html#test_getAllNonFeatures">test_getAllNonFeatures()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML.testParseFeatureXML-class.html">testParseFeatureXML</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html#test_mapping">test_mapping()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping.testFeatureMapping-class.html">testFeatureMapping</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_MsrunCsvWriter">test_MsrunCsvWriter()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getAssignedPeptidesMZandRTvalue">test_getAssignedPeptidesMZandRTvalue()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot.testParseMascot-class.html">testParseMascot</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.test.test_output.testOutput-class.html#test_MsrunCsvWriter">test_MsrunCsvWriter()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output.testOutput-class.html">testOutput</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html">test_mzmlFunctions</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot.testSubmitMascot-class.html">testSubmitMascot</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html#test_getChargeStateAbundance">test_getChargeStateAbundance()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions.testMzmlFunctions_mzmlFile-class.html">testMzmlFunctions_mzmlFile</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html">test_output</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 <td width="33%" class="link-index">&nbsp;</td>
 </tr>
 </table>
@@ -1287,216 +1317,223 @@
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.database.ConnectMySQL-class.html#__enter__">__enter__()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectMySQL-class.html">ConnectMySQL</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML.Reader-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML.Reader-class.html">Reader</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML-module.html#__package__">__package__</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML-module.html">pyMSA.parsePeaksMzML</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__enter__">__enter__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.parseMascot.Reader-class.html#__init__">__init__()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.parseMascot.Reader-class.html">Reader</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.plots-module.html#__package__">__package__</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.plots-module.html">pyMSA.plots</a>)</span></td>
-</tr>
-<tr>
-<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__enter__">__enter__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML.Reader-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML.Reader-class.html">Reader</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.rFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.rFunctions-module.html">pyMSA.rFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output.FileWriter-class.html#__enter__">__enter__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output.FileWriter-class.html">FileWriter</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.rPlotGenerics.Plots-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.rPlotGenerics.Plots-class.html">Plots</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__enter__">__enter__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML.Reader-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML.Reader-class.html">Reader</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.rPlotGenerics-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.rPlotGenerics-module.html">pyMSA.rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.ConnectMySQL-class.html#__exit__">__exit__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectMySQL-class.html">ConnectMySQL</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__enter__">__enter__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.rPlotGenerics.Plots-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.rPlotGenerics.Plots-class.html">Plots</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.submitMascot-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.submitMascot-module.html">pyMSA.submitMascot</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.output.FileWriter-class.html#__enter__">__enter__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output.FileWriter-class.html">FileWriter</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts-module.html">example_scripts</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test-module.html">pyMSA.test</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__exit__">__exit__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.ConnectMySQL-class.html#__exit__">__exit__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectMySQL-class.html">ConnectMySQL</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.compare_aligned_features-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.compare_aligned_features-module.html">example_scripts.compare_aligned_features</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareFeatureXMLmzML-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareFeatureXMLmzML-module.html">pyMSA.test.test_compareFeatureXMLmzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__exit__">__exit__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__exit__">__exit__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.comparing_runs-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.comparing_runs-module.html">example_scripts.comparing_runs</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_compareRuns-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_compareRuns-module.html">pyMSA.test.test_compareRuns</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output.FileWriter-class.html#__exit__">__exit__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output.FileWriter-class.html">FileWriter</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__exit__">__exit__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.filling_database_mysql-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.filling_database_mysql-module.html">example_scripts.filling_database_mysql</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_config-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_config-module.html">pyMSA.test.test_config</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML.Reader-class.html#__getitem__">__getitem__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML.Reader-class.html">Reader</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.output.FileWriter-class.html#__exit__">__exit__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output.FileWriter-class.html">FileWriter</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.filling_database_sqlite-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.filling_database_sqlite-module.html">example_scripts.filling_database_sqlite</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML.Reader-class.html#__getitem__">__getitem__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML.Reader-class.html">Reader</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML.Reader-class.html#__getitem__">__getitem__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML.Reader-class.html">Reader</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.parsing_featureXML-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.parsing_featureXML-module.html">example_scripts.parsing_featureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_elementFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_elementFunctions-module.html">pyMSA.test.test_elementFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML.Reader-class.html#__getitem__">__getitem__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML.Reader-class.html">Reader</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.plots_from_csvFiles-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.plots_from_csvFiles-module.html">example_scripts.plots_from_csvFiles</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureFunctions-module.html">pyMSA.test.test_featureFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.config.ConfigHandle-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.config.ConfigHandle-class.html">ConfigHandle</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.compareRuns.CompareRuns-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns.CompareRuns-class.html">CompareRuns</a>)</span></td>
 <td width="33%" class="link-index"><a href="example_scripts.specific_peaks_and_feature_retrieval-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="example_scripts.specific_peaks_and_feature_retrieval-module.html">example_scripts.specific_peaks_and_feature_retrieval</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_featureMapping-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_featureMapping-module.html">pyMSA.test.test_featureMapping</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.ConnectMySQL-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectMySQL-class.html">ConnectMySQL</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.config.ConfigHandle-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.config.ConfigHandle-class.html">ConfigHandle</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA-module.html">pyMSA</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fileHandling-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fileHandling-module.html">pyMSA.test.test_fileHandling</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.ConnectMySQL-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectMySQL-class.html">ConnectMySQL</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.compareFeatureXMLmzML-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.compareFeatureXMLmzML-module.html">pyMSA.compareFeatureXMLmzML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_fillDatabase-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_fillDatabase-module.html">pyMSA.test.test_fillDatabase</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.database.FillDatabase-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.database.FillDatabase-class.html">FillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.ConnectSqlite-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.ConnectSqlite-class.html">ConnectSqlite</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.compareRuns-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.compareRuns-module.html">pyMSA.compareRuns</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_getWindow-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_getWindow-module.html">pyMSA.test.test_getWindow</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.featureMapping.Map-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.featureMapping.Map-class.html">Map</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.database.FillDatabase-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.database.FillDatabase-class.html">FillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.config-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.config-module.html">pyMSA.config</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_mzmlFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_mzmlFunctions-module.html">pyMSA.test.test_mzmlFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.fileHandling.FileHandle-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.fileHandling.FileHandle-class.html">FileHandle</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.featureMapping.Map-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.featureMapping.Map-class.html">Map</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.database-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.database-module.html">pyMSA.database</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.fileHandling.FileHandle-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.fileHandling.FileHandle-class.html">FileHandle</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.elementFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.elementFunctions-module.html">pyMSA.elementFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseFeatureXML-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseFeatureXML-module.html">pyMSA.test.test_parseFeatureXML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.getWindow.FeatureLocation-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.FeatureLocation-class.html">FeatureLocation</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.fillDatabase.FillDatabase-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase.FillDatabase-class.html">FillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.featureFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.featureFunctions-module.html">pyMSA.featureFunctions</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parseMascot-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parseMascot-module.html">pyMSA.test.test_parseMascot</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.getWindow.PeakLocation-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.PeakLocation-class.html">PeakLocation</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.getWindow.FeatureLocation-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.FeatureLocation-class.html">FeatureLocation</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.featureMapping-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.featureMapping-module.html">pyMSA.featureMapping</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_parsePeaksMzML-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_parsePeaksMzML-module.html">pyMSA.test.test_parsePeaksMzML</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.getWindow.SpectraLocation-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.SpectraLocation-class.html">SpectraLocation</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.getWindow.PeakLocation-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.PeakLocation-class.html">PeakLocation</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.fileHandling-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.fileHandling-module.html">pyMSA.fileHandling</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_plots-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_plots-module.html">pyMSA.test.test_plots</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.mzmlFunctions.IntensityFromSpectra-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.mzmlFunctions.IntensityFromSpectra-class.html">IntensityFromSpectra</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.getWindow.SpectraLocation-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.getWindow.SpectraLocation-class.html">SpectraLocation</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.fillDatabase-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.fillDatabase-module.html">pyMSA.fillDatabase</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output.CompareDataWriter-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output.CompareDataWriter-class.html">CompareDataWriter</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.mzmlFunctions.IntensityFromSpectra-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.mzmlFunctions.IntensityFromSpectra-class.html">IntensityFromSpectra</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.getWindow-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.getWindow-module.html">pyMSA.getWindow</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rPlotGenerics-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rPlotGenerics-module.html">pyMSA.test.test_rPlotGenerics</a>)</span></td>
 </tr>
 <tr>
-<td width="33%" class="link-index"><a href="pyMSA.output.FeatureCsvWriter-class.html#__init__">__init__()</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output.FeatureCsvWriter-class.html">FeatureCsvWriter</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.output.CompareDataWriter-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output.CompareDataWriter-class.html">CompareDataWriter</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.mzmlFunctions-module.html#__package__">__package__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.mzmlFunctions-module.html">pyMSA.mzmlFunctions</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.test.test_submitMascot-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.test.test_submitMascot-module.html">pyMSA.test.test_submitMascot</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.output.FeatureCsvWriter-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output.FeatureCsvWriter-class.html">FeatureCsvWriter</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.output-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_database-module.html#__warningregistry__">__warningregistry__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_database-module.html">pyMSA.test.test_database</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.output.FeatureWriter-class.html#__init__">__init__()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.output.FeatureWriter-class.html">FeatureWriter</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.output-module.html#__package__">__package__</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.output-module.html">pyMSA.output</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML-module.html">pyMSA.parseFeatureXML</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_output-module.html#__warningregistry__">__warningregistry__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_output-module.html">pyMSA.test.test_output</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.output.FileWriter-class.html#__init__">__init__()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.output.FileWriter-class.html">FileWriter</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML-module.html#__package__">__package__</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML-module.html">pyMSA.parseFeatureXML</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parseMascot-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parseMascot-module.html">pyMSA.parseMascot</a>)</span></td>
 <td width="33%" class="link-index"><a href="pyMSA.test.test_rFunctions-module.html#__warningregistry__">__warningregistry__</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.test.test_rFunctions-module.html">pyMSA.test.test_rFunctions</a>)</span></td>
 </tr>
 <tr>
 <td width="33%" class="link-index"><a href="pyMSA.output.MsrunCsvWriter-class.html#__init__">__init__()</a><br />
 <span class="index-where">(in&nbsp;<a href="pyMSA.output.MsrunCsvWriter-class.html">MsrunCsvWriter</a>)</span></td>
-<td width="33%" class="link-index"><a href="pyMSA.parseMascot-module.html#__package__">__package__</a><br />
-<span class="index-where">(in&nbsp;<a href="pyMSA.parseMascot-module.html">pyMSA.parseMascot</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.parsePeaksMzML-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parsePeaksMzML-module.html">pyMSA.parsePeaksMzML</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="pyMSA.parseFeatureXML.Reader-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.parseFeatureXML.Reader-class.html">Reader</a>)</span></td>
+<td width="33%" class="link-index"><a href="pyMSA.plots-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="pyMSA.plots-module.html">pyMSA.plots</a>)</span></td>
 <td width="33%" class="link-index">&nbsp;</td>
 </tr>
 </table>
@@ -1525,7 +1562,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:32 2012
+    Generated by Epydoc 3.0.1 on Wed Jun 20 18:34:59 2012
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

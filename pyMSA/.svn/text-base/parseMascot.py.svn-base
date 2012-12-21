@@ -53,17 +53,19 @@ class Reader():
     
     # initializer, takes a file path as input
     def __init__(self, path, **kwargs):
-        self.rt_re= kwargs.get('rt_re',None)
-        self.mz_re=kwargs.get('mz_re',None) 
-        self.scan_re=kwargs.get('scan_re',None) 
-        self.file_re=kwargs.get('file_re',None)
         """
         Initialize the Reader instance and check if the file is a valid peaks.mzML file and put it in a fileHandling.FileHandle instance.
         
         @type path: string
-        @param path: The path of the feature XML file                       
+        @param path: The path of the feature XML file     
+        @param kwargs: Accepts rt_re, mz_re, scan_re and file_re. Regular expression to parse info from scan_title can be set with them (see the setter functions for more info)
 
         """
+        # if the values are given to kwargs, set them. if not, set them to None
+        self.rt_re = kwargs.get('rt_re',None)
+        self.mz_re = kwargs.get('mz_re',None) 
+        self.scan_re = kwargs.get('scan_re',None) 
+        self.file_re = kwargs.get('file_re',None)
         
         # filepath
         self.path = path
@@ -83,20 +85,78 @@ class Reader():
         self.simpleFlag = True
         
     def setScanRE(self, scan_re):
-        '''sets the regular expression used to parse the scan number out from the Mascot file'''
-        self.scan_re=scan_re
+        """
+        Sets the regular expression used to parse the scan number out from the scan_title of the peptides in a MASCOT file
+        
+        @type scan_re: string
+        @param scan_re: regular expression used to parse the scan number out from the MASCOT file
+        """
+        if not isinstance(scan_re, str):
+            raise TypeError, 'scan_re not of type string. Instead, is of type: '+str(type(scan_re))
+        self.scan_re = scan_re
         
     def setFileRE(self, file_re):
-        '''sets the regular expression used to parse the scan number out from the Mascot file'''
-        self.file_re=file_re
+        """
+        Sets the regular expression used to parse the scan number out from the scan_title of the peptides in a MASCOT file
+        
+        @type file_re: string
+        @param file_re: regular expression used to parse the scan number out of the MASCOT file
+        """
+        if not isinstance(file_re, str):
+            raise TypeError, 'file_re not of type string. Instead, is of type: '+str(type(file_re))
+        self.file_re = file_re
         
     def setRtRE(self, rt_re):
-        '''sets the regular expression used to parse the scan number out from the Mascot file'''
-        self.rt_re=rt_re
+        """
+        Sets the regular expression used to parse the retention time out from the scan_title of the peptides in a MASCOT file
+        
+        @type rt_re: string
+        @param rt_re: regular expression used to parse the retention time out from the scan_title of the peptides in a MASCOT file
+        """
+        if not isinstance(rt_re, str):
+            raise TypeError, 'rt_re not of type string. Instead, is of type: '+str(type(rt_re))
+        self.rt_re = rt_re
         
     def setMzRE(self, mz_re):
-        '''sets the regular expression used to parse the scan number out from the Mascot file'''
-        self.mz_re=mz_re
+        """
+        Sets the regular expression used to parse the m/z value out from the scan_title of the peptides in a MASCOT file
+        
+        @type mz_re: string
+        @param mz_re: regular expression used to parse the m/z value out from the scan_title of the peptides in a MASCOT file
+        """
+        if not isinstance(mz_re, str):
+            raise TypeError, 'mz_re not of type string. Instead, is of type: '+str(type(mz_re))
+        self.mz_re = mz_re
+
+    def _parseTitle(self, title):
+        """
+        Uses the object level regular expression definitions to extract the rt, mz, scan and file name parameters from the title string if present
+        
+        @type title: string
+        @param title: title of the mascot peptide
+        @rtype: dict
+        @return regular expression definitions to extract the rt, mz, scan and file name parameters
+        
+        """
+        params={}
+        if self.rt_re != None:
+            rtm = re.search(self.rt_re, title)
+            if rtm:
+                params['rt'] = rtm.group(1)
+        if self.mz_re != None:
+            rtm = re.search(self.mz_re, title)
+            if rtm:
+                params['mz'] = rtm.group(1)
+        if self.scan_re != None:
+            rtm = re.search(self.scan_re, title)
+            if rtm:
+                params['scan'] = rtm.group(1)
+        if self.file_re != None:
+            rtm = re.search(self.file_re, title)
+            if rtm:
+                params['file'] = rtm.group(1)
+        return params
+
         
     # Make an iterable function (by using yield) that returns every element in the file
     def getAllElements(self):
@@ -147,6 +207,7 @@ class Reader():
         
         @rtype: dict
         @return: A dict of all the assigned peptides with m/z, RT value and protein description
+        @raise RuntimeError: None of the regular expressions for parsing the scan_title was set
         
         B{Example:}
         
@@ -156,6 +217,10 @@ class Reader():
         >>> for result in mascot.getAssignedPeptidesMZandRTvalue():
         ...    print result
         """
+        
+        if self.scan_re == None and self.file_re == None and self.rt_re == None and self.mz_re == None:
+            raise RuntimeError, 'None of the regular expressions was set to get the scan number or m/z and rt value out of the scan title. You can set them using setScanRE, setFileRE, setRtRE, setMzRE'  
+        
         for element in self.getAllElements(): 
             # get the useful info from the element tag
             elementTag = element.tag.split('}')[-1]
@@ -164,10 +229,12 @@ class Reader():
                 for hit in element:
                     for protein in hit:
                         proteinAccession = elementFunctions.getItems(protein)['accession']
+                        prot_desc="No description"
                         for protInfo in protein:
                             protInfoTag = protInfo.tag.split('}')[-1]
                             if protInfoTag == 'prot_desc':
-                                prot_desc = protInfo.text
+                                if protInfo.text != None and protInfo.text !='':
+                                    prot_desc = protInfo.text
                             elif protInfoTag == 'prot_score':
                                 prot_score = protInfo.text
                             elif protInfoTag == 'prot_mass':
@@ -246,43 +313,6 @@ class Reader():
                                                'pep_res_after':pep_res_after, 'pep_var_mod':pep_var_mod,'pep_var_mod_pos':pep_var_mod_pos
                                                ,'pep_num_match':pep_num_match, 'pep_scan_title':pep_scan_title, 'fileroot':fileroot, 'scannumber':scan}
  
-    def _parseTitle(self, title):
-        '''uses the object level regular expression definitions to extract the rt, mz, scan and file name parameters from the title string if present'''
-        params={}
-        if self.rt_re != None:
-            try:
-                rtm=re.search(self.rt_re, title)
-                if rtm:
-                    if rtm.group(1):
-                        params['rt']=rtm.group(1)
-            except:
-                pass
-        if self.mz_re != None:
-            try:
-                rtm=re.search(self.mz_re, title)
-                if rtm:
-                    if rtm.group(1):
-                        params['mz']=rtm.group(1)
-            except:
-                pass
-        if self.scan_re != None:
-            try:
-                rtm=re.search(self.scan_re, title)
-                if rtm:
-                    if rtm.group(1):
-                        params['scan']=rtm.group(1)
-            except:
-                pass
-        if self.file_re != None:
-            try:
-                rtm=re.search(self.file_re, title)
-                if rtm:
-                    if rtm.group(1):
-                        params['file']=rtm.group(1)
-            except:
-                pass
-        return params
-
 
 
     def getUnassignedPeptidesMZandRTvalue(self):
@@ -291,6 +321,7 @@ class Reader():
         
         @rtype: dict
         @return: A dict of all the assigned peptides with m/z, RT value and protein description
+        @raise RuntimeError: None of the regular expressions for parsing the scan_title was set
         
         B{Example:}
         
@@ -300,6 +331,8 @@ class Reader():
         >>> for result in mascot.getAssignedPeptidesMZandRTvalue():
         ...    print result
         """
+        if self.scan_re == None and self.file_re == None and self.rt_re == None and self.mz_re == None:
+            raise RuntimeError, 'None of the regular expressions was set to get the scan number or m/z and rt value out of the scan title. You can set them using setScanRE, setFileRE, setRtRE, setMzRE'  
 
         for element in self.getAllElements():
             # get the useful info from the element tag

@@ -1,14 +1,14 @@
 9
 
 dir
-5540
+5977
 https://svn.lifesci.dundee.ac.uk/svn/barton/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/_build/html/_sources
 https://svn.lifesci.dundee.ac.uk/svn/barton
 
 
 
-2012-06-18T09:31:08.161478Z
-5538
+2012-06-20T17:48:13.570808Z
+5550
 ndeklein
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2012-06-18T14:17:09.000000Z
-e0227288cc42e4961196ea2ac9a9bebc
-2012-06-18T09:31:08.161478Z
-5538
+2012-10-04T14:15:41.000000Z
+1ba08bb36a286729ee12868893e5a49a
+2012-06-20T17:48:13.570808Z
+5550
 ndeklein
 
 
@@ -58,7 +58,7 @@ ndeklein
 
 
 
-11874
+12367
 
 3. Example scripts.txt
 file

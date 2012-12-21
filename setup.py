@@ -19,7 +19,7 @@ from distutils.core import setup
 
 setup(
     name='PyMSA',
-    version='0.2.6',
+    version='0.2.9',
     author='N.P. de Klein',
     author_email='niekdeklein@gmail.com',
     packages=['pyMSA', 'pyMSA.test'],

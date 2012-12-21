@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 59
-/svn/barton/!svn/ver/5538/ndeklein/MS/Trunk/PyMSA_dev/pyMSA
+/svn/barton/!svn/ver/5563/ndeklein/MS/Trunk/PyMSA_dev/pyMSA
 END
 rFunctions.py
 K 25
 svn:wc:ra_dav:version-url
 V 73
 /svn/barton/!svn/ver/5296/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/rFunctions.py
+END
+parseConsensusXML.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/barton/!svn/ver/6282/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseConsensusXML.py
 END
 compareRuns.py
 K 25
@@ -43,7 +49,7 @@ database.py
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/barton/!svn/ver/5547/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/database.py
+/svn/barton/!svn/ver/6277/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/database.py
 END
 config.py
 K 25
@@ -75,17 +81,11 @@ svn:wc:ra_dav:version-url
 V 76
 /svn/barton/!svn/ver/5472/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/mzmlFunctions.py
 END
-submitMascot.py
+helper.py
 K 25
 svn:wc:ra_dav:version-url
-V 75
-/svn/barton/!svn/ver/5537/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/submitMascot.py
-END
-XIC_plot.png
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/barton/!svn/ver/5472/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/XIC_plot.png
+V 69
+/svn/barton/!svn/ver/6277/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/helper.py
 END
 rPlotGenerics.py
 K 25
@@ -97,7 +97,7 @@ parseMascot.py
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svn/barton/!svn/ver/5547/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseMascot.py
+/svn/barton/!svn/ver/6041/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseMascot.py
 END
 elementFunctions.py
 K 25
@@ -115,7 +115,7 @@ fileHandling.py
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/barton/!svn/ver/5472/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/fileHandling.py
+/svn/barton/!svn/ver/6277/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/fileHandling.py
 END
 featureFunctions.py
 K 25

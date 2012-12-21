@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS `consensus_feature_element`;
+DROP TABLE IF EXISTS `consensus_feature`;
+DROP TABLE IF EXISTS `db_search`;
+DROP TABLE IF EXISTS `db_search_group`;
+DROP TABLE IF EXISTS `feature_pair`;
+DROP TABLE IF EXISTS `feature_group_type`;
+DROP TABLE IF EXISTS `peptide_fragment`;
+DROP TABLE IF EXISTS `peptide_fragment_database`;
 DROP TABLE IF EXISTS `feature_has_MSMS_precursor`;
 DROP TABLE IF EXISTS `MASCOT_protein`;
 DROP TABLE IF EXISTS `MASCOT_peptide`;
@@ -14,12 +22,46 @@ DROP TABLE IF EXISTS `feature`;
 DROP TABLE IF EXISTS `msrun`;
 
 -- -----------------------------------------------------
+-- Table `peptide_fragment_database`
+--
+-- Holds the details for the peptide fragment source
+-- -----------------------------------------------------
+CREATE TABLE `peptide_fragment_database` (
+`database_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`database_name` VARCHAR(50) UNIQUE NOT NULL,
+`database_species` VARCHAR(100),
+`database_description` VARCHAR(1000)
+);
+
+-- -----------------------------------------------------
+-- Table `peptide_fragment`
+--
+-- Holds the details for the peptide fragment
+-- -----------------------------------------------------
+CREATE TABLE `peptide_fragment` (
+`fragment_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`protein_accession` VARCHAR(50) NOT NULL,
+`fragment_database_id` INT NOT NULL,
+`fragment_sequence` VARCHAR(100) NOT NULL,
+`fragment_start` INT NOT NULL,
+`fragment_end` INT NOT NULL,
+`fragment_mono_mass` DOUBLE NOT NULL,
+CONSTRAINT `fk_fragment_database`
+    FOREIGN KEY (`fragment_database_id` )
+    REFERENCES `peptide_fragment_database` (`database_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+
+
+-- -----------------------------------------------------
 -- Table `msrun`
 --
 -- Holds the name of the msrun and a description.The start_time is saved as TEXT as ISO8601 strings ("YYYY-MM-DD HH:MM:SS.SSS"). See http://sqlite.org/datatype3.html 1.2
 -- -----------------------------------------------------
 CREATE TABLE `msrun` (
-  `msrun_id` INT PRIMARY KEY NOT NULL ,
+  `msrun_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `msrun_name` VARCHAR(40) UNIQUE NOT NULL ,
   `description` VARCHAR(500) NOT NULL ,
   `start_time` TEXT NOT NULL);
@@ -34,7 +76,7 @@ CREATE TABLE `msrun` (
 -- save in the convexhull but it takes to long to do a join and max(rt), max(mz), min(rt) etc select. 
 -- -----------------------------------------------------
 CREATE TABLE `feature` (
-  `feature_table_id` INT PRIMARY KEY NOT NULL ,
+  `feature_table_id` INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
   `feature_id` VARCHAR(40) NOT NULL ,
   `intensity` DOUBLE NOT NULL ,
   `overallquality` DOUBLE NOT NULL ,
@@ -49,20 +91,115 @@ CREATE TABLE `feature` (
     ON UPDATE NO ACTION);
 
 -- -----------------------------------------------------
+-- Table `feature group type`
+--
+-- Holds a text description of feature grouping types
+-- -----------------------------------------------------
+
+CREATE TABLE `feature_group_type` (
+`feature_group_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`feature_group_name` VARCHAR(80) UNIQUE NOT NULL,
+`feature_group_description` VARCHAR(500) NOT NULL,
+`iso_rt` BOOLEAN NOT NULL DEFAULT FALSE,
+-- retention times must be concurrent
+`fixed_delta` DOUBLE NOT NULL DEFAULT 0.0
+-- if fixed delta == 0 then the delta is variable, ie between charge states. 
+-- If it is non-zero, then it is a PTM with that delta mass. 
+-- mz difference must be calculated from charge state as fixed_delta/charge
+
+);
+-- -----------------------------------------------------
+-- Table `feature pair`
+--
+-- Links to features with a grouping type
+-- `feature_pair_id` unique relationship id
+-- `feature_low_id` paired feature with lower mz - foreign key
+-- `feature_high_id ` paired feature with higher mz - foreign key
+-- `experiment` tag to allow assignments from different sources to be distinguished
+-- -----------------------------------------------------
+
+CREATE TABLE `feature_pair` (
+`feature_group_id` INT NOT NULL AUTO_INCREMENT,
+`feature_low_id` INT NOT NULL,
+`feature_high_id` INT NOT NULL,
+`experiment` VARCHAR(50) NOT NULL,
+  CONSTRAINT `fk_low_feature`
+    FOREIGN KEY (`feature_low_id` )
+    REFERENCES `feature` (`feature_table_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_high_feature`
+    FOREIGN KEY (`feature_high_id` )
+    REFERENCES `feature` (`feature_table_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_feature_group`
+    FOREIGN KEY (`feature_group_id` )
+    REFERENCES `feature_group_type` (`feature_group_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+-- -----------------------------------------------------
+-- Table `consensus_feature`
+--
+-- cf_id unique table identifier
+-- cf_name consensusElement id attribute
+-- centroid_rt retention time
+-- centroid_mz parent mz
+-- runtag Identifier for grouping analysis runs
+-- -----------------------------------------------------
+
+CREATE TABLE `consensus_feature` (
+cf_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+cf_name VARCHAR(30) NOT NULL,
+centroid_rt FLOAT NOT NULL,
+centroid_mz FLOAT NOT NULL,
+quality FLOAT NOT NULL,
+charge INTEGER NOT NULL,
+intensity FLOAT NOT NULL,
+runtag VARCHAR(50) NOT NULL
+);
+
+-- -----------------------------------------------------
+-- Table `consensus_feature_element`
+--
+-- -----------------------------------------------------
+CREATE TABLE `consensus_feature_element` (
+consensus_id INTEGER NOT NULL,
+feature_id INTEGER NOT NULL,
+delta_rt FLOAT NOT NULL,
+CONSTRAINT `fk_consensus_element` 
+	   FOREIGN KEY (`consensus_id`) 
+	   REFERENCES `consensus_feature` (`cf_id`) 
+	   ON DELETE NO ACTION
+    	   ON UPDATE NO ACTION,
+CONSTRAINT `fk_feature_element`
+    	   FOREIGN KEY (`feature_id` )
+    	   REFERENCES `feature` (`feature_table_id` )
+    	   ON DELETE NO ACTION
+    	   ON UPDATE NO ACTION
+);
+
+
+
+-- -----------------------------------------------------
 -- Table `convexhull`
 -- 
 -- Holds the convexhull m/z and retention time points of each feature
 -- -----------------------------------------------------
 CREATE TABLE `convexhull` (
-  `convexhull_id` INT PRIMARY KEY NOT NULL ,
+  `convexhull_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
   `mz` DOUBLE NOT NULL ,
   `rt` DOUBLE NOT NULL ,
   `feature_feature_table_id` INT NOT NULL ,
+
+index(mzchar),
   CONSTRAINT `fk_convexhull_feature`
     FOREIGN KEY (`feature_feature_table_id` )
     REFERENCES `feature` (`feature_table_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+-- Add an update trigger
 
 -- -----------------------------------------------------
 -- Table `convexhull_edges`
@@ -93,7 +230,7 @@ CREATE TABLE convexhull_edges(
 -- scan_start_time is in seconds (to be the same as the retention time of features)
 -- -----------------------------------------------------
 CREATE TABLE `spectrum` (
-  `spectrum_id` INT PRIMARY KEY NOT NULL ,
+  `spectrum_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
   `spectrum_index` INT NOT NULL ,
   `ms_level` INT NOT NULL ,
   `base_peak_mz` DOUBLE NOT NULL ,
@@ -150,13 +287,42 @@ CREATE TABLE `feature_has_MSMS_precursor` (
     ON UPDATE NO ACTION);
 
 -- -----------------------------------------------------
+-- Table db_search_group
+-- Contains details of database search parameter sets
+-- These are essentially just tags for grouping - detailed parameters will be in the individual file
+-- -----------------------------------------------------
+
+CREATE TABLE `db_search_group`(
+db_search_group_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+db_search_group_name VARCHAR(40) NOT NULL,
+db_search_group_description VARCHAR(1000),
+db_search_engine VARCHAR(60)
+);
+insert into db_search_group (db_search_group_id, db_search_group_name, db_search_group_description, db_search_engine) values (0,'unattached','default search group', 'Probably Mascot');
+-- -----------------------------------------------------
+-- Table db_search
+-- Contains details of database search runs
+-- -----------------------------------------------------
+CREATE TABLE `db_search`(
+db_search_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+results_filename VARCHAR(40) NOT NULL,
+db_search_group_id INT NOT NULL,
+CONSTRAINT `fk_db_search_group_id`
+    FOREIGN KEY (`db_search_group_id` )
+    REFERENCES `db_search_group` (`db_search_group_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+insert into db_search (db_search_id, results_filename, db_search_group_id) values (0,'None', 0);
+
+-- -----------------------------------------------------
 -- Table `MASCOT_peptide`
 --
 -- Holds information on the peptides from mascot results. If they are assigned, MASCOT_protein will be linked to them.  
 -- assigned works as a boolean, but because sqlite doesn't know bool type it is an int type. 0 for false, 1 for true. 
 -- -----------------------------------------------------
 CREATE TABLE `MASCOT_peptide` (
-  `peptide_id` INT PRIMARY KEY NOT NULL,
+  `peptide_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `pep_exp_mz` DOUBLE NOT NULL, 
   `pep_exp_mr` DOUBLE NOT NULL,
   `pep_exp_z` INT NOT NULL,
@@ -168,15 +334,21 @@ CREATE TABLE `MASCOT_peptide` (
   `pep_res_before` VARCHAR(1),
   `pep_seq` VARCHAR(40) NOT NULL,
   `pep_res_after` VARCHAR(1),
-  `pep_var_mod` VARCHAR(100),
-  `pep_var_mod_pos` VARCHAR(40),
+  `pep_var_mod` VARCHAR(200),
+  `pep_var_mod_pos` VARCHAR(100),
   `pep_num_match` INT,
   `pep_scan_title` VARCHAR(255) NOT NULL,
   `isAssigned` int NOT null,
   `precursor_precursor_id` INT NOT NULL, 
+  `db_search_id` INT NOT NULL default 0,	 
   CONSTRAINT `fk_mascot_peptide_precursor1`
     FOREIGN KEY (`precursor_precursor_id`)
     REFERENCES `MSMS_precursor` (`precursor_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_mascot_peptide_dbsearch`
+    FOREIGN KEY (`db_search_id`)
+    REFERENCES `db_search` (`db_search_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -186,7 +358,7 @@ CREATE TABLE `MASCOT_peptide` (
 -- Holds information on the proteins from mascot results. 
 -- -----------------------------------------------------
 CREATE TABLE `MASCOT_protein` (
-  `mascot_protein_id` INT PRIMARY KEY NOT NULL ,
+  `mascot_protein_id` INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
   `protein_accession` VARCHAR(500) NOT NULL,
   `prot_desc` VARCHAR(200) NOT NULL,
   `prot_score` DOUBLE NOT NULL,
@@ -217,7 +389,7 @@ CREATE TABLE `userParam_names` (
 -- The value of the userParam of a feature (see also table userParam_names)
 -- -----------------------------------------------------
 CREATE TABLE `userParam_value` (
-  `userParamValue_id` INT PRIMARY KEY NOT NULL ,
+  `userParamValue_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
   `value` VARCHAR(45) NOT NULL );
 
 -- -----------------------------------------------------
@@ -226,7 +398,7 @@ CREATE TABLE `userParam_value` (
 -- Many-to-many link between features and userParam names
 -- -----------------------------------------------------
 CREATE TABLE `feature_has_userParam_names` (
-  `feature_has_userParam_names_id` INT PRIMARY KEY NOT NULL ,
+  `feature_has_userParam_names_id` INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
   `feature_feature_table_id` INT NOT NULL ,
   `userParam_names_userParamName_id` INT NOT NULL ,
   CONSTRAINT `fk_feature_has_userParam_names_feature1`
@@ -269,7 +441,7 @@ CREATE TABLE `feature_has_userParam_names_has_userParam_value` (
 -- for the foreign keys to point to.
 -- -----------------------------------------------------
 CREATE TABLE `feature_mapping` (
-  `feature_mapping_id` INT PRIMARY KEY NOT NULL ,
+  `feature_mapping_id` INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
   `feature_got_mapped_id` INT NOT NULL,
   `feature_identity_id` INT NOT NULL ,
   `to` DOUBLE NOT NULL ,

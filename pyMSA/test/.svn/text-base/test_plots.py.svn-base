@@ -46,8 +46,8 @@ import mzmlFunctions
 
 configHandle =  config.ConfigHandle()
 config = configHandle.getConfig()
-testFolder = os.path.join(os.path.dirname(__file__), config.get('test','testfilefolder'))
-testDatabase = os.path.join(os.path.dirname(__file__), config.get('test', 'testdatabase'))
+testFolder = config.get('test','testfilefolder')
+testDatabase = config.get('test', 'sqlite_testdatabase')
 
 
 class testPlots(unittest.TestCase):
@@ -87,4 +87,4 @@ def suite():
     return suite
 
 
-unittest.TextTestRunner(verbosity=2).run(suite())
+unittest.TextTestRunner(verbosity=1).run(suite())

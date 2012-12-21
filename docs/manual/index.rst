@@ -16,6 +16,7 @@ Contents:
    3. Example scripts.rst
    4. Database.rst
    5. API documentation.rst
+   6. Coding standards.rst
 
 Indices and tables
 ******************

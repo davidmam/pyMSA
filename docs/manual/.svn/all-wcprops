@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/barton/!svn/ver/5538/ndeklein/MS/Trunk/PyMSA_dev/docs/manual
+/svn/barton/!svn/ver/5555/ndeklein/MS/Trunk/PyMSA_dev/docs/manual
+END
+6. Coding standards.rst
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/barton/!svn/ver/5555/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/6.%20Coding%20standards.rst
 END
 1. Introduction.rst
 K 25
@@ -13,7 +19,7 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/barton/!svn/ver/5538/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/2.%20Usage.rst
+/svn/barton/!svn/ver/5554/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/2.%20Usage.rst
 END
 3. Example scripts.rst
 K 25
@@ -49,5 +55,5 @@ index.rst
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/barton/!svn/ver/5298/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/index.rst
+/svn/barton/!svn/ver/5554/ndeklein/MS/Trunk/PyMSA_dev/docs/manual/index.rst
 END

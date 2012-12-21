@@ -43,7 +43,7 @@ import compareFeatureXMLmzML as compare
 import config
 configHandle =  config.ConfigHandle()
 config = configHandle.getConfig()
-testFolder = os.path.join(os.path.dirname(__file__), config.get('test','testfilefolder'))
+testFolder = config.get('test','testfilefolder')
 
 
 class testCompareFeatureXMLmzML(unittest.TestCase):
@@ -79,4 +79,4 @@ def suite():
     suite.addTest(unittest.makeSuite(testCompareFeatureXMLmzML))
     return suite
 
-unittest.TextTestRunner(verbosity=2).run(suite())
+unittest.TextTestRunner(verbosity=1).run(suite())

@@ -43,7 +43,7 @@ import fileHandling
 
 configHandle =  config.ConfigHandle()
 config = configHandle.getConfig()
-testFolder = os.path.join(os.path.dirname(__file__), config.get('test','testfilefolder'))
+testFolder = config.get('test','testfilefolder')
 
 
 class testFileHandling(unittest.TestCase):
@@ -93,7 +93,7 @@ class testFileHandling(unittest.TestCase):
         self.assertRaises(IOError, fileHandler.isMzML)
     
     def test_isMascot(self):
-        validMascot = testFolder+'test_mascot.xml'
+        validMascot = testFolder+'MASCOT_scan_in_title.xml'
         fileHandler = fileHandling.FileHandle(validMascot)
         fileHandler.isMascot()
         # no error means it passed
@@ -115,4 +115,4 @@ def suite():
     suite.addTest(unittest.makeSuite(testFileHandling))
     return suite
 
-unittest.TextTestRunner(verbosity=2).run(suite())
+unittest.TextTestRunner(verbosity=1).run(suite())

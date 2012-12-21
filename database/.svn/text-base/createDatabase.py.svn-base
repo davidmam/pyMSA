@@ -32,7 +32,8 @@ import os
 
 from os.path import realpath
 # make a connection to a database
-db_conn = sqlite.connect('pyMSA_database.db')
+databaseName = 'pyMSA_database.db'
+db_conn = sqlite.connect(databaseName)
 
 # A cursor object is the means by which we issue SQL statements to our database and then get the results. To run a specific SQL statement use the execute method:
 db_curs = db_conn.cursor()

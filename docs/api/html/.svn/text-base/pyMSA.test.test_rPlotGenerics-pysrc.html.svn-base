@@ -97,7 +97,7 @@
 <a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-name">dirname</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt> </tt>
 <a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">unittest2</tt> <tt class="py-keyword">as</tt> <tt class="py-name">unittest</tt> </tt>
-<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyMSA.config=pyMSA.config-module.html,Variable pyMSA.output.config=pyMSA.output-module.html#config,Variable pyMSA.test.test_compareFeatureXMLmzML.config=pyMSA.test.test_compareFeatureXMLmzML-module.html#config,Variable pyMSA.test.test_compareRuns.config=pyMSA.test.test_compareRuns-module.html#config,Variable pyMSA.test.test_database.config=pyMSA.test.test_database-module.html#config,Variable pyMSA.test.test_elementFunctions.config=pyMSA.test.test_elementFunctions-module.html#config,Variable pyMSA.test.test_featureFunctions.config=pyMSA.test.test_featureFunctions-module.html#config,Variable pyMSA.test.test_featureMapping.config=pyMSA.test.test_featureMapping-module.html#config,Variable pyMSA.test.test_fileHandling.config=pyMSA.test.test_fileHandling-module.html#config,Variable pyMSA.test.test_fillDatabase.config=pyMSA.test.test_fillDatabase-module.html#config,Variable pyMSA.test.test_getWindow.config=pyMSA.test.test_getWindow-module.html#config,Variable pyMSA.test.test_mzmlFunctions.config=pyMSA.test.test_mzmlFunctions-module.html#config,Variable pyMSA.test.test_output.config=pyMSA.test.test_output-module.html#config,Variable pyMSA.test.test_parseFeatureXML.config=pyMSA.test.test_parseFeatureXML-module.html#config,Variable pyMSA.test.test_parseMascot.config=pyMSA.test.test_parseMascot-module.html#config,Variable pyMSA.test.test_parsePeaksMzML.config=pyMSA.test.test_parsePeaksMzML-module.html#config,Variable pyMSA.test.test_plots.config=pyMSA.test.test_plots-module.html#config,Variable pyMSA.test.test_rFunctions.config=pyMSA.test.test_rFunctions-module.html#config,Variable pyMSA.test.test_rPlotGenerics.config=pyMSA.test.test_rPlotGenerics-module.html#config"><a title="pyMSA.config
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyMSA.config=pyMSA.config-module.html,Variable pyMSA.output.config=pyMSA.output-module.html#config,Variable pyMSA.test.test_compareFeatureXMLmzML.config=pyMSA.test.test_compareFeatureXMLmzML-module.html#config,Variable pyMSA.test.test_compareRuns.config=pyMSA.test.test_compareRuns-module.html#config,Variable pyMSA.test.test_database.config=pyMSA.test.test_database-module.html#config,Variable pyMSA.test.test_elementFunctions.config=pyMSA.test.test_elementFunctions-module.html#config,Variable pyMSA.test.test_featureFunctions.config=pyMSA.test.test_featureFunctions-module.html#config,Variable pyMSA.test.test_featureMapping.config=pyMSA.test.test_featureMapping-module.html#config,Variable pyMSA.test.test_fileHandling.config=pyMSA.test.test_fileHandling-module.html#config,Variable pyMSA.test.test_fillDatabase.config=pyMSA.test.test_fillDatabase-module.html#config,Variable pyMSA.test.test_getWindow.config=pyMSA.test.test_getWindow-module.html#config,Variable pyMSA.test.test_mzmlFunctions.config=pyMSA.test.test_mzmlFunctions-module.html#config,Variable pyMSA.test.test_output.config=pyMSA.test.test_output-module.html#config,Variable pyMSA.test.test_parseFeatureXML.config=pyMSA.test.test_parseFeatureXML-module.html#config,Variable pyMSA.test.test_parseMascot.config=pyMSA.test.test_parseMascot-module.html#config,Variable pyMSA.test.test_parsePeaksMzML.config=pyMSA.test.test_parsePeaksMzML-module.html#config,Variable pyMSA.test.test_plots.config=pyMSA.test.test_plots-module.html#config,Variable pyMSA.test.test_rFunctions.config=pyMSA.test.test_rFunctions-module.html#config,Variable pyMSA.test.test_rPlotGenerics.config=pyMSA.test.test_rPlotGenerics-module.html#config,Variable pyMSA.test.test_submitMascot.config=pyMSA.test.test_submitMascot-module.html#config"><a title="pyMSA.config
 pyMSA.output.config
 pyMSA.test.test_compareFeatureXMLmzML.config
 pyMSA.test.test_compareRuns.config
@@ -115,13 +115,14 @@ pyMSA.test.test_parseMascot.config
 pyMSA.test.test_parsePeaksMzML.config
 pyMSA.test.test_plots.config
 pyMSA.test.test_rFunctions.config
-pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-0', 'config', 'link-0');">config</a></tt> </tt>
+pyMSA.test.test_rPlotGenerics.config
+pyMSA.test.test_submitMascot.config" class="py-name" href="#" onclick="return doclink('link-0', 'config', 'link-0');">config</a></tt> </tt>
 <a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyMSA.rPlotGenerics=pyMSA.rPlotGenerics-module.html"><a title="pyMSA.rPlotGenerics" class="py-name" href="#" onclick="return doclink('link-1', 'rPlotGenerics', 'link-1');">rPlotGenerics</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">rPlots</tt> </tt>
 <a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">warnings</tt> </tt>
 <a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">rpy2</tt><tt class="py-op">.</tt><tt class="py-name">robjects</tt> <tt class="py-keyword">as</tt> <tt class="py-name">R</tt> </tt>
 <a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Module pyMSA.rFunctions=pyMSA.rFunctions-module.html"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-2', 'rFunctions', 'link-2');">rFunctions</a></tt> </tt>
 <a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
-<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pyMSA.output.configHandle=pyMSA.output-module.html#configHandle,Variable pyMSA.test.test_compareFeatureXMLmzML.configHandle=pyMSA.test.test_compareFeatureXMLmzML-module.html#configHandle,Variable pyMSA.test.test_compareRuns.configHandle=pyMSA.test.test_compareRuns-module.html#configHandle,Variable pyMSA.test.test_database.configHandle=pyMSA.test.test_database-module.html#configHandle,Variable pyMSA.test.test_elementFunctions.configHandle=pyMSA.test.test_elementFunctions-module.html#configHandle,Variable pyMSA.test.test_featureFunctions.configHandle=pyMSA.test.test_featureFunctions-module.html#configHandle,Variable pyMSA.test.test_featureMapping.configHandle=pyMSA.test.test_featureMapping-module.html#configHandle,Variable pyMSA.test.test_fileHandling.configHandle=pyMSA.test.test_fileHandling-module.html#configHandle,Variable pyMSA.test.test_fillDatabase.configHandle=pyMSA.test.test_fillDatabase-module.html#configHandle,Variable pyMSA.test.test_getWindow.configHandle=pyMSA.test.test_getWindow-module.html#configHandle,Variable pyMSA.test.test_mzmlFunctions.configHandle=pyMSA.test.test_mzmlFunctions-module.html#configHandle,Variable pyMSA.test.test_output.configHandle=pyMSA.test.test_output-module.html#configHandle,Variable pyMSA.test.test_parseFeatureXML.configHandle=pyMSA.test.test_parseFeatureXML-module.html#configHandle,Variable pyMSA.test.test_parseMascot.configHandle=pyMSA.test.test_parseMascot-module.html#configHandle,Variable pyMSA.test.test_parsePeaksMzML.configHandle=pyMSA.test.test_parsePeaksMzML-module.html#configHandle,Variable pyMSA.test.test_plots.configHandle=pyMSA.test.test_plots-module.html#configHandle,Variable pyMSA.test.test_rFunctions.configHandle=pyMSA.test.test_rFunctions-module.html#configHandle,Variable pyMSA.test.test_rPlotGenerics.configHandle=pyMSA.test.test_rPlotGenerics-module.html#configHandle"><a title="pyMSA.output.configHandle
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pyMSA.output.configHandle=pyMSA.output-module.html#configHandle,Variable pyMSA.test.test_compareFeatureXMLmzML.configHandle=pyMSA.test.test_compareFeatureXMLmzML-module.html#configHandle,Variable pyMSA.test.test_compareRuns.configHandle=pyMSA.test.test_compareRuns-module.html#configHandle,Variable pyMSA.test.test_database.configHandle=pyMSA.test.test_database-module.html#configHandle,Variable pyMSA.test.test_elementFunctions.configHandle=pyMSA.test.test_elementFunctions-module.html#configHandle,Variable pyMSA.test.test_featureFunctions.configHandle=pyMSA.test.test_featureFunctions-module.html#configHandle,Variable pyMSA.test.test_featureMapping.configHandle=pyMSA.test.test_featureMapping-module.html#configHandle,Variable pyMSA.test.test_fileHandling.configHandle=pyMSA.test.test_fileHandling-module.html#configHandle,Variable pyMSA.test.test_fillDatabase.configHandle=pyMSA.test.test_fillDatabase-module.html#configHandle,Variable pyMSA.test.test_getWindow.configHandle=pyMSA.test.test_getWindow-module.html#configHandle,Variable pyMSA.test.test_mzmlFunctions.configHandle=pyMSA.test.test_mzmlFunctions-module.html#configHandle,Variable pyMSA.test.test_output.configHandle=pyMSA.test.test_output-module.html#configHandle,Variable pyMSA.test.test_parseFeatureXML.configHandle=pyMSA.test.test_parseFeatureXML-module.html#configHandle,Variable pyMSA.test.test_parseMascot.configHandle=pyMSA.test.test_parseMascot-module.html#configHandle,Variable pyMSA.test.test_parsePeaksMzML.configHandle=pyMSA.test.test_parsePeaksMzML-module.html#configHandle,Variable pyMSA.test.test_plots.configHandle=pyMSA.test.test_plots-module.html#configHandle,Variable pyMSA.test.test_rFunctions.configHandle=pyMSA.test.test_rFunctions-module.html#configHandle,Variable pyMSA.test.test_rPlotGenerics.configHandle=pyMSA.test.test_rPlotGenerics-module.html#configHandle,Variable pyMSA.test.test_submitMascot.configHandle=pyMSA.test.test_submitMascot-module.html#configHandle"><a title="pyMSA.output.configHandle
 pyMSA.test.test_compareFeatureXMLmzML.configHandle
 pyMSA.test.test_compareRuns.configHandle
 pyMSA.test.test_database.configHandle
@@ -138,7 +139,8 @@ pyMSA.test.test_parseMascot.configHandle
 pyMSA.test.test_parsePeaksMzML.configHandle
 pyMSA.test.test_plots.configHandle
 pyMSA.test.test_rFunctions.configHandle
-pyMSA.test.test_rPlotGenerics.configHandle" class="py-name" href="#" onclick="return doclink('link-3', 'configHandle', 'link-3');">configHandle</a></tt> <tt class="py-op">=</tt>  <tt id="link-4" class="py-name"><a title="pyMSA.config
+pyMSA.test.test_rPlotGenerics.configHandle
+pyMSA.test.test_submitMascot.configHandle" class="py-name" href="#" onclick="return doclink('link-3', 'configHandle', 'link-3');">configHandle</a></tt> <tt class="py-op">=</tt>  <tt id="link-4" class="py-name"><a title="pyMSA.config
 pyMSA.output.config
 pyMSA.test.test_compareFeatureXMLmzML.config
 pyMSA.test.test_compareRuns.config
@@ -156,7 +158,8 @@ pyMSA.test.test_parseMascot.config
 pyMSA.test.test_parsePeaksMzML.config
 pyMSA.test.test_plots.config
 pyMSA.test.test_rFunctions.config
-pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-4', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Class pyMSA.config.ConfigHandle=pyMSA.config.ConfigHandle-class.html"><a title="pyMSA.config.ConfigHandle" class="py-name" href="#" onclick="return doclink('link-5', 'ConfigHandle', 'link-5');">ConfigHandle</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.config
+pyMSA.test.test_submitMascot.config" class="py-name" href="#" onclick="return doclink('link-4', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Class pyMSA.config.ConfigHandle=pyMSA.config.ConfigHandle-class.html"><a title="pyMSA.config.ConfigHandle" class="py-name" href="#" onclick="return doclink('link-5', 'ConfigHandle', 'link-5');">ConfigHandle</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt id="link-6" class="py-name"><a title="pyMSA.config
 pyMSA.output.config
 pyMSA.test.test_compareFeatureXMLmzML.config
@@ -175,7 +178,8 @@ pyMSA.test.test_parseMascot.config
 pyMSA.test.test_parsePeaksMzML.config
 pyMSA.test.test_plots.config
 pyMSA.test.test_rFunctions.config
-pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-6', 'config', 'link-0');">config</a></tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="pyMSA.output.configHandle
+pyMSA.test.test_rPlotGenerics.config
+pyMSA.test.test_submitMascot.config" class="py-name" href="#" onclick="return doclink('link-6', 'config', 'link-0');">config</a></tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="pyMSA.output.configHandle
 pyMSA.test.test_compareFeatureXMLmzML.configHandle
 pyMSA.test.test_compareRuns.configHandle
 pyMSA.test.test_database.configHandle
@@ -192,8 +196,9 @@ pyMSA.test.test_parseMascot.configHandle
 pyMSA.test.test_parsePeaksMzML.configHandle
 pyMSA.test.test_plots.configHandle
 pyMSA.test.test_rFunctions.configHandle
-pyMSA.test.test_rPlotGenerics.configHandle" class="py-name" href="#" onclick="return doclink('link-7', 'configHandle', 'link-3');">configHandle</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyMSA.config.ConfigHandle.getConfig()=pyMSA.config.ConfigHandle-class.html#getConfig"><a title="pyMSA.config.ConfigHandle.getConfig" class="py-name" href="#" onclick="return doclink('link-8', 'getConfig', 'link-8');">getConfig</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable pyMSA.test.test_compareFeatureXMLmzML.testFolder=pyMSA.test.test_compareFeatureXMLmzML-module.html#testFolder,Variable pyMSA.test.test_compareRuns.testFolder=pyMSA.test.test_compareRuns-module.html#testFolder,Variable pyMSA.test.test_database.testFolder=pyMSA.test.test_database-module.html#testFolder,Variable pyMSA.test.test_elementFunctions.testFolder=pyMSA.test.test_elementFunctions-module.html#testFolder,Variable pyMSA.test.test_featureFunctions.testFolder=pyMSA.test.test_featureFunctions-module.html#testFolder,Variable pyMSA.test.test_featureMapping.testFolder=pyMSA.test.test_featureMapping-module.html#testFolder,Variable pyMSA.test.test_fileHandling.testFolder=pyMSA.test.test_fileHandling-module.html#testFolder,Variable pyMSA.test.test_fillDatabase.testFolder=pyMSA.test.test_fillDatabase-module.html#testFolder,Variable pyMSA.test.test_getWindow.testFolder=pyMSA.test.test_getWindow-module.html#testFolder,Variable pyMSA.test.test_mzmlFunctions.testFolder=pyMSA.test.test_mzmlFunctions-module.html#testFolder,Variable pyMSA.test.test_output.testFolder=pyMSA.test.test_output-module.html#testFolder,Variable pyMSA.test.test_parseFeatureXML.testFolder=pyMSA.test.test_parseFeatureXML-module.html#testFolder,Variable pyMSA.test.test_parseMascot.testFolder=pyMSA.test.test_parseMascot-module.html#testFolder,Variable pyMSA.test.test_parsePeaksMzML.testFolder=pyMSA.test.test_parsePeaksMzML-module.html#testFolder,Variable pyMSA.test.test_plots.testFolder=pyMSA.test.test_plots-module.html#testFolder,Variable pyMSA.test.test_rFunctions.testFolder=pyMSA.test.test_rFunctions-module.html#testFolder,Variable pyMSA.test.test_rPlotGenerics.testFolder=pyMSA.test.test_rPlotGenerics-module.html#testFolder"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_rPlotGenerics.configHandle
+pyMSA.test.test_submitMascot.configHandle" class="py-name" href="#" onclick="return doclink('link-7', 'configHandle', 'link-3');">configHandle</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyMSA.config.ConfigHandle.getConfig()=pyMSA.config.ConfigHandle-class.html#getConfig"><a title="pyMSA.config.ConfigHandle.getConfig" class="py-name" href="#" onclick="return doclink('link-8', 'getConfig', 'link-8');">getConfig</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable pyMSA.test.test_compareFeatureXMLmzML.testFolder=pyMSA.test.test_compareFeatureXMLmzML-module.html#testFolder,Variable pyMSA.test.test_compareRuns.testFolder=pyMSA.test.test_compareRuns-module.html#testFolder,Variable pyMSA.test.test_database.testFolder=pyMSA.test.test_database-module.html#testFolder,Variable pyMSA.test.test_elementFunctions.testFolder=pyMSA.test.test_elementFunctions-module.html#testFolder,Variable pyMSA.test.test_featureFunctions.testFolder=pyMSA.test.test_featureFunctions-module.html#testFolder,Variable pyMSA.test.test_featureMapping.testFolder=pyMSA.test.test_featureMapping-module.html#testFolder,Variable pyMSA.test.test_fileHandling.testFolder=pyMSA.test.test_fileHandling-module.html#testFolder,Variable pyMSA.test.test_fillDatabase.testFolder=pyMSA.test.test_fillDatabase-module.html#testFolder,Variable pyMSA.test.test_getWindow.testFolder=pyMSA.test.test_getWindow-module.html#testFolder,Variable pyMSA.test.test_mzmlFunctions.testFolder=pyMSA.test.test_mzmlFunctions-module.html#testFolder,Variable pyMSA.test.test_output.testFolder=pyMSA.test.test_output-module.html#testFolder,Variable pyMSA.test.test_parseFeatureXML.testFolder=pyMSA.test.test_parseFeatureXML-module.html#testFolder,Variable pyMSA.test.test_parseMascot.testFolder=pyMSA.test.test_parseMascot-module.html#testFolder,Variable pyMSA.test.test_parsePeaksMzML.testFolder=pyMSA.test.test_parsePeaksMzML-module.html#testFolder,Variable pyMSA.test.test_plots.testFolder=pyMSA.test.test_plots-module.html#testFolder,Variable pyMSA.test.test_rFunctions.testFolder=pyMSA.test.test_rFunctions-module.html#testFolder,Variable pyMSA.test.test_rPlotGenerics.testFolder=pyMSA.test.test_rPlotGenerics-module.html#testFolder,Variable pyMSA.test.test_submitMascot.testFolder=pyMSA.test.test_submitMascot-module.html#testFolder"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
 pyMSA.test.test_elementFunctions.testFolder
@@ -209,7 +214,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-9', 'testFolder', 'link-9');">testFolder</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="pyMSA.config
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-9', 'testFolder', 'link-9');">testFolder</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="pyMSA.config
 pyMSA.output.config
 pyMSA.test.test_compareFeatureXMLmzML.config
 pyMSA.test.test_compareRuns.config
@@ -227,7 +233,8 @@ pyMSA.test.test_parseMascot.config
 pyMSA.test.test_parsePeaksMzML.config
 pyMSA.test.test_plots.config
 pyMSA.test.test_rFunctions.config
-pyMSA.test.test_rPlotGenerics.config" class="py-name" href="#" onclick="return doclink('link-10', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt><tt class="py-string">'testfilefolder'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.config
+pyMSA.test.test_submitMascot.config" class="py-name" href="#" onclick="return doclink('link-10', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'test'</tt><tt class="py-op">,</tt><tt class="py-string">'testfilefolder'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
 <a name="testRPlotGenerics"></a><div id="testRPlotGenerics-def"><a name="L54"></a><tt class="py-lineno"> 54</tt> <a class="py-toggle" href="#" id="testRPlotGenerics-toggle" onclick="return toggle('testRPlotGenerics');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html">testRPlotGenerics</a><tt class="py-op">(</tt><tt class="py-base-class">unittest</tt><tt class="py-op">.</tt><tt class="py-base-class">TestCase</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="testRPlotGenerics-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="testRPlotGenerics-expanded"><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
@@ -294,7 +301,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-31', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-31', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -311,7 +319,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-32', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-32', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">             </tt>
 <a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-comment"># reading in a csv file, seperated by tabs into a matrix</tt> </tt>
 <a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">csvData</tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-33', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Function pyMSA.rFunctions.readCsvFile()=pyMSA.rFunctions-module.html#readCsvFile"><a title="pyMSA.rFunctions.readCsvFile" class="py-name" href="#" onclick="return doclink('link-34', 'readCsvFile', 'link-34');">readCsvFile</a></tt><tt class="py-op">(</tt><tt id="link-35" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
@@ -330,7 +339,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-35', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt> <tt class="py-op">=</tt> <tt class="py-string">'\t'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">na</tt><tt class="py-op">=</tt><tt class="py-string">'N/A'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-35', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt> <tt class="py-op">=</tt> <tt class="py-string">'\t'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">na</tt><tt class="py-op">=</tt><tt class="py-string">'N/A'</tt><tt class="py-op">)</tt> </tt>
 <a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-comment"># get only the rows with unique ids and put it in a new matrix</tt> </tt>
 <a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">csvUniqID</tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-36', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Function pyMSA.rFunctions.getRowsWithUniqColumn()=pyMSA.rFunctions-module.html#getRowsWithUniqColumn"><a title="pyMSA.rFunctions.getRowsWithUniqColumn" class="py-name" href="#" onclick="return doclink('link-37', 'getRowsWithUniqColumn', 'link-37');">getRowsWithUniqColumn</a></tt><tt class="py-op">(</tt><tt class="py-name">csvData</tt><tt class="py-op">,</tt> <tt class="py-string">'id'</tt><tt class="py-op">)</tt>       </tt>
 <a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-comment"># get a vector of all intensities using the index function from R_functions</tt> </tt>
@@ -354,7 +364,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-44', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">,</tt> <tt class="py-name">logIntensityVector</tt><tt class="py-op">,</tt> <tt class="py-name">plotArgs</tt><tt class="py-op">=</tt><tt class="py-op">{</tt><tt class="py-string">'labels'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">title</tt><tt class="py-op">=</tt><tt class="py-string">'test #features per intensity'</tt><tt class="py-op">,</tt>  <tt class="py-name">ylab</tt> <tt class="py-op">=</tt> <tt class="py-string">'# of test features'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-44', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">,</tt> <tt class="py-name">logIntensityVector</tt><tt class="py-op">,</tt> <tt class="py-name">plotArgs</tt><tt class="py-op">=</tt><tt class="py-op">{</tt><tt class="py-string">'labels'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">title</tt><tt class="py-op">=</tt><tt class="py-string">'test #features per intensity'</tt><tt class="py-op">,</tt>  <tt class="py-name">ylab</tt> <tt class="py-op">=</tt> <tt class="py-string">'# of test features'</tt><tt class="py-op">)</tt> </tt>
 <a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-comment"># if after this the ouput does not exist, fail the test</tt> </tt>
 <a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt id="link-45" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -372,7 +383,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-45', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-45', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fail</tt><tt class="py-op">(</tt><tt id="link-46" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -389,7 +401,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-46', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-46', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
 <a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-47" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -407,7 +420,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-47', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-47', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_histogram.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
 <a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"> </tt>
 <a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-comment">###TEST 3 HISTOGRAMS</tt> </tt>
@@ -428,7 +442,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-48', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-48', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-49" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -445,7 +460,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-49', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt> <tt class="py-comment"># to make sure that the test isn't passing when the method doesn't work, but the file already exists</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-49', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt> <tt class="py-comment"># to make sure that the test isn't passing when the method doesn't work, but the file already exists</tt> </tt>
 <a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-name">outpng</tt> <tt class="py-op">=</tt> <tt id="link-50" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -462,7 +478,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-50', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-50', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt> </tt>
 <a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-name">vector1</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">IntVector</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-number">3</tt><tt class="py-op">,</tt><tt class="py-number">3</tt><tt class="py-op">,</tt><tt class="py-number">3</tt><tt class="py-op">,</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-number">5</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-name">vector2</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">IntVector</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-number">5</tt><tt class="py-op">,</tt><tt class="py-number">5</tt><tt class="py-op">,</tt><tt class="py-number">5</tt><tt class="py-op">,</tt><tt class="py-number">6</tt><tt class="py-op">,</tt><tt class="py-number">6</tt><tt class="py-op">,</tt><tt class="py-number">7</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-name">vector3</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">IntVector</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-number">6</tt><tt class="py-op">,</tt><tt class="py-number">6</tt><tt class="py-op">,</tt><tt class="py-number">7</tt><tt class="py-op">,</tt><tt class="py-number">7</tt><tt class="py-op">,</tt><tt class="py-number">7</tt><tt class="py-op">,</tt><tt class="py-number">8</tt><tt class="py-op">,</tt><tt class="py-number">8</tt><tt class="py-op">,</tt><tt class="py-number">9</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
@@ -485,7 +502,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-55', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-55', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-56" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -502,7 +520,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-56', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-56', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'testOverlapHistogram.png'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
 <a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
 <a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
@@ -523,7 +542,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-59', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt id="link-60" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-59', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt id="link-60" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
 pyMSA.test.test_elementFunctions.testFolder
@@ -539,7 +559,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-60', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'unreachableoutput.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-60', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'unreachableoutput.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">assertRaises</tt><tt class="py-op">(</tt><tt class="py-name">TypeError</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="pyMSA.plots" class="py-name" href="#" onclick="return doclink('link-61', 'plots', 'link-11');">plots</a></tt><tt class="py-op">.</tt><tt id="link-62" class="py-name"><a title="pyMSA.rPlotGenerics.Plots.histogram" class="py-name" href="#" onclick="return doclink('link-62', 'histogram', 'link-43');">histogram</a></tt><tt class="py-op">,</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">FloatVector</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">2.2</tt><tt class="py-op">,</tt><tt class="py-number">3.2</tt><tt class="py-op">,</tt><tt class="py-number">1.2</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-63" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -556,7 +577,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-63', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt id="link-64" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-63', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">,</tt> <tt id="link-64" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
 pyMSA.test.test_elementFunctions.testFolder
@@ -572,7 +594,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-64', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'unreachableoutput.png'</tt><tt class="py-op">,</tt> <tt class="py-name">plotArgs</tt> <tt class="py-op">=</tt> <tt class="py-string">'not a dict'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-64', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'unreachableoutput.png'</tt><tt class="py-op">,</tt> <tt class="py-name">plotArgs</tt> <tt class="py-op">=</tt> <tt class="py-string">'not a dict'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
 <a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"> </tt>
 <a name="testRPlotGenerics.test_barplot"></a><div id="testRPlotGenerics.test_barplot-def"><a name="L144"></a><tt class="py-lineno">144</tt> <a class="py-toggle" href="#" id="testRPlotGenerics.test_barplot-toggle" onclick="return toggle('testRPlotGenerics.test_barplot');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_barplot">test_barplot</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -593,7 +616,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-67', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature_precursor.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">'\t'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-67', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature_precursor.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">'\t'</tt><tt class="py-op">)</tt> </tt>
 <a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-comment"># get the # precursors column and put it in a vector (R dataframe translate '#' to 'X.' and ' ' to '.'</tt> </tt>
 <a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">precursorVector</tt> <tt class="py-op">=</tt> <tt class="py-name">csvData</tt><tt class="py-op">[</tt><tt id="link-68" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-68', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-69" class="py-name"><a title="pyMSA.rFunctions.index" class="py-name" href="#" onclick="return doclink('link-69', 'index', 'link-39');">index</a></tt><tt class="py-op">(</tt><tt class="py-name">csvData</tt><tt class="py-op">,</tt> <tt class="py-string">'X..precursors'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
 <a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
@@ -615,7 +639,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-70', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-70', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-71" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -632,7 +657,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-71', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-71', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">         </tt>
 <a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="pyMSA.plots" class="py-name" href="#" onclick="return doclink('link-72', 'plots', 'link-11');">plots</a></tt><tt class="py-op">.</tt><tt id="link-73" class="py-name" targets="Method pyMSA.rPlotGenerics.Plots.barplot()=pyMSA.rPlotGenerics.Plots-class.html#barplot"><a title="pyMSA.rPlotGenerics.Plots.barplot" class="py-name" href="#" onclick="return doclink('link-73', 'barplot', 'link-73');">barplot</a></tt><tt class="py-op">(</tt><tt id="link-74" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -650,7 +676,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-74', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">,</tt> <tt class="py-name">precursTable</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-74', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">,</tt> <tt class="py-name">precursTable</tt><tt class="py-op">)</tt> </tt>
 <a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">[</tt><tt class="py-string">'dev.off'</tt><tt class="py-op">]</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>  </tt>
 <a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">         </tt>
 <a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt id="link-75" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
@@ -669,7 +696,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-75', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-75', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fail</tt><tt class="py-op">(</tt><tt id="link-76" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -686,7 +714,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-76', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-76', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
 <a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-77" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -704,7 +733,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-77', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-77', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'test_barplot.png'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">         </tt>
 <a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"> </tt>
 <a name="testRPlotGenerics.test_boxplotDataframe"></a><div id="testRPlotGenerics.test_boxplotDataframe-def"><a name="L164"></a><tt class="py-lineno">164</tt> <a class="py-toggle" href="#" id="testRPlotGenerics.test_boxplotDataframe-toggle" onclick="return toggle('testRPlotGenerics.test_boxplotDataframe');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframe">test_boxplotDataframe</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -725,7 +755,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-78', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-78', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-79" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -742,7 +773,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-79', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-79', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">         </tt>
 <a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">        <tt class="py-name">msmsPrecursorPerFeaturePerIntensity</tt> <tt class="py-op">=</tt> <tt id="link-80" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-80', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-81" class="py-name"><a title="pyMSA.rFunctions.readCsvFile" class="py-name" href="#" onclick="return doclink('link-81', 'readCsvFile', 'link-34');">readCsvFile</a></tt><tt class="py-op">(</tt><tt id="link-82" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -760,7 +792,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-82', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'msmsPrecursorPerFeaturePerIntensity.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">','</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-82', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'msmsPrecursorPerFeaturePerIntensity.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">','</tt><tt class="py-op">)</tt> </tt>
 <a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"> </tt>
 <a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-83" class="py-name"><a title="pyMSA.plots" class="py-name" href="#" onclick="return doclink('link-83', 'plots', 'link-11');">plots</a></tt><tt class="py-op">.</tt><tt id="link-84" class="py-name" targets="Method pyMSA.rPlotGenerics.Plots.boxplotDataframe()=pyMSA.rPlotGenerics.Plots-class.html#boxplotDataframe"><a title="pyMSA.rPlotGenerics.Plots.boxplotDataframe" class="py-name" href="#" onclick="return doclink('link-84', 'boxplotDataframe', 'link-84');">boxplotDataframe</a></tt><tt class="py-op">(</tt><tt id="link-85" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -778,7 +811,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-85', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">,</tt> <tt class="py-name">msmsPrecursorPerFeaturePerIntensity</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt>  </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-85', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">,</tt> <tt class="py-name">msmsPrecursorPerFeaturePerIntensity</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-number">400</tt><tt class="py-op">,</tt>  </tt>
 <a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">                                           <tt class="py-name">title</tt><tt class="py-op">=</tt><tt class="py-string">'feature and ms/ms per intensity'</tt><tt class="py-op">,</tt> <tt class="py-name">xlab</tt> <tt class="py-op">=</tt> <tt class="py-string">'log 10 of intensity'</tt><tt class="py-op">,</tt> <tt class="py-name">ylab</tt> <tt class="py-op">=</tt> <tt class="py-string">'# of MS/MS per feature'</tt><tt class="py-op">)</tt> </tt>
 <a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">        <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">[</tt><tt class="py-string">'dev.off'</tt><tt class="py-op">]</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>  </tt>
 <a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">        <tt class="py-comment"># if after this the ouput does not exist, fail the test</tt> </tt>
@@ -798,7 +832,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-86', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-86', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fail</tt><tt class="py-op">(</tt><tt id="link-87" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -815,7 +850,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-87', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-87', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
 <a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">         </tt>
 <a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">        <tt class="py-comment"># remove the plot</tt> </tt>
 <a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt id="link-88" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
@@ -834,7 +870,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-88', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-88', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-89" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -851,7 +888,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-89', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-89', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotDataframe.png'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"> </tt>
 <a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"> </tt>
 <a name="testRPlotGenerics.test_boxplotDataframeExceptions"></a><div id="testRPlotGenerics.test_boxplotDataframeExceptions-def"><a name="L183"></a><tt class="py-lineno">183</tt> <a class="py-toggle" href="#" id="testRPlotGenerics.test_boxplotDataframeExceptions-toggle" onclick="return toggle('testRPlotGenerics.test_boxplotDataframeExceptions');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotDataframeExceptions">test_boxplotDataframeExceptions</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -880,7 +918,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-94', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-94', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-95" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -897,7 +936,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-95', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-95', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt> </tt>
 <a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">             </tt>
 <a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">        <tt class="py-name">featDataframe</tt> <tt class="py-op">=</tt> <tt id="link-96" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-96', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="pyMSA.rFunctions.readCsvFile" class="py-name" href="#" onclick="return doclink('link-97', 'readCsvFile', 'link-34');">readCsvFile</a></tt><tt class="py-op">(</tt><tt id="link-98" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -915,7 +955,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-98', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-98', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature.csv'</tt><tt class="py-op">)</tt> </tt>
 <a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-name">featDataframeUniq</tt> <tt class="py-op">=</tt> <tt id="link-99" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-99', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="pyMSA.rFunctions.getRowsWithUniqColumn" class="py-name" href="#" onclick="return doclink('link-100', 'getRowsWithUniqColumn', 'link-37');">getRowsWithUniqColumn</a></tt><tt class="py-op">(</tt><tt class="py-name">featDataframe</tt><tt class="py-op">,</tt> <tt class="py-string">'id'</tt><tt class="py-op">)</tt> </tt>
 <a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">        <tt class="py-name">precursorPerFeatureDataframe</tt> <tt class="py-op">=</tt> <tt id="link-101" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-101', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-102" class="py-name"><a title="pyMSA.rFunctions.readCsvFile" class="py-name" href="#" onclick="return doclink('link-102', 'readCsvFile', 'link-34');">readCsvFile</a></tt><tt class="py-op">(</tt><tt id="link-103" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -933,7 +974,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-103', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature_precursor.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">'\t'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-103', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'feature_precursor.csv'</tt><tt class="py-op">,</tt> <tt class="py-name">head</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">sep</tt><tt class="py-op">=</tt><tt class="py-string">'\t'</tt><tt class="py-op">)</tt> </tt>
 <a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-name">mergedFeatureDataframe</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">[</tt><tt class="py-string">'merge'</tt><tt class="py-op">]</tt><tt class="py-op">(</tt><tt class="py-name">featDataframeUniq</tt><tt class="py-op">,</tt> <tt class="py-name">precursorPerFeatureDataframe</tt><tt class="py-op">)</tt> </tt>
 <a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">        <tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">[</tt><tt id="link-104" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-104', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-105" class="py-name"><a title="pyMSA.rFunctions.index" class="py-name" href="#" onclick="return doclink('link-105', 'index', 'link-39');">index</a></tt><tt class="py-op">(</tt><tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">,</tt> <tt class="py-string">'intensity'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">[</tt><tt class="py-string">'round'</tt><tt class="py-op">]</tt><tt class="py-op">(</tt><tt id="link-106" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-106', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-107" class="py-name"><a title="pyMSA.rFunctions.takeLog" class="py-name" href="#" onclick="return doclink('link-107', 'takeLog', 'link-41');">takeLog</a></tt><tt class="py-op">(</tt><tt class="py-name">featDataframeUniq</tt><tt class="py-op">[</tt><tt id="link-108" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-108', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-109" class="py-name"><a title="pyMSA.rFunctions.index" class="py-name" href="#" onclick="return doclink('link-109', 'index', 'link-39');">index</a></tt><tt class="py-op">(</tt><tt class="py-name">featDataframeUniq</tt><tt class="py-op">,</tt> <tt class="py-string">'intensity'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-number">10</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-name">vector1</tt> <tt class="py-op">=</tt> <tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">[</tt><tt id="link-110" class="py-name"><a title="pyMSA.rFunctions" class="py-name" href="#" onclick="return doclink('link-110', 'rFunctions', 'link-2');">rFunctions</a></tt><tt class="py-op">.</tt><tt id="link-111" class="py-name"><a title="pyMSA.rFunctions.index" class="py-name" href="#" onclick="return doclink('link-111', 'index', 'link-39');">index</a></tt><tt class="py-op">(</tt><tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">,</tt> <tt class="py-string">'X..precursors'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
@@ -955,7 +997,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-116', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">,</tt> <tt class="py-name">vector1</tt><tt class="py-op">,</tt> <tt class="py-name">vector2</tt><tt class="py-op">,</tt> <tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">,</tt>  </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-116', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">,</tt> <tt class="py-name">vector1</tt><tt class="py-op">,</tt> <tt class="py-name">vector2</tt><tt class="py-op">,</tt> <tt class="py-name">mergedFeatureDataframe</tt><tt class="py-op">,</tt>  </tt>
 <a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">                                <tt class="py-name">title</tt> <tt class="py-op">=</tt> <tt class="py-string">'MS/MS per feature per intensity'</tt><tt class="py-op">,</tt> <tt class="py-name">ylab</tt> <tt class="py-op">=</tt> <tt class="py-string">'# of MS/MS per feature'</tt><tt class="py-op">,</tt> <tt class="py-name">xlab</tt> <tt class="py-op">=</tt> <tt class="py-string">'Rounded log10 of intensity'</tt><tt class="py-op">)</tt> </tt>
 <a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-name">R</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">[</tt><tt class="py-string">'dev.off'</tt><tt class="py-op">]</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>  </tt>
 <a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt class="py-comment"># if after this the ouput does not exist, fail the test</tt> </tt>
@@ -975,7 +1018,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-117', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-117', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fail</tt><tt class="py-op">(</tt><tt id="link-118" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -992,7 +1036,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-118', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-118', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png does not exist. File not written out correctly'</tt><tt class="py-op">)</tt> </tt>
 <a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-comment"># remove the plot</tt> </tt>
 <a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt id="link-119" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
@@ -1010,7 +1055,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-119', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-119', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt id="link-120" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.testFolder
 pyMSA.test.test_compareRuns.testFolder
 pyMSA.test.test_database.testFolder
@@ -1027,7 +1073,8 @@ pyMSA.test.test_parseMascot.testFolder
 pyMSA.test.test_parsePeaksMzML.testFolder
 pyMSA.test.test_plots.testFolder
 pyMSA.test.test_rFunctions.testFolder
-pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="return doclink('link-120', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.testFolder
+pyMSA.test.test_submitMascot.testFolder" class="py-name" href="#" onclick="return doclink('link-120', 'testFolder', 'link-9');">testFolder</a></tt><tt class="py-op">+</tt><tt class="py-string">'boxplotFormulae.png'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"> </tt>
 <a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"> </tt>
 <a name="testRPlotGenerics.test_boxplotFormulaeException"></a><div id="testRPlotGenerics.test_boxplotFormulaeException-def"><a name="L215"></a><tt class="py-lineno">215</tt> <a class="py-toggle" href="#" id="testRPlotGenerics.test_boxplotFormulaeException-toggle" onclick="return toggle('testRPlotGenerics.test_boxplotFormulaeException');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_boxplotFormulaeException">test_boxplotFormulaeException</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -1043,7 +1090,7 @@ pyMSA.test.test_rPlotGenerics.testFolder" class="py-name" href="#" onclick="retu
 <a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-string">'remove.png'</tt><tt class="py-op">)</tt> </tt>
 </div></div><a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">         </tt>
 <a name="suite"></a><div id="suite-def"><a name="L227"></a><tt class="py-lineno">227</tt> <a class="py-toggle" href="#" id="suite-toggle" onclick="return toggle('suite');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyMSA.test.test_rPlotGenerics-module.html#suite">suite</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="suite-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="suite-expanded"><a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">    <tt id="link-129" class="py-name" targets="Function pyMSA.test.test_compareFeatureXMLmzML.suite()=pyMSA.test.test_compareFeatureXMLmzML-module.html#suite,Function pyMSA.test.test_compareRuns.suite()=pyMSA.test.test_compareRuns-module.html#suite,Function pyMSA.test.test_config.suite()=pyMSA.test.test_config-module.html#suite,Function pyMSA.test.test_database.suite()=pyMSA.test.test_database-module.html#suite,Function pyMSA.test.test_elementFunctions.suite()=pyMSA.test.test_elementFunctions-module.html#suite,Function pyMSA.test.test_featureFunctions.suite()=pyMSA.test.test_featureFunctions-module.html#suite,Function pyMSA.test.test_featureMapping.suite()=pyMSA.test.test_featureMapping-module.html#suite,Function pyMSA.test.test_fileHandling.suite()=pyMSA.test.test_fileHandling-module.html#suite,Function pyMSA.test.test_fillDatabase.suite()=pyMSA.test.test_fillDatabase-module.html#suite,Function pyMSA.test.test_getWindow.suite()=pyMSA.test.test_getWindow-module.html#suite,Function pyMSA.test.test_mzmlFunctions.suite()=pyMSA.test.test_mzmlFunctions-module.html#suite,Function pyMSA.test.test_output.suite()=pyMSA.test.test_output-module.html#suite,Function pyMSA.test.test_parseFeatureXML.suite()=pyMSA.test.test_parseFeatureXML-module.html#suite,Function pyMSA.test.test_parseMascot.suite()=pyMSA.test.test_parseMascot-module.html#suite,Function pyMSA.test.test_parsePeaksMzML.suite()=pyMSA.test.test_parsePeaksMzML-module.html#suite,Function pyMSA.test.test_plots.suite()=pyMSA.test.test_plots-module.html#suite,Function pyMSA.test.test_rFunctions.suite()=pyMSA.test.test_rFunctions-module.html#suite,Function pyMSA.test.test_rPlotGenerics.suite()=pyMSA.test.test_rPlotGenerics-module.html#suite"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
+</div><div id="suite-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="suite-expanded"><a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">    <tt id="link-129" class="py-name" targets="Function pyMSA.test.test_compareFeatureXMLmzML.suite()=pyMSA.test.test_compareFeatureXMLmzML-module.html#suite,Function pyMSA.test.test_compareRuns.suite()=pyMSA.test.test_compareRuns-module.html#suite,Function pyMSA.test.test_config.suite()=pyMSA.test.test_config-module.html#suite,Function pyMSA.test.test_database.suite()=pyMSA.test.test_database-module.html#suite,Function pyMSA.test.test_elementFunctions.suite()=pyMSA.test.test_elementFunctions-module.html#suite,Function pyMSA.test.test_featureFunctions.suite()=pyMSA.test.test_featureFunctions-module.html#suite,Function pyMSA.test.test_featureMapping.suite()=pyMSA.test.test_featureMapping-module.html#suite,Function pyMSA.test.test_fileHandling.suite()=pyMSA.test.test_fileHandling-module.html#suite,Function pyMSA.test.test_fillDatabase.suite()=pyMSA.test.test_fillDatabase-module.html#suite,Function pyMSA.test.test_getWindow.suite()=pyMSA.test.test_getWindow-module.html#suite,Function pyMSA.test.test_mzmlFunctions.suite()=pyMSA.test.test_mzmlFunctions-module.html#suite,Function pyMSA.test.test_output.suite()=pyMSA.test.test_output-module.html#suite,Function pyMSA.test.test_parseFeatureXML.suite()=pyMSA.test.test_parseFeatureXML-module.html#suite,Function pyMSA.test.test_parseMascot.suite()=pyMSA.test.test_parseMascot-module.html#suite,Function pyMSA.test.test_parsePeaksMzML.suite()=pyMSA.test.test_parsePeaksMzML-module.html#suite,Function pyMSA.test.test_plots.suite()=pyMSA.test.test_plots-module.html#suite,Function pyMSA.test.test_rFunctions.suite()=pyMSA.test.test_rFunctions-module.html#suite,Function pyMSA.test.test_rPlotGenerics.suite()=pyMSA.test.test_rPlotGenerics-module.html#suite,Function pyMSA.test.test_submitMascot.suite()=pyMSA.test.test_submitMascot-module.html#suite"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
 pyMSA.test.test_compareRuns.suite
 pyMSA.test.test_config.suite
 pyMSA.test.test_database.suite
@@ -1060,7 +1107,8 @@ pyMSA.test.test_parseMascot.suite
 pyMSA.test.test_parsePeaksMzML.suite
 pyMSA.test.test_plots.suite
 pyMSA.test.test_rFunctions.suite
-pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-129', 'suite', 'link-129');">suite</a></tt> <tt class="py-op">=</tt> <tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">TestSuite</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.suite
+pyMSA.test.test_submitMascot.suite" class="py-name" href="#" onclick="return doclink('link-129', 'suite', 'link-129');">suite</a></tt> <tt class="py-op">=</tt> <tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">TestSuite</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">    <tt class="py-comment"># adding the unit tests to the test suite</tt> </tt>
 <a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">    <tt id="link-130" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
 pyMSA.test.test_compareRuns.suite
@@ -1079,7 +1127,8 @@ pyMSA.test.test_parseMascot.suite
 pyMSA.test.test_parsePeaksMzML.suite
 pyMSA.test.test_plots.suite
 pyMSA.test.test_rFunctions.suite
-pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-130', 'suite', 'link-129');">suite</a></tt><tt class="py-op">.</tt><tt class="py-name">addTest</tt><tt class="py-op">(</tt><tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">makeSuite</tt><tt class="py-op">(</tt><tt id="link-131" class="py-name" targets="Class pyMSA.test.test_rPlotGenerics.testRPlotGenerics=pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html"><a title="pyMSA.test.test_rPlotGenerics.testRPlotGenerics" class="py-name" href="#" onclick="return doclink('link-131', 'testRPlotGenerics', 'link-131');">testRPlotGenerics</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+pyMSA.test.test_rPlotGenerics.suite
+pyMSA.test.test_submitMascot.suite" class="py-name" href="#" onclick="return doclink('link-130', 'suite', 'link-129');">suite</a></tt><tt class="py-op">.</tt><tt class="py-name">addTest</tt><tt class="py-op">(</tt><tt class="py-name">unittest</tt><tt class="py-op">.</tt><tt class="py-name">makeSuite</tt><tt class="py-op">(</tt><tt id="link-131" class="py-name" targets="Class pyMSA.test.test_rPlotGenerics.testRPlotGenerics=pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html"><a title="pyMSA.test.test_rPlotGenerics.testRPlotGenerics" class="py-name" href="#" onclick="return doclink('link-131', 'testRPlotGenerics', 'link-131');">testRPlotGenerics</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-132" class="py-name"><a title="pyMSA.test.test_compareFeatureXMLmzML.suite
 pyMSA.test.test_compareRuns.suite
 pyMSA.test.test_config.suite
@@ -1097,7 +1146,8 @@ pyMSA.test.test_parseMascot.suite
 pyMSA.test.test_parsePeaksMzML.suite
 pyMSA.test.test_plots.suite
 pyMSA.test.test_rFunctions.suite
-pyMSA.test.test_rPlotGenerics.suite" class="py-name" href="#" onclick="return doclink('link-132', 'suite', 'link-129');">suite</a></tt> </tt>
+pyMSA.test.test_rPlotGenerics.suite
+pyMSA.test.test_submitMascot.suite" class="py-name" href="#" onclick="return doclink('link-132', 'suite', 'link-129');">suite</a></tt> </tt>
 </div><a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
 expandto(location.href);
@@ -1128,7 +1178,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jun  5 15:10:35 2012
+    Generated by Epydoc 3.0.1 on Wed Jun 20 18:35:03 2012
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -93,6 +93,9 @@ pyMSA.rFunctions.takeLog	pyMSA.rFunctions-module.html#takeLog
 pyMSA.rFunctions.fillNA	pyMSA.rFunctions-module.html#fillNA
 pyMSA.rPlotGenerics	pyMSA.rPlotGenerics-module.html
 pyMSA.rPlotGenerics.__package__	pyMSA.rPlotGenerics-module.html#__package__
+pyMSA.submitMascot	pyMSA.submitMascot-module.html
+pyMSA.submitMascot.test	pyMSA.submitMascot-module.html#test
+pyMSA.submitMascot.__package__	pyMSA.submitMascot-module.html#__package__
 pyMSA.test	pyMSA.test-module.html
 pyMSA.test.__package__	pyMSA.test-module.html#__package__
 pyMSA.test.test_compareFeatureXMLmzML	pyMSA.test.test_compareFeatureXMLmzML-module.html
@@ -206,6 +209,12 @@ pyMSA.test.test_rPlotGenerics.config	pyMSA.test.test_rPlotGenerics-module.html#c
 pyMSA.test.test_rPlotGenerics.__package__	pyMSA.test.test_rPlotGenerics-module.html#__package__
 pyMSA.test.test_rPlotGenerics.suite	pyMSA.test.test_rPlotGenerics-module.html#suite
 pyMSA.test.test_rPlotGenerics.testFolder	pyMSA.test.test_rPlotGenerics-module.html#testFolder
+pyMSA.test.test_submitMascot	pyMSA.test.test_submitMascot-module.html
+pyMSA.test.test_submitMascot.configHandle	pyMSA.test.test_submitMascot-module.html#configHandle
+pyMSA.test.test_submitMascot.__package__	pyMSA.test.test_submitMascot-module.html#__package__
+pyMSA.test.test_submitMascot.suite	pyMSA.test.test_submitMascot-module.html#suite
+pyMSA.test.test_submitMascot.testFolder	pyMSA.test.test_submitMascot-module.html#testFolder
+pyMSA.test.test_submitMascot.config	pyMSA.test.test_submitMascot-module.html#config
 exceptions.AssertionError	exceptions.AssertionError-class.html
 exceptions.AssertionError.__init__	exceptions.AssertionError-class.html#__init__
 exceptions.AssertionError.__new__	exceptions.AssertionError-class.html#__new__
@@ -475,6 +484,7 @@ pyMSA.test.test_parseFeatureXML.testParseFeatureXML.test_getAllFeatureInfoExcept
 pyMSA.test.test_parseMascot.testParseMascot	pyMSA.test.test_parseMascot.testParseMascot-class.html
 pyMSA.test.test_parseMascot.testParseMascot.test_getAssignedPeptidesMZandRTvalue	pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getAssignedPeptidesMZandRTvalue
 pyMSA.test.test_parseMascot.testParseMascot.test_getAllElements	pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getAllElements
+pyMSA.test.test_parseMascot.testParseMascot.test_getUnassignedPeptidesMZandRTvalue	pyMSA.test.test_parseMascot.testParseMascot-class.html#test_getUnassignedPeptidesMZandRTvalue
 pyMSA.test.test_parseMascot.testParseMascot.test_Reader	pyMSA.test.test_parseMascot.testParseMascot-class.html#test_Reader
 unittest.TestCase.failureException	exceptions.AssertionError-class.html
 pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML	pyMSA.test.test_parsePeaksMzML.testParsePeaksMzML-class.html
@@ -516,3 +526,6 @@ pyMSA.test.test_rPlotGenerics.testRPlotGenerics.test_getColorsException	pyMSA.te
 pyMSA.test.test_rPlotGenerics.testRPlotGenerics.test_getColors	pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_getColors
 unittest.TestCase.failureException	exceptions.AssertionError-class.html
 pyMSA.test.test_rPlotGenerics.testRPlotGenerics.test_histogramExceptions	pyMSA.test.test_rPlotGenerics.testRPlotGenerics-class.html#test_histogramExceptions
+pyMSA.test.test_submitMascot.testSubmitMascot	pyMSA.test.test_submitMascot.testSubmitMascot-class.html
+pyMSA.test.test_submitMascot.testSubmitMascot.test_submitMascot	pyMSA.test.test_submitMascot.testSubmitMascot-class.html#test_submitMascot
+unittest.TestCase.failureException	exceptions.AssertionError-class.html

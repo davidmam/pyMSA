@@ -27,4 +27,6 @@ V<0.2.5>, <11/04/2012> -- Added featureMappingQuality, a module to analyze quali
 V<0.2.5>, <11/04/2012> -- Added SQLite and MySQL database support
 						  Added a parser for MASCOT's XML result files
 						  Extra example scripts
-						  
+V<0.2.7>, <?/?/?> 	  --  Added shell scripts to bin/ for the automated finding of features and mapping of features
+V<0.2.7>, <20/06/2012 --  A much more complete documentation	  
+					

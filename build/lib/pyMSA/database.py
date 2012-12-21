@@ -552,7 +552,9 @@ class FillDatabase:
             spectrum_index = spectrum['id']
             binary_data_mz = spectrum['encodedData'][0]
             binary_data_rt = spectrum['encodedData'][1]
-                
+            if binary_data_mz ==None:
+		sys.stderr.write("No binary data for spectrum %s\n"%spectrum_index)
+		continue    
             # apareantly not all mzml files have an ion injection time, to prevent an error, ion injetion time is initialized here already
             ion_injection_time = None
             

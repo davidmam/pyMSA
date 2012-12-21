@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svn/barton/!svn/ver/5498/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/test/test_database
+/svn/barton/!svn/ver/5563/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/test/test_database
 END
 test_pyMSA_database.db
 K 25
 svn:wc:ra_dav:version-url
 V 101
-/svn/barton/!svn/ver/5498/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/test/test_database/test_pyMSA_database.db
+/svn/barton/!svn/ver/5563/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/test/test_database/test_pyMSA_database.db
 END

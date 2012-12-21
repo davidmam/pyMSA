@@ -214,12 +214,21 @@ class FillDatabase:
             # set msrunFilled to True, this is used later in fillMsrun to know if the name already exists
             self.msrunFilled = True
             self.msrun_primaryKey = msrun_id[0]
+        self.dbsearchgroups={}
+        self._getSearchGroups()
         
 
         # this is for speed reasons (see http://stackoverflow.com/questions/1711631/how-do-i-improve-the-performance-of-sqlite)
         # it does mean that if a machine powers down unexpectedly the db can become corrupted
         #self.cursor.execute("PRAGMA synchronous=OFF")
-
+    def _getSearchGroups(self):
+        '''retrieves db search group details from the database for local storage as self.searchgroups'''
+        sql="select db_search_group_id, db_search_group_name from db_search_group"
+        cursor=self.connect.cursor
+        cursor.execute(sql)
+        for x in cursor.fetchall():
+            self.dbsearchgroups[x[1]]=x[0]
+        
     def sanitizeString(self, string, errors="strict"):
         """
         Way to sanitize query input. Use this if you want to use variable table or column names (as used in getPrimaryKeyValue). For variable values use the sqlite's "+self.placeholder+" method.
@@ -248,11 +257,15 @@ class FillDatabase:
 
     def getPrimaryKeyValue(self, column, table, sanitize=False):
         """
+        Old version -- 
         Gets the value for the primary key of column and table. Selects max of column and adds one. The primary key value returned is always
         1 higher than the highest value currently in column of table. If there is no current value (it's the first entry) the value is set to 1.
         This works on all tables and columns that are in the database to which fillDatabase is connected. The variable table and column names are 
         sanitized using L{FillDatabase.sanitizeString} before being concatenated.
-        
+        New version --
+        Looks for a sequence 'column' and gets the nextval() from that.
+        Allows for seamless interchange
+
         @type table: string
         @param table: table from which you want to get the next primary key value
         @type column: string
@@ -279,12 +292,15 @@ class FillDatabase:
         ...    print fd.getPrimaryKeyValue('example', 'id')
         4
         """
+        
+        #sequence=column
         # select highest value of the primary key column
         if sanitize:
-            self.connect.cursor.execute("SELECT max(%s) FROM `%s`" % (self.sanitizeString(column), self.sanitizeString(table)))
-        else:
-            self.connect.cursor.execute("SELECT max(%s) FROM `%s`" % (column, table))
-
+            sequence=self.sanitizeString(column)
+            #self.connect.cursor.execute("SELECT max(%s) FROM `%s`" % (self.sanitizeString(column), self.sanitizeString(table)))
+        #else:
+        #    self.connect.cursor.execute("SELECT max(%s) FROM `%s`" % (column, table))
+        self.connect.cursor.execute("SELECT `%s`.nextval()" % (column,))
         primaryKey = self.connect.cursor.fetchone()[0]
         if primaryKey == None:
             primaryKey = 0
@@ -310,17 +326,21 @@ class FillDatabase:
             raise sqlite.IntegrityError, 'The name: '+str(self.msrunName)+' already exists in the table msrun. Choose a different name or, if you want to update the description, use FillDatabase.updateDescription()'
         if self.msrunName == None:
             raise RuntimeError, 'msrunName is set to None (this is also the default). You cannot fill msrun if msrunName is None. '
-        self.msrun_primaryKey = self.getPrimaryKeyValue('msrun_id', 'msrun')
+        #self.msrun_primaryKey = self.getPrimaryKeyValue('msrun_id', 'msrun')
+        # not thread safe. Use auto_increment instead.
         # get the start time. Because it is in the start of the file, looping through the lines to find it does not take much time
+        startTimeStamp=None
         with open(mzmlPath) as mzml:
             for line in mzml:
                 if 'startTimeStamp' in line:
                     startTimeStamp = line.split('startTimeStamp="')[1].split('"')[0].replace('T',' ').rstrip('Z')
                     break
         # tulip of the input values for sql insert
-        inputValues = (self.msrun_primaryKey, str(self.msrunName), str(self.msrunDescription), str(startTimeStamp))
+        #inputValues = (self.msrun_primaryKey,str(self.msrunName), str(self.msrunDescription), str(startTimeStamp))
+        inputValues = (str(self.msrunName), str(self.msrunDescription), str(startTimeStamp))
         # insert the values into msrun using "+self.placeholder+" for sql injection safety
-        self.connect.cursor.execute("INSERT INTO `msrun` VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", inputValues)
+        #self.connect.cursor.execute("INSERT INTO `msrun` VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", inputValues)
+        self.connect.cursor.execute("INSERT INTO `msrun` (msrun_name, description, start_time ) VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+")", inputValues)
         # set msrunFilled to true incase someone tries to insert this name again from the same instance, or wants to update from the same instance
         self.msrunFilled = True
         # save the data 
@@ -412,12 +432,22 @@ class FillDatabase:
             content = str(featureXMLinstance['content'])
             msrun_msrun_name = str(self.msrunName)
             
-            feature_primaryKey = self.getPrimaryKeyValue('feature_table_id', 'feature')
+            #feature_primaryKey = self.getPrimaryKeyValue('feature_table_id', 'feature')
+            # this is not thread safe.
             # tulip of the input values for sql insert            
-            featureInputValues = (feature_primaryKey, featureID, intensity, overallQuality, charge, content, intensity_cutoff, self.msrun_primaryKey)
+            #featureInputValues = (feature_primaryKey, featureID, intensity, overallQuality, charge, content, intensity_cutoff, self.msrun_primaryKey)
+            featureInputValues = (featureID, intensity, overallQuality, charge, content, intensity_cutoff, self.msrun_primaryKey)
             # insert the values into msrun using "+self.placeholder+" for sql injection safety
             
-            self.connect.cursor.execute("INSERT INTO `feature` VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", featureInputValues)
+            self.connect.cursor.execute("INSERT INTO `feature`(feature_id, intensity, overallquality,charge,content,intensity_cutoff,msrun_msrun_id) VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", featureInputValues)
+            #self.connect.cursor.execute("INSERT INTO `feature` VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", featureInputValues)
+            #retreive primary key
+            self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+            #self.connect.cursor.execute("SELECT max(feature_table_id) from feature where feature_id = "+self.placeholder+" and intensity_cutoff = "+self.placeholder, (featureID,intensity_cutoff))
+            res=self.connect.cursor.fetchone()
+            if res !=None:
+                feature_primaryKey=res[0]
+            
             # keep track of the rt and mz minimum and maximum to save the corners of the convexhull. This is used
             # for fast(er) comparison between features and spectra instead of having to get max(rt) using the db
             rtMin = 0
@@ -427,12 +457,18 @@ class FillDatabase:
             # loop through all the values in the convexhull and add them to the convexhull table
             for mz_and_rt in featureXMLinstance['convexhull']:
                 # increment the max value of convexhull_id by one as primary key
-                covexhull_primaryKey = self.getPrimaryKeyValue('convexhull_id','convexhull')
-
+                #covexhull_primaryKey = self.getPrimaryKeyValue('convexhull_id','convexhull')
+                #not thread safe
                 # fill convexhull, (SELECT max(a) FROM t1)+1 mak
-                convexhullInputValues = (covexhull_primaryKey, mz_and_rt['mz'], mz_and_rt['rt'], feature_primaryKey)
-                self.connect.cursor.execute("INSERT INTO `convexhull` VALUES ("+self.placeholder+","+self.placeholder+", "+self.placeholder+", "+self.placeholder+")",convexhullInputValues)
-            
+                try:
+                    #assert covexhull_primaryKey !=None and mz_and_rt['mz'] !=None and mz_and_rt['rt'] !=None and feature_primaryKey !=None
+                    #convexhullInputValues = (covexhull_primaryKey, mz_and_rt['mz'], mz_and_rt['rt'], feature_primaryKey)
+                    #self.connect.cursor.execute("INSERT INTO `convexhull` VALUES ("+self.placeholder+","+self.placeholder+", "+self.placeholder+", "+self.placeholder+")",convexhullInputValues)
+                    assert mz_and_rt['mz'] !=None and mz_and_rt['rt'] !=None and feature_primaryKey !=None
+                    convexhullInputValues = ( mz_and_rt['mz'], mz_and_rt['rt'], feature_primaryKey)
+                    self.connect.cursor.execute("INSERT INTO `convexhull` (mz, rt, feature_feature_table_id ) VALUES ("+self.placeholder+", "+self.placeholder+", "+self.placeholder+")",convexhullInputValues)
+                except Exception,e:
+                    warnings.warn("Error reading convex hull %s (%s): %s"%(mz_and_rt,":".join([str(x) for x in convexhullInputValues]),e)) 
             self.connect.cursor.execute("SELECT min(rt), max(rt), min(mz), max(mz) FROM convexhull WHERE feature_feature_table_id = "+self.placeholder+"",(feature_primaryKey,))
             edges = self.connect.cursor.fetchone()
             convexhull_edges_inputValues = (feature_primaryKey, edges[0], edges[1], edges[2],edges[3])
@@ -442,27 +478,39 @@ class FillDatabase:
             self.featureList.append([mzMin, mzMax, rtMin, rtMax, feature_primaryKey])
             # loop through all the positions and add them to thep position table
             for userParam in featureXMLinstance['userParam']:
-                userParamName_primaryKey = self.getPrimaryKeyValue('userParamName_id','userParam_names')
+                #userParamName_primaryKey = self.getPrimaryKeyValue('userParamName_id','userParam_names')
+                # not thread safe.
                 # input for userParam_names
-                userParamNamesInputValues =  (userParamName_primaryKey, userParam['name'])
+                userParamNamesInputValues =  ( userParam['name'],)
                 
-                self.connect.cursor.execute("INSERT INTO `userParam_names` VALUES ("+self.placeholder+","+self.placeholder+")",userParamNamesInputValues)
-
+                self.connect.cursor.execute("INSERT INTO `userParam_names` ( name ) VALUES ("+self.placeholder+")",userParamNamesInputValues)
+                self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+                #self.connect.cursor.execute("SELECT userParamName_id from userParam_names where name="+self.placeholder, userParamNamesInputValues)
+                res=self.connect.cursor.fetchone()
+                userParamName_primaryKey=res[0]
                 # increment the max value of userParam_names by one as primary key
-                userParamValue_primaryKey = self.getPrimaryKeyValue('userParamValue_id', 'userParam_value')
+                #userParamValue_primaryKey = self.getPrimaryKeyValue('userParamValue_id', 'userParam_value')
+                #not thread safe
                 # input for userParam_names
-                userParamValueInputValues =  (userParamValue_primaryKey, userParam['value'])
+                userParamValueInputValues =  (userParam['value'],)
                 
-                self.connect.cursor.execute("INSERT INTO `userParam_value` VALUES ("+self.placeholder+","+self.placeholder+")", userParamValueInputValues)
+                self.connect.cursor.execute("INSERT INTO `userParam_value` ( value ) VALUES ("+self.placeholder+")", userParamValueInputValues)
+                self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+                res=self.connect.cursor.fetchone()
+                userParamValue_primaryKey=res[0]
                 # increment the max value of userParam_names by one as primary key
-                feature_has_userParam_names_primaryKey = self.getPrimaryKeyValue('feature_has_userParam_names_id', 'feature_has_userParam_names')
-            
+                #feature_has_userParam_names_primaryKey = self.getPrimaryKeyValue('feature_has_userParam_names_id', 'feature_has_userParam_names')
+                # not thread safe
                 # fill the many-to-many linking tables
-                featureHasUserParamValuesInputValues = (feature_has_userParam_names_primaryKey, feature_primaryKey, userParamName_primaryKey)
-                self.connect.cursor.execute("INSERT INTO `feature_has_userParam_names` VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+")", featureHasUserParamValuesInputValues)
-                
+                featureHasUserParamValuesInputValues = ( feature_primaryKey, userParamName_primaryKey)
+                self.connect.cursor.execute("INSERT INTO `feature_has_userParam_names` ( feature_feature_table_id,userParam_names_userParamName_id) VALUES ("+self.placeholder+","+self.placeholder+")", featureHasUserParamValuesInputValues)
+                self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+                res=self.connect.cursor.fetchone()
+                feature_has_userParam_names_primaryKey=res[0]
+
                 featureHasUserParamNameHasUserParamValue_inputValues = (feature_has_userParam_names_primaryKey, userParamValue_primaryKey)
                 self.connect.cursor.execute("INSERT INTO `feature_has_userParam_names_has_userParam_value` VALUES ("+self.placeholder+","+self.placeholder+")", featureHasUserParamNameHasUserParamValue_inputValues)
+
             
         self.connect.connection.commit()
      
@@ -505,6 +553,7 @@ class FillDatabase:
                 raise RuntimeError, 'No features found in table feature. Are you sure you are connecting to the right database table"+self.placeholder+"'
             
         for featureID_dict in featureMapping.getMappedFeatureIds():
+            ## TODO
             feature_mapping_primaryKey = self.getPrimaryKeyValue('feature_mapping_id','feature_mapping')
             # have to get the feature_table_id where the feature_id = the same as the from id, and the msrun_id is the same as self.msrun_primaryKey
             #feature_got_mapped_id_inputValues = (featureID_dict['from_featureID'],)
@@ -516,10 +565,11 @@ class FillDatabase:
             feature_identity_id = feature_dict[featureID_dict['to_featureID']]
             to_value = featureID_dict['to']
             from_value = featureID_dict['from']
-            feature_mapping_inputValues = (feature_mapping_primaryKey, feature_got_mapped_id, feature_identity_id, to_value, from_value)
-            self.connect.cursor.execute("INSERT INTO `feature_mapping` VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", feature_mapping_inputValues)
-        self.connect.connection.commit()
-    
+            feature_mapping_inputValues = ( feature_got_mapped_id, feature_identity_id, to_value, from_value)
+            self.connect.cursor.execute("INSERT INTO `feature_mapping` (feature_got_mapped_id, feature_identity_id, to, from) VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", feature_mapping_inputValues)
+            
+            self.connect.connection.commit()
+
     def fillSpectrum(self, mzMLinstance):
         """
         Fill all tables related to spectra with data from mzMLinstance. 
@@ -548,11 +598,17 @@ class FillDatabase:
             raise RuntimeError, 'msrunName is set to None (this is also the default). You cannot fill spectrum if msrunName is None. '
         self.connect.cursor.execute('begin')
         for spectrum in mzMLinstance:
-            spectrum_primaryKey = self.getPrimaryKeyValue('spectrum_id', 'spectrum')
+            #spectrum_primaryKey = self.getPrimaryKeyValue('spectrum_id', 'spectrum')
             spectrum_index = spectrum['id']
+            try:
+                int(spectrum_index)
+            except:
+                continue
             binary_data_mz = spectrum['encodedData'][0]
             binary_data_rt = spectrum['encodedData'][1]
-                
+            if binary_data_mz ==None:
+		sys.stderr.write("No binary data for spectrum %s\n"%spectrum_index)
+		continue    
             # apareantly not all mzml files have an ion injection time, to prevent an error, ion injetion time is initialized here already
             ion_injection_time = None
             
@@ -590,7 +646,7 @@ class FillDatabase:
                      
                 # because all info for MSMS_precursor is in the element, to prevent extra looping get all the values for the MSMS_precursor table now
                 if int(ms_level) >= 2:
-                    precursor_primaryKey = self.getPrimaryKeyValue('precursor_id','MSMS_precursor')
+                    #precursor_primaryKey = self.getPrimaryKeyValue('precursor_id','MSMS_precursor')
                     if elementInfo['name'] == 'selected ion m/z':
                         ion_mz = elementFunctions.getItems(element)['value']
                     elif elementInfo['name'] == 'charge state':
@@ -599,14 +655,20 @@ class FillDatabase:
                         peak_intensity = elementInfo['value']
                         
             # to prevent sql injections, put all the values in a tuple and use "+self.placeholder+" replacemenet    
-            spectrum_inputValues = (spectrum_primaryKey, spectrum_index, ms_level, base_peak_mz, base_peak_intensity, total_ion_current, lowest_observed_mz, highest_observed_mz,
+            spectrum_inputValues = ( spectrum_index, ms_level, base_peak_mz, base_peak_intensity, total_ion_current, lowest_observed_mz, highest_observed_mz,
                                     scan_start_time, ion_injection_time, binary_data_mz, binary_data_rt, self.msrun_primaryKey)
-            self.connect.cursor.execute("INSERT INTO `spectrum` VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", spectrum_inputValues)
-            
+            self.connect.cursor.execute("INSERT INTO `spectrum` ( spectrum_index, ms_level, base_peak_mz, base_peak_intensity, total_ion_current, lowest_observes_mz, highest_observed_mz,scan_start_time,ion_injection_time, binary_data_mz, binary_data_rt, msrun_msrun_id ) VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", spectrum_inputValues)
+            self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+            res=self.connect.cursor.fetchone()
+            spectrum_primaryKey=res[0]
+            #self.connect.cursor.execute("SELECT spectrum_id FROM spectrum where spectrum_index="+self.placeholder+" and msrun_msrun_id="+self.placeholder, (spectrum_index, self.msrun_primaryKey))
+            #res=self.connect.cursor.fetchone()
+            #spectrum_primaryKey=res[0]
+                                        
             if int(ms_level) >= 2:
-                MSMS_precursor_inputValues = (precursor_primaryKey, ion_mz, charge_state, peak_intensity, spectrum_primaryKey)               
-                self.connect.cursor.execute("INSERT INTO `MSMS_precursor` VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", MSMS_precursor_inputValues)
-                self.spectraList.append([ion_mz, scan_start_time, precursor_primaryKey])
+                MSMS_precursor_inputValues = (ion_mz, charge_state, peak_intensity, spectrum_primaryKey)               
+                self.connect.cursor.execute("INSERT INTO `MSMS_precursor` (ion_mz,charge_state,peak_intensity,spectrum_spectrum_id) VALUES ("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+")", MSMS_precursor_inputValues)
+                #self.spectraList.append([ion_mz, scan_start_time, precursor_primaryKey])
                     
         self.connect.connection.commit()
     
@@ -662,8 +724,77 @@ class FillDatabase:
             feature_has_MSMS_precursor_inputValues = (precursorAndFeatureID[0], precursorAndFeatureID[1])
             self.connect.cursor.execute("INSERT INTO `feature_has_MSMS_precursor` VALUES("+self.placeholder+","+self.placeholder+")", feature_has_MSMS_precursor_inputValues)
         self.connect.connection.commit()
-    
-    def fillMascot(self, mascotXMLinstance, runfileroot=None):
+
+    def linkSpectrumToFeatureNew(self):
+        """
+        Fills the spectrum_has_feature table. Takes the spectrum and features that have the same msrun_msrun_id (the foreign key to the msrun table) and matches the ones where the
+        spectrum is inside the features convexhull. 
+        
+        @raise RuntimeError: msrun, spectrum or feature table has not been filled yet. 
+        
+        B{Example:}
+        
+        >>> import pymzml
+        >>> import parseFeatureXML
+        >>> mzMLinstance = pymzml.run.Reader('example_file.mzML')                   # make a pymzml.run.Reader instance
+        >>> featureXML = parseFeatureXML.Reader('example_file.featureXML')          # make a parseFeatureXML.Reader instance
+        >>> fillDatabaseInstance = FillDatabase('example')                          # make a FillDatabase instance with msrun named example
+        >>> with fillDatabase.FillDatabase('exampleSqliteDb.db', 'example', 'example description') as fd:
+        ...     fd.fillMsrun                                                        # need to fill the msrun, feature and spectrum tables first
+        ...     fd.fillSpectrum(mzMLinstance)                                      
+        ...     fd.fillFeatures(featureXML)
+        ...     fd.linkSpectrumToFeature()
+        """    
+        # if the msrunName given to FillDatabase() is not in the database, raise runtime error. Because feature table is linked to msrun with a foreign key, msrun HAS to be filled first
+        # msrunName can be None, in which case msrunFilled doesn't have to be true, this can be used for fillFeatureMapping and feature_spectrum_linking because these can be done independently of msrun
+        if not self.msrunFilled and not self.msrunName == None:
+            raise RuntimeError, 'There is no record of: \''+str(self.msrunName)+'\' in the msrun table. Run FillDatabase.fillMsrun() first'
+        if self.msrunName == None:
+            raise RuntimeError, 'msrunName is set to None (this is also the default). You cannot link feature to MSMS precursors if msrunName is None. '
+
+        self.connect.cursor.execute('begin')
+        self.connect.cursor.execute("SELECT (@msrun:=msrun_id) FROM `msrun` WHERE msrun_name = "+self.placeholder+"", (self.msrunName,))
+        # assign msrun_id to the variable @msrun
+
+        # query that retrieves the spectrum_id and feature_table_id for all the spectrums and features where the spectrum is inside the 
+        # convexhull of the feature and inserts that directly into the link table..
+        self.connect.cursor.execute("INSERT INTO `feature_has_MSMS_precursor` (MSMS_precursor_precursor_id,feature_feature_table_id)  SELECT precursor_id, feature_table_id "+
+                                    "FROM `MSMS_precursor` "+
+                                    "JOIN `spectrum` ON spectrum_id = spectrum_spectrum_id "+
+                                    "JOIN `feature` ON feature.msrun_msrun_id = spectrum.msrun_msrun_id "+
+                                    "JOIN `convexhull_edges` ON convexhull_edges.feature_feature_table_id = feature.feature_table_id "
+                                    "AND spectrum.scan_start_time BETWEEN convexhull_edges.rtMin AND convexhull_edges.rtMax "+
+                                    "WHERE MSMS_precursor.ion_mz BETWEEN convexhull_edges.mzMin AND convexhull_edges.mzMax "+
+                                    "AND feature.msrun_msrun_id = @msrun")
+        self.connect.connection.commit()
+        
+    def fillDBSearchGroup(self, tag, description, engine):
+        """
+        Adds a search group description
+        """
+        if self.dbsearchgroups.has_key(tag):
+            return self.dbsearchgroups[tag]
+        if tag==None or description==None or engine==None:
+            raise Exception("Specify tag, description and engine")
+        sql="insert into db_search_group (db_search_group_name, db_search_group_description, db_search_engine) values (%s, %s, %s)"
+        self.connect.cursor.execute(sql, (tag, description, engine))
+        self.connect.cursor.execute("select last_insert_id()")
+        grpid=int(self.connect.cursor.fetchone()[0])
+        self.dbsearchgroups[tag]=grpid
+        return grpid
+        
+    def fillDBSearch(self, filename, searchgroup=0):
+        """ 
+        Adds a DB search instance to the dbsearch table. filename should be the output filename, not the input file.
+        searchgroup should be the id for the search group else no searchgroup
+        """
+        sql="insert into db_search (results_filename, db_search_group_id) VALUES( %s, %s)"
+        self.connect.cursor.execute(sql, (filename, searchgroup))
+        self.connect.cursor.execute("select last_insert_id()")
+        dbid=int(self.connect.cursor.fetchone()[0])
+        return dbid
+
+    def fillMascot(self, mascotXMLinstance, runfileroot=None, dbsearch=0):
         """
         Fill the MASCOT_results table. 
 
@@ -673,23 +804,25 @@ class FillDatabase:
         @raise RuntimeError: There is no database entry with self.msrunName as msrun_name
         @raise RuntimeError: No peptides found
         
-        B{Example:}
+        B{Examples:}
+        
+        When the mascot file only contains one result:
         
         >>> import parseMascot
         >>> mascotInstance = parseMascot.Reader('mascotResults.xml')          # make a parseMascot.Reader instance
-        >>> fillDatabaseInstance = FillDatabase('example')            # make a FillDatabase instance with msrun named example
+        >>> fillDatabaseInstance = FillDatabase('example')                    # make a FillDatabase instance with msrun named example
         >>> with fillDatabase.FillDatabase('exampleSqliteDb.db', 'example', 'example description') as fd:
-        ...     fd.fillMsrun()                                           # need to fill the msrun table first
-        ...     fd.fillMascot(mascotInstance)                           # fill the database. msrun name is 'example'
+        ...     fd.fillMsrun()                                                # need to fill the msrun table first
+        ...     fd.fillMascot(mascotInstance)                                 # fill the database. msrun name is 'example'
         
-         B{Example:}
+        When the mascot file contains multiple results and you only want to add one of them:
         
         >>> import parseMascot
         >>> mascotInstance = parseMascot.Reader('mascotResults.xml')          # make a parseMascot.Reader instance
-        >>> fillDatabaseInstance = FillDatabase('example')            # make a FillDatabase instance with msrun named example
+        >>> fillDatabaseInstance = FillDatabase('example')                    # make a FillDatabase instance with msrun named example
         >>> with fillDatabase.FillDatabase('exampleSqliteDb.db', 'example', 'example description') as fd:
-        ...     fd.fillMsrun()                                           # need to fill the msrun table first
-        ...     fd.fillMascot(mascotInstance, "msfile1")             # fill the database. msrun name is 'example'. Mascot search includes results from several original files - just upload the ones from msfile1
+        ...     fd.fillMsrun()                                                # need to fill the msrun table first
+        ...     fd.fillMascot(mascotInstance, "msfile1")                      # fill the database. msrun name is 'example'. Mascot search includes results from several original files - just upload the ones from msfile1
 
         """
         # if the msrunName given to FillDatabase() is not in the database, raise runtime error. Because feature table is linked to msrun with a foreign key, msrun HAS to be filled first
@@ -709,34 +842,46 @@ class FillDatabase:
         count = 0
         # keep track of the peptides already added
         peptideDict = collections.defaultdict(lambda : collections.defaultdict(list))
+        # build an index of scan number and precursor ID
+        scanIndex={}
+        self.connect.cursor.execute("SELECT spectrum_index, precursor_id FROM MSMS_precursor "+
+                                    "JOIN spectrum ON spectrum_id = spectrum_spectrum_id "+
+                                    "WHERE msrun_msrun_id = "+self.placeholder+"", ( msrun_id,))
+        for s in self.connect.cursor.fetchall():
+            scanIndex[str(s[0])]=s[1]
         for assignedPeptides in mascotXMLinstance.getAssignedPeptidesMZandRTvalue():
-            # TODO first check for filename (fileroot) matching the ms run,(not recorded so need to select on method parameters) 
-            if runfileroot !=None and assignedPeptides['fileroot'] != runfileroot :
+            # first check for filename (fileroot) matching the ms run,(not recorded so need to select on method parameters) 
+            if runfileroot != None and assignedPeptides['fileroot'] != runfileroot :
                 continue
                 #check self.msrunName matches assignedPeptides['fileroot']
                 
-            # TODO then check for scannumber. 
-            if assignedPeptides['scannumber'] !=None:
-                # TODO If scannumber then link directly with that (spectrum ->precursor) after checking rt/mz match  else
-                self.connect.cursor.execute("SELECT precursor_id FROM MSMS_precursor "+
-                                            "JOIN spectrum ON spectrum_id = spectrum_spectrum_id "+
-                                            "AND spectrum_index = "+self.placeholder+" "+
-                                            "AND msrun_msrun_id = "+self.placeholder+"", (assignedPeptides['scannumber'], msrun_id))
-                result = self.connect.cursor.fetchone()
-                if result == None:
+            # then check for scannumber. 
+            if assignedPeptides['scannumber'] != None:
+                # If scannumber then link directly with that (spectrum ->precursor) after checking rt/mz match  else
+                #self.connect.cursor.execute("SELECT precursor_id FROM MSMS_precursor "+
+                #                            "JOIN spectrum ON spectrum_id = spectrum_spectrum_id "+
+                #                            "AND spectrum_index = "+self.placeholder+" "+
+                #                            "AND msrun_msrun_id = "+self.placeholder+"", (assignedPeptides['scannumber'], msrun_id))
+                #result = self.connect.cursor.fetchone()
+                #if result == None:
+                try:
+                    result=(scanIndex[str(assignedPeptides['scannumber'])],)
+                except:
                     print 'not found scan number: ',assignedPeptides['scannumber']
                     count += 1
                     continue
             else:
             # TODO cascade to matching spectra vs rt and mz values.
 
-            # because mysql (and hopefully sqlite, otherwise change this for that) rounds to nearest even number when last number is 5, if len after
-            # comma is 10 and last number is 5 and second last number is even, make last number 4 (so that python also rounds to nearest even in that case)
-            # otherwise python rounds 5 up.
+                # because mysql (and hopefully sqlite, otherwise change this for that) rounds to nearest even number when last number is 5, if len after
+                # comma is 10 and last number is 5 and second last number is even, make last number 4 (so that python also rounds to nearest even in that case)
+                # otherwise python rounds 5 up.
+                if assignedPeptides.get('mz')==None:
+                    next
                 if len(assignedPeptides['mz'].split('.')[1]) == 10 and assignedPeptides['mz'].endswith('5') and int(assignedPeptides['mz'][-2]) % 2 == 0:
                     assignedPeptides['mz'] = assignedPeptides['mz'][:-1]+'4'
-            # round result to 9th digit, do the same for ion_mz. 9 is enough to get unique results, and this way makes sure
-            # that not one has more significant numbers and thats why they dont match up
+                    # round result to 9th digit, do the same for ion_mz. 9 is enough to get unique results, and this way makes sure
+                    # that not one has more significant numbers and thats why they dont match up
                 select_inputValues = (round(float(assignedPeptides['mz']),9), round(float(assignedPeptides['rt']),4), msrun_id)
                 self.connect.cursor.execute("SELECT precursor_id FROM MSMS_precursor "+
                                             "JOIN spectrum ON spectrum_id = spectrum_spectrum_id "+
@@ -752,32 +897,31 @@ class FillDatabase:
             if not peptideDict['pep_id'].has_key(assignedPeptides['pep_scan_title']) and not assignedPeptides['pep_seq'] in peptideDict[assignedPeptides['pep_scan_title']]['pep_seq_list']:
                 # add the info to the mascot table
                 # get the primary key
-
-                mascot_primaryKey = self.getPrimaryKeyValue('peptide_id', 'MASCOT_peptide')
-                mascot_inputValues = (mascot_primaryKey, assignedPeptides['pep_exp_mz'], assignedPeptides['pep_exp_mr'], assignedPeptides['pep_exp_z']\
+                #mascot_primaryKey = self.getPrimaryKeyValue('peptide_id', 'MASCOT_peptide')
+                mascot_inputValues = ( assignedPeptides['pep_exp_mz'], assignedPeptides['pep_exp_mr'], assignedPeptides['pep_exp_z']\
                                   ,assignedPeptides['pep_calc_mr'], assignedPeptides['pep_delta'], assignedPeptides['pep_miss'],assignedPeptides['pep_score']\
                                   ,assignedPeptides['pep_expect'], assignedPeptides['pep_res_before'], assignedPeptides['pep_seq'], assignedPeptides['pep_res_after']\
-                                  ,assignedPeptides['pep_var_mod'],assignedPeptides['pep_var_mod_pos'],assignedPeptides['pep_num_match'], assignedPeptides['pep_scan_title'],1, result[0])
+                                  ,assignedPeptides['pep_var_mod'],assignedPeptides['pep_var_mod_pos'],assignedPeptides['pep_num_match'], assignedPeptides['pep_scan_title'],1, result[0], dbsearch)
 
-                self.connect.cursor.execute("INSERT INTO MASCOT_peptide VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
+                self.connect.cursor.execute("INSERT INTO MASCOT_peptide (pep_exp_mz,pep_exp_mr,pep_exp_z, pep_calc_mr,pep_delta,pep_miss, pep_score, pep_expect, pep_res_before,pep_seq, pep_res_after,pep_var_mod,pep_var_mod_pos, pep_num_match, pep_scan_title, isAssigned,precursor_precursor_id,db_search_id ) VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
-                                                                            +self.placeholder+","+self.placeholder+")", mascot_inputValues)
+                                                                            +self.placeholder+","+self.placeholder+","+self.placeholder+")", mascot_inputValues)
+                self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+                #self.connect.cursor.execute("select peptide_id from MASCOT_peptide where pep_scan_title="+self.placeholder+" and precursor_precursor_id="+self.placeholder,(assignedPeptides['pep_scan_title'], result[0] ))
+                res=self.connect.cursor.fetchone()
+                mascot_primaryKey=res[0]
                 peptideDict[assignedPeptides['pep_scan_title']]['pep_id'] = mascot_primaryKey
 
                 peptideDict[assignedPeptides['pep_scan_title']]['pep_seq_list'].append(assignedPeptides['pep_seq'])
             
 
-
-                    
-            
-                
-            mascot_protein_primaryKey = self.getPrimaryKeyValue('mascot_protein_id', 'MASCOT_protein')
-            mascot_protein_inputValues = (mascot_protein_primaryKey, assignedPeptides['protAccession'], assignedPeptides['prot_desc'], assignedPeptides['prot_score']\
+            #mascot_protein_primaryKey = self.getPrimaryKeyValue('mascot_protein_id', 'MASCOT_protein')
+            mascot_protein_inputValues = ( assignedPeptides['protAccession'], assignedPeptides['prot_desc'], assignedPeptides['prot_score']\
                                           ,assignedPeptides['prot_mass'], assignedPeptides['prot_matches'], assignedPeptides['prot_matches_sig']\
                                           ,assignedPeptides['prot_sequences'], assignedPeptides['prot_sequences_sig'], peptideDict[assignedPeptides['pep_scan_title']]['pep_id'])
-            self.connect.cursor.execute("INSERT INTO MASCOT_protein VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
+            self.connect.cursor.execute("INSERT INTO MASCOT_protein ( protein_accession, prot_desc, prot_score, prot_mass, prot_matches,prot_matches_sig, prot_sequences,prot_sequences_sig,mascot_peptide_peptide_id ) VALUES("+self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+")",mascot_protein_inputValues)
 
@@ -806,14 +950,14 @@ class FillDatabase:
                 continue
             
             # get the primary key
-            mascot_primaryKey = self.getPrimaryKeyValue('peptide_id', 'MASCOT_peptide')
+            #mascot_primaryKey = self.getPrimaryKeyValue('peptide_id', 'MASCOT_peptide')
             # add the info to the mascot table
-            mascot_inputValues = (mascot_primaryKey, unassignedPeptide['pep_exp_mz'], unassignedPeptide['pep_exp_mr'], unassignedPeptide['pep_exp_z']\
+            mascot_inputValues = ( unassignedPeptide['pep_exp_mz'], unassignedPeptide['pep_exp_mr'], unassignedPeptide['pep_exp_z']\
                                   ,unassignedPeptide['pep_calc_mr'], unassignedPeptide['pep_delta'], unassignedPeptide['pep_miss'],unassignedPeptide['pep_score']\
                                   ,unassignedPeptide['pep_expect'], unassignedPeptide['pep_seq']\
                                   ,unassignedPeptide['pep_var_mod'],unassignedPeptide['pep_var_mod_pos'],unassignedPeptide['pep_num_match'],unassignedPeptide['pep_scan_title'],0,result[0])
 
-            self.connect.cursor.execute("INSERT INTO MASCOT_peptide (peptide_id, pep_exp_mz, pep_exp_mr, pep_exp_z, pep_calc_mr, pep_delta, pep_miss, pep_score, pep_expect, pep_seq, pep_var_mod, pep_var_mod_pos, pep_num_match, "\
+            self.connect.cursor.execute("INSERT INTO MASCOT_peptide ( pep_exp_mz, pep_exp_mr, pep_exp_z, pep_calc_mr, pep_delta, pep_miss, pep_score, pep_expect, pep_seq, pep_var_mod, pep_var_mod_pos, pep_num_match, "\
                                                                   +"pep_scan_title, isAssigned, precursor_precursor_id) VALUES("\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","\
                                                                             +self.placeholder+","+self.placeholder+","+self.placeholder+","\
