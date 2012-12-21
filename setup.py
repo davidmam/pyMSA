@@ -19,8 +19,8 @@ from distutils.core import setup
 
 setup(
     name='PyMSA',
-    version='0.2.9',
-    author='N.P. de Klein',
+    version='0.3.0',
+    author='N.P. de Klein, D.M.A. Martin',
     author_email='niekdeklein@gmail.com',
     packages=['pyMSA', 'pyMSA.test'],
     license='LICENSE.txt',
