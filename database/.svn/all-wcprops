@@ -13,7 +13,7 @@ MySQL_create_pyMSA_database.sql
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/svn/barton/!svn/ver/6063/ndeklein/MS/Trunk/PyMSA_dev/database/MySQL_create_pyMSA_database.sql
+/svn/barton/!svn/ver/6283/ndeklein/MS/Trunk/PyMSA_dev/database/MySQL_create_pyMSA_database.sql
 END
 pyMSA_database_createStatements.sqlite
 K 25

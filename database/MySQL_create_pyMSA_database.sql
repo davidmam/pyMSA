@@ -89,6 +89,7 @@ CREATE TABLE `feature` (
     REFERENCES `msrun` (`msrun_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+create index idx_feature_id on feature (feature_id);
 
 -- -----------------------------------------------------
 -- Table `feature group type`

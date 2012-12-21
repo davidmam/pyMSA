@@ -783,6 +783,39 @@ class FillDatabase:
         self.dbsearchgroups[tag]=grpid
         return grpid
         
+    def fillConsensus(self, cXML, tag):
+        """Adds a consenseusXML instance to the database
+        
+        cXML an instance of parseConsensusXML.Reader()
+        tag a text tag to identify this consensus operation.
+        """
+        
+        if not self.msrunFilled and not self.msrunName == None:
+            raise RuntimeError, 'There is no record of: \''+str(self.msrunName)+'\' in the msrun table. Run FillDatabase.fillMsrun() first'
+        cXML.getAllElements()
+        loadsql="insert into consensus_feature (cf_name, centroid_rt, centroid_mz, quality, charge, intensity, runtag) values ( %s,%s, %s,%s, %s,%s, %s)"
+        featsql="insert into consensus_feature_element (consensus_id, feature_id, delta_rt) values (%s, %s, %s)"
+        findfeat="select feature_table_id from feature where feature_id=%s"
+
+        el=cXML.getSimpleElementInfo()
+        for e in el:
+            consensusFields=(cXML['id'], cXML['rt'], cXML['mz'],cXML['quality'], cXML['charge'], cXML['intensity'], tag)
+            self.connect.cursor.execute(loadsql, consensusFields)
+            self.connect.cursor.execute("SELECT LAST_INSERT_ID()")
+            conId=int(self.connect.cursor.fetchone()[0]) 
+            for ele in cXML['elements']:
+                eleId=ele['id']
+                self.connect.cursor.execute(findfeat, eleId)
+                fl=self.connect.cursor.fetchall()
+                if len(fl)>1:
+                    warnings.warn("non-unique feature ID")
+                else:
+                    featId=int(fl[0][0])
+                    self.connect.cursor.execute(featsql,(conId, featId, 0.0))
+                    
+                    
+                
+
     def fillDBSearch(self, filename, searchgroup=0):
         """ 
         Adds a DB search instance to the dbsearch table. filename should be the output filename, not the input file.

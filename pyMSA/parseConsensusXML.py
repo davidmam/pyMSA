@@ -97,7 +97,7 @@ class Reader():
         self.__elementKeySet.add('rt')      
         self.__elementKeySet.add('quality')
         self.__elementKeySet.add('charge')
-        self.__elementKeySet.add('groupedElementList')
+        self.__elementKeySet.add('elements')
         self.__elementKeySet.add('id')
 
         self.maplist=[]
@@ -149,15 +149,18 @@ class Reader():
         """Retrieves and stores the map details for files"""
 
         for element in self.getAllElements():
-            if element.tag==map:
+            if element.tag=='map':
                 mapDict={}
-                mapid=int(elementFunctions.getItems(ele)['id'])
-                mapDict['name']=elementFunctions.getItems(ele)['name']
-                mapDict['unique_id']=elementFunctions.getItems(ele)['unique_id']
-                mapDict['label' ]=elementFunctions.getItems(ele)['label']
-                mapDict['size' ]=int(elementFunctions.getItems(ele)['size'])
-                self.mapList[mapid]=mapDict
-        return self.mapList
+                mapid=int(elementFunctions.getItems(element)['id'])
+                mapDict['name']=elementFunctions.getItems(element)['name']
+                mapDict['unique_id']=elementFunctions.getItems(element)['unique_id']
+                mapDict['label' ]=elementFunctions.getItems(element)['label']
+                mapDict['size' ]=int(elementFunctions.getItems(element)['size'])
+                while len(self.maplist) <=mapid: 
+                    self.maplist.append({})
+                self.maplist[mapid]=mapDict
+
+        return self.maplist
 
     # Get the items from getElements, only yield the feature elements
     # Add extra feature specific info to self.elementInfo
@@ -424,7 +427,7 @@ class Reader():
         
         Print the feature id and intensity, making use of the dictionary [key] sytax:
         
-        >>> featureXML = Reader('example_feature_file.featureXML')   # make a Reader instance
+        >>> consensusXML = Reader('example_consensus_file.consensusXML')   # make a Reader instance
         >>> features = featureXML.getFeatures()                    # get all the features of the Reader instance
         >>> for feature in features:                               # loop through all the features
         ...     print 'intensity of', featureXML['id'],' = ', featureXML['intensity']    # print the id and intensity of the feature
@@ -442,14 +445,14 @@ class Reader():
             try:
                 return self.elementInfo[self.element][key]
             except KeyError:
-                raise KeyError, 'key given to parseFeatureXML[<key>] does not exist in elementInfo. The possible keys are: '+str(self.getKeys())
+                raise KeyError, 'key "%s" given to parseConsensusXML[<key>] does not exist in elementInfo. The possible keys are: '%key +str(self.getKeys())
         
         # elif simpleFlag is False, feature were retrieved by allFeatureInfo
         elif not self.simpleFlag:
             try:
                 return self.elementInfo[key]
             except KeyError:
-                raise KeyError, 'key given to parseFeatureXML[<key>] does not exist in elementInfo. The possible keys are: '+str(self.getKeys())
+                raise KeyError, 'key "%s" given to parseFeatureXML[<key>] does not exist in elementInfo. The possible keys are: '%key +str(self.getKeys())
         else:
             raise RuntimeError, 'This should not happen, self.simpleFlag in parseFeatureXML is a bool and should either be True or False, not: '+str(simpleFlag)
       

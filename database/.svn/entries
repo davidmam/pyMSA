@@ -62,14 +62,14 @@ ndeklein
 
 MySQL_create_pyMSA_database.sql
 file
-6063
+6283
 
 
 
-2012-10-24T14:25:38.000000Z
-004ec662d1945fdbc994154724d7a550
-2012-10-24T17:05:40.641701Z
-6063
+2012-12-21T17:40:06.000000Z
+40d69fdf984bebe6b135fa4f3bc2d781
+2012-12-21T17:40:37.278179Z
+6283
 dmamartin
 
 
@@ -92,7 +92,7 @@ dmamartin
 
 
 
-16948
+19909
 
 pyMSA_database_createStatements.sqlite
 file

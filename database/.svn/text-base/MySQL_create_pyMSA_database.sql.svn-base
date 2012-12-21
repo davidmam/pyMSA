@@ -1,4 +1,8 @@
-DROP TABLE IF EXISTS `feature_group`;
+DROP TABLE IF EXISTS `consensus_feature_element`;
+DROP TABLE IF EXISTS `consensus_feature`;
+DROP TABLE IF EXISTS `db_search`;
+DROP TABLE IF EXISTS `db_search_group`;
+DROP TABLE IF EXISTS `feature_pair`;
 DROP TABLE IF EXISTS `feature_group_type`;
 DROP TABLE IF EXISTS `peptide_fragment`;
 DROP TABLE IF EXISTS `peptide_fragment_database`;
@@ -85,6 +89,7 @@ CREATE TABLE `feature` (
     REFERENCES `msrun` (`msrun_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+create index idx_feature_id on feature (feature_id);
 
 -- -----------------------------------------------------
 -- Table `feature group type`
@@ -134,6 +139,46 @@ CONSTRAINT `fk_feature_group`
     REFERENCES `feature_group_type` (`feature_group_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
+);
+-- -----------------------------------------------------
+-- Table `consensus_feature`
+--
+-- cf_id unique table identifier
+-- cf_name consensusElement id attribute
+-- centroid_rt retention time
+-- centroid_mz parent mz
+-- runtag Identifier for grouping analysis runs
+-- -----------------------------------------------------
+
+CREATE TABLE `consensus_feature` (
+cf_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+cf_name VARCHAR(30) NOT NULL,
+centroid_rt FLOAT NOT NULL,
+centroid_mz FLOAT NOT NULL,
+quality FLOAT NOT NULL,
+charge INTEGER NOT NULL,
+intensity FLOAT NOT NULL,
+runtag VARCHAR(50) NOT NULL
+);
+
+-- -----------------------------------------------------
+-- Table `consensus_feature_element`
+--
+-- -----------------------------------------------------
+CREATE TABLE `consensus_feature_element` (
+consensus_id INTEGER NOT NULL,
+feature_id INTEGER NOT NULL,
+delta_rt FLOAT NOT NULL,
+CONSTRAINT `fk_consensus_element` 
+	   FOREIGN KEY (`consensus_id`) 
+	   REFERENCES `consensus_feature` (`cf_id`) 
+	   ON DELETE NO ACTION
+    	   ON UPDATE NO ACTION,
+CONSTRAINT `fk_feature_element`
+    	   FOREIGN KEY (`feature_id` )
+    	   REFERENCES `feature` (`feature_table_id` )
+    	   ON DELETE NO ACTION
+    	   ON UPDATE NO ACTION
 );
 
 
@@ -243,6 +288,35 @@ CREATE TABLE `feature_has_MSMS_precursor` (
     ON UPDATE NO ACTION);
 
 -- -----------------------------------------------------
+-- Table db_search_group
+-- Contains details of database search parameter sets
+-- These are essentially just tags for grouping - detailed parameters will be in the individual file
+-- -----------------------------------------------------
+
+CREATE TABLE `db_search_group`(
+db_search_group_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+db_search_group_name VARCHAR(40) NOT NULL,
+db_search_group_description VARCHAR(1000),
+db_search_engine VARCHAR(60)
+);
+insert into db_search_group (db_search_group_id, db_search_group_name, db_search_group_description, db_search_engine) values (0,'unattached','default search group', 'Probably Mascot');
+-- -----------------------------------------------------
+-- Table db_search
+-- Contains details of database search runs
+-- -----------------------------------------------------
+CREATE TABLE `db_search`(
+db_search_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+results_filename VARCHAR(40) NOT NULL,
+db_search_group_id INT NOT NULL,
+CONSTRAINT `fk_db_search_group_id`
+    FOREIGN KEY (`db_search_group_id` )
+    REFERENCES `db_search_group` (`db_search_group_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+insert into db_search (db_search_id, results_filename, db_search_group_id) values (0,'None', 0);
+
+-- -----------------------------------------------------
 -- Table `MASCOT_peptide`
 --
 -- Holds information on the peptides from mascot results. If they are assigned, MASCOT_protein will be linked to them.  
@@ -261,15 +335,21 @@ CREATE TABLE `MASCOT_peptide` (
   `pep_res_before` VARCHAR(1),
   `pep_seq` VARCHAR(40) NOT NULL,
   `pep_res_after` VARCHAR(1),
-  `pep_var_mod` VARCHAR(100),
-  `pep_var_mod_pos` VARCHAR(40),
+  `pep_var_mod` VARCHAR(200),
+  `pep_var_mod_pos` VARCHAR(100),
   `pep_num_match` INT,
   `pep_scan_title` VARCHAR(255) NOT NULL,
   `isAssigned` int NOT null,
   `precursor_precursor_id` INT NOT NULL, 
+  `db_search_id` INT NOT NULL default 0,	 
   CONSTRAINT `fk_mascot_peptide_precursor1`
     FOREIGN KEY (`precursor_precursor_id`)
     REFERENCES `MSMS_precursor` (`precursor_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_mascot_peptide_dbsearch`
+    FOREIGN KEY (`db_search_id`)
+    REFERENCES `db_search` (`db_search_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
