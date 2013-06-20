@@ -15,17 +15,17 @@ svn:wc:ra_dav:version-url
 V 80
 /svn/barton/!svn/ver/6283/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseConsensusXML.py
 END
-parsePeaksMzML.py
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/barton/!svn/ver/5296/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parsePeaksMzML.py
-END
 compareRuns.py
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/barton/!svn/ver/5305/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/compareRuns.py
+END
+parsePeaksMzML.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/barton/!svn/ver/5296/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parsePeaksMzML.py
 END
 __init__.py
 K 25
@@ -57,11 +57,11 @@ svn:wc:ra_dav:version-url
 V 69
 /svn/barton/!svn/ver/5296/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/config.py
 END
-parseFeatureXML.py
+featureMapping.py
 K 25
 svn:wc:ra_dav:version-url
-V 78
-/svn/barton/!svn/ver/5327/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseFeatureXML.py
+V 77
+/svn/barton/!svn/ver/5327/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/featureMapping.py
 END
 getWindow.py
 K 25
@@ -69,11 +69,11 @@ svn:wc:ra_dav:version-url
 V 72
 /svn/barton/!svn/ver/5472/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/getWindow.py
 END
-featureMapping.py
+parseFeatureXML.py
 K 25
 svn:wc:ra_dav:version-url
-V 77
-/svn/barton/!svn/ver/5327/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/featureMapping.py
+V 78
+/svn/barton/!svn/ver/5327/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/parseFeatureXML.py
 END
 mzmlFunctions.py
 K 25
@@ -85,7 +85,7 @@ helper.py
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/barton/!svn/ver/6277/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/helper.py
+/svn/barton/!svn/ver/6427/ndeklein/MS/Trunk/PyMSA_dev/pyMSA/helper.py
 END
 rPlotGenerics.py
 K 25
